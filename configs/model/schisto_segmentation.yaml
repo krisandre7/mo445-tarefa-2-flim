@@ -1,0 +1,76 @@
+model:
+  class_path: modules.SchistoSegmentationModule
+  init_args:
+    use_gt: false
+    split: 3
+    triplet_margin: 0.2
+    l2_reg_weight: 1.0e-5
+    graph_weight_estimator:
+      original_size: [400, 400]
+      embed_dim: 8
+      kernel_size: 7
+      dilation: 1
+      fc_hidden_dims: [128, 64]
+    seed_selection:
+      erosion_disk_radius: 1
+      dilation_disk_radius: 2
+      in_percentage: 0.5
+      out_percentage: 0.1
+    flim_decoder:
+      decoder_type: "mean_based_ad"  # mean_based_ad, probability_based_ad, vanilla_adaptive_decoder, labeled_marker_d
+      filter_by_size: false
+      adj_radius: 1.5
+    arcw_id: 0
+    dynamic_trees:
+      segmentation:
+        border: 1
+        min_comp_area: 1000
+        max_comp_area: 9000
+        saliency_erosion: 2
+        saliency_dilation: 30
+    f_beta: 0.3
+    flim_model_path: null  # Will use default path based on split
+    seed: 2021
+
+optimizer:
+  class_path: torch.optim.Adam
+  init_args:
+    lr: 1e-3
+    weight_decay: 1e-4
+lr_scheduler:
+  class_path: torch.optim.lr_scheduler.CyclicLR
+  init_args:
+    base_lr: 0.001
+    max_lr: 0.01
+    step_size_up: 20
+    mode: "exp_range"
+trainer:
+  # max_epochs: 1000
+  max_epochs: 10
+  accelerator: gpu
+  devices: [0]
+  precision: 32
+  gradient_clip_val: 1.0
+  accumulate_grad_batches: 4
+  log_every_n_steps: 1
+  check_val_every_n_epoch: 10
+  callbacks:
+    # https://lightning.ai/docs/pytorch/latest/api/lightning.pytorch.callbacks.ModelCheckpoint.html#lightning.pytorch.callbacks.ModelCheckpoint
+    - class_path: callbacks.FixedModelCheckpoint
+      init_args:
+        filename: epoch={epoch:02d}-val_fbeta_mlp={val/fbeta_mlp:.4f}
+        monitor: val/fbeta_mlp
+        verbose: true
+        save_last: true
+        save_top_k: 1
+        mode: max
+        auto_insert_metric_name: false
+    # https://lightning.ai/docs/pytorch/latest/api/lightning.pytorch.callbacks.EarlyStopping.html#lightning.pytorch.callbacks.EarlyStopping
+    - class_path: EarlyStopping
+      init_args:
+        monitor: val/fbeta_mlp
+        min_delta: 0.005
+        patience: 20
+        verbose: true
+        mode: max
+        strict: true
