@@ -15,6 +15,7 @@ class SchistoDataModule(LightningDataModule):
         split: int = 3,
         home: str = "/home/kris/projects/mo445-analise-de-imagem/tarefa_2",
         train_split_ratio: float = 0.5,
+        use_flim_data: bool = True,
         batch_size: int = 1,
         num_workers: int = 0,
         seed: int = 2021,
@@ -95,6 +96,13 @@ class SchistoDataModule(LightningDataModule):
             for i in test_df[0]
         ]
         
+        # print a table summary
+        print("Dataset summary:")
+        print(f"  FLIM train images: {len(images_list_flim)}")
+        print(f"  GWE train images: {len(images_list_gwe_train)}")
+        print(f"  GWE val images: {len(images_list_gwe_val)}")
+        print(f"  Test images: {len(images_list_test)}")
+        
         if stage == "fit" or stage is None:
             self.train_dataset_flim = data.FLIMData(
                 orig_folder=self.orig_folder,
@@ -141,7 +149,7 @@ class SchistoDataModule(LightningDataModule):
     
     def train_dataloader(self):
         return DataLoader(
-            self.train_dataset_flim,
+            self.train_dataset_flim if self.hparams.use_flim_data else self.train_dataset_gwe,
             batch_size=self.hparams.batch_size,
             shuffle=True,
             num_workers=self.hparams.num_workers
@@ -156,6 +164,14 @@ class SchistoDataModule(LightningDataModule):
         )
     
     def test_dataloader(self):
+        return DataLoader(
+            self.test_dataset,
+            batch_size=self.hparams.batch_size,
+            shuffle=False,
+            num_workers=self.hparams.num_workers
+        )
+    
+    def predict_dataloader(self):
         return DataLoader(
             self.test_dataset,
             batch_size=self.hparams.batch_size,

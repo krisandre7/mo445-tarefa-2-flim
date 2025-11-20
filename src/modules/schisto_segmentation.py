@@ -8,7 +8,7 @@ import pyift.pyift as ift
 from pytorch_lightning import LightningModule
 from skimage.morphology import binary_dilation, binary_erosion, disk
 
-from src.data_modules.utils import f_beta_score, labnorm
+from src.modules.utils import f_beta_score, labnorm
 from src.models.graph_weight_estimator import GraphWeightEstimator
 from pytorch_lightning.trainer.states import RunningStage
 
@@ -41,7 +41,7 @@ class SchistoSegmentationModule(LightningModule):
         # Loss function
         self.loss_fn = nn.TripletMarginLoss(margin=triplet_margin)
         
-        # Load FLIM model for validation/testing
+        # Load FLIM model
         if flim_model_path is None:
             flim_model_path = f'models/flim/split{split}/flim_encoder_split{split}.pth'
         
@@ -50,7 +50,7 @@ class SchistoSegmentationModule(LightningModule):
                 f"FLIM model not found at {flim_model_path}. Please provide a valid path."
             )
         
-        self.flim_model = None  # Loaded on demand
+        self.flim_model = None 
         self.flim_model_path = flim_model_path
         
         self.flim_model = torch.load(
@@ -65,9 +65,15 @@ class SchistoSegmentationModule(LightningModule):
         )
         self.flim_model.eval()
 
+        # --- METRIC STORAGE ---
+        # We initialize lists to store scores for std calculation
+        self.val_mlp_scores = []
+        self.test_mlp_scores = []
+        self.test_lab_scores = []
+
 
     def _get_tags_and_run_name(self):
-        """Automatically derive tags and a run name from SchistoSegmentationModule hyperparameters."""
+        # ... (Your existing code for tags remains unchanged) ...
         hparams = getattr(self, "hparams", None)
         if hparams is None:
             return [], "unnamed_run"
@@ -75,7 +81,6 @@ class SchistoSegmentationModule(LightningModule):
         tags = []
         run_name_parts = []
         
-        # get stage from trainer
         stage = self.trainer.state.stage
         
         if stage == RunningStage.TRAINING:
@@ -91,11 +96,9 @@ class SchistoSegmentationModule(LightningModule):
             tags.append("predict")
             run_name_parts.append("predict")
 
-        # --- Base model info ---
         run_name_parts.append("schist_seg")
         tags.append("schisto_seg")
 
-        # --- Use GT or FLIM ---
         if hparams.use_gt:
             tags.append("use_gt")
             run_name_parts.append("gt")
@@ -103,39 +106,32 @@ class SchistoSegmentationModule(LightningModule):
             tags.append("use_flim")
             run_name_parts.append("flim")
 
-        # --- Split number ---
         tags.append(f"split_{hparams.split}")
         run_name_parts.append(f"s{hparams.split}")
 
-        # --- Arc Weight id ---
         tags.append(f"arcw_{hparams.arcw_id}")
         run_name_parts.append(f"arcw{hparams.arcw_id}")
 
-        # --- Graph Weight Estimator configuration ---
         gcfg = hparams.graph_weight_estimator
         tags.append(f"embed{gcfg.get('embed_dim', 'na')}")
         run_name_parts.append(f"e{gcfg.get('embed_dim', 'na')}")
 
-        # --- FLIM decoder ---
         flim_decoder = hparams.flim_decoder
         if flim_decoder and "decoder_type" in flim_decoder:
             dec_type = flim_decoder["decoder_type"]
             tags.append(dec_type)
             run_name_parts.append(dec_type)
 
-        # --- Loss and regularization ---
         tags.append(f"triplet_margin_{hparams.triplet_margin}")
         tags.append(f"l2_{hparams.l2_reg_weight}")
         run_name_parts.append(f"m{hparams.triplet_margin}")
 
-        # --- Dynamic Trees summary ---
         if "segmentation" in hparams.dynamic_trees:
             seg_cfg = hparams.dynamic_trees["segmentation"]
             seg_border = seg_cfg.get("border", 1)
             tags.append(f"border_{seg_border}")
             run_name_parts.append(f"b{seg_border}")
 
-        # --- Optimizer info (if defined externally) ---
         optimizer_cfg = getattr(hparams, "optimizer", None)
         if optimizer_cfg and "class_path" in optimizer_cfg:
             opt_name = optimizer_cfg["class_path"].split(".")[-1].lower()
@@ -148,14 +144,12 @@ class SchistoSegmentationModule(LightningModule):
             if "weight_decay" in opt_args:
                 tags.append(f"wd_{opt_args['weight_decay']}")
 
-        # --- Scheduler info (optional) ---
         scheduler_cfg = getattr(hparams, "scheduler", None)
         if scheduler_cfg and "class_path" in scheduler_cfg:
             sched_name = scheduler_cfg["class_path"].split(".")[-1].lower()
             tags.append(sched_name)
             run_name_parts.append(sched_name)
 
-        # --- Finalize run name ---
         run_name = "_".join(run_name_parts)
 
         return tags, run_name
@@ -171,7 +165,6 @@ class SchistoSegmentationModule(LightningModule):
         return self.model(x)
     
     def random_select(self, mask, percentage=0.3):
-        """Select random pixels from binary mask"""
         mask = mask.astype(bool)
         indices = np.flatnonzero(mask)
         num_select = int(len(indices) * percentage)
@@ -180,10 +173,7 @@ class SchistoSegmentationModule(LightningModule):
         new_mask.flat[selected] = 1
         return new_mask
     
-    def prepare_seeds(
-        self, mask: np.ndarray
-    ) -> tuple[np.ndarray, np.ndarray]:
-        """Prepare seeds for training"""
+    def prepare_seeds(self, mask: np.ndarray) -> tuple[np.ndarray, np.ndarray]:
         seed_config = self.hparams.seed_selection
 
         eroded = binary_erosion(
@@ -202,25 +192,19 @@ class SchistoSegmentationModule(LightningModule):
 
         return seeds_in.astype(np.int32), seeds_out.astype(np.int32)
 
-    
     def training_step(self, batch, batch_idx):
+        # ... (Your existing training logic) ...
         x = batch["image"]
         y = batch["label"]
-        
         y[y > 0] = 1
 
         if y.max() == 0:
             return None
 
         y = y[0].cpu().numpy()
-
-        # Get representation
         representation = self.model(x)
-
-        # Prepare seeds
         seeds_in, seeds_out = self.prepare_seeds(y)
 
-        # Convert to IFT format
         seeds_in_mimg = ift.CreateImageFromNumPy(seeds_in, is3D=False)
         seeds_out_mimg = ift.CreateImageFromNumPy(seeds_out, is3D=False)
         res_mimg = ift.CreateMImageFromNumPy(
@@ -229,7 +213,6 @@ class SchistoSegmentationModule(LightningModule):
             )
         )
 
-        # Dynamic Trees propagation
         if self.hparams.arcw_id <= 0:
             res = ift.DynamicTrees(res_mimg, seeds_in_mimg, seeds_out_mimg)
         else:
@@ -238,18 +221,15 @@ class SchistoSegmentationModule(LightningModule):
             )
         res = res.AsNumPy()
 
-        # Get correct labels
         x_correct_1 = np.argwhere((res == 1) & (y == 1))
         x_correct_0 = np.argwhere((res == 0) & (y == 0))
 
         if len(x_correct_1) == 0 or len(x_correct_0) == 0:
             return None
 
-        # Balance sizes
         self.rng.shuffle(x_correct_0)
         x_correct_0 = x_correct_0[: x_correct_1.shape[0], :]
 
-        # Split into anchors and positives
         self.rng.shuffle(x_correct_1)
         half = x_correct_1.shape[0] // 2
 
@@ -259,22 +239,13 @@ class SchistoSegmentationModule(LightningModule):
         anchors_idx = x_correct_1[:half]
         positives_idx = x_correct_1[half : 2 * half]
 
-        # Extract representations
         anchor = representation[anchors_idx[:, 0], anchors_idx[:, 1]]
-        positive = representation[
-            positives_idx[:, 0], positives_idx[:, 1]
-        ]
-        negative = representation[
-            x_correct_0[:half, 0], x_correct_0[:half, 1]
-        ]
+        positive = representation[positives_idx[:, 0], positives_idx[:, 1]]
+        negative = representation[x_correct_0[:half, 0], x_correct_0[:half, 1]]
 
-        # Compute loss
         loss = self.loss_fn(anchor, positive, negative)
 
-        # L2 regularization
-        l2_reg = sum(
-            torch.norm(p, 2) for p in self.model.fc.parameters()
-        )
+        l2_reg = sum(torch.norm(p, 2) for p in self.model.fc.parameters())
         loss += self.hparams.l2_reg_weight * l2_reg
         
         self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True)
@@ -329,14 +300,14 @@ class SchistoSegmentationModule(LightningModule):
             stage = 'val'
         else:
             stage = 'test'
+            # Accumulate Test LAB score
+            self.test_lab_scores.append(loss_lab)
+
         self.log(f'{stage}/fbeta_lab', loss_lab, on_step=False, on_epoch=True, prog_bar=True)
 
     def get_saliency(self, x, y):
         if not self.hparams.use_gt:
             x_t = labnorm(x)
-            # if isinstance(x_t, torch.Tensor):
-            #     # to numPy
-            #     x_t = x_t.cpu().numpy()
             y_t = self.flim_model.forward(x_t, decoder_layer=0)
             y_t = y_t.squeeze().detach().cpu().numpy()
             saliency = ift.CreateImageFromNumPy(
@@ -354,13 +325,9 @@ class SchistoSegmentationModule(LightningModule):
         y[y > 0] = 1
         y = y[0].cpu().numpy()
 
-        # Get representation
         representation = self.model(x)
-
-        # Get saliency map
         saliency = self.get_saliency(x, y)
 
-        # Create MImage
         res_mimg = ift.CreateMImageFromNumPy(
             np.ascontiguousarray(
                 representation.detach()
@@ -383,7 +350,6 @@ class SchistoSegmentationModule(LightningModule):
                 seg_config["saliency_dilation"]
             )
         else:
-            # Segmentation
             res = ift.mySMansoniDelineation(
                 res_mimg,
                 saliency,
@@ -397,41 +363,49 @@ class SchistoSegmentationModule(LightningModule):
 
         res = res.AsNumPy()
         
-        # Compute scores
         loss_mlp = f_beta_score(y, res, beta2=self.hparams.f_beta)
         
-        # get stage either 'val' or 'test'
         if self.trainer.state.stage == RunningStage.VALIDATING:
             stage = 'val'
+            # Accumulate Validation score
+            self.val_mlp_scores.append(loss_mlp)
         else:
             stage = 'test'
+            # Accumulate Test MLP score
+            self.test_mlp_scores.append(loss_mlp)
         
+        # This logs the MEAN
         self.log(f'{stage}/fbeta_mlp', loss_mlp, on_step=False, on_epoch=True, prog_bar=True)
         
         return loss_mlp
 
+    def on_validation_epoch_end(self):
+        # Calculate and log Standard Deviation for Validation
+        if len(self.val_mlp_scores) > 1:
+            scores_tensor = torch.tensor(self.val_mlp_scores, dtype=torch.float)
+            std_dev = scores_tensor.std()
+            self.log('val/fbeta_mlp_std', std_dev, prog_bar=True)
+        
+        # Clear list for next epoch
+        self.val_mlp_scores.clear()
+
+    def on_test_epoch_end(self):
+        # Calculate and log Standard Deviation for Test MLP
+        if len(self.test_mlp_scores) > 1:
+            mlp_tensor = torch.tensor(self.test_mlp_scores, dtype=torch.float)
+            mlp_std = mlp_tensor.std()
+            self.log('test/fbeta_mlp_std', mlp_std, prog_bar=True)
+            
+        # Calculate and log Standard Deviation for Test LAB
+        if len(self.test_lab_scores) > 1:
+            lab_tensor = torch.tensor(self.test_lab_scores, dtype=torch.float)
+            lab_std = lab_tensor.std()
+            self.log('test/fbeta_lab_std', lab_std, prog_bar=True)
+
+        # Clear lists
+        self.test_mlp_scores.clear()
+        self.test_lab_scores.clear()
         
     def test_step(self, batch, batch_idx):
-        # Similar to validation but with full evaluation
         self.validation_step(batch, batch_idx)
         self.test_lab(batch)
-    
-    # def configure_optimizers(self):
-    #     optimizer = torch.optim.Adam(
-    #         self.parameters(),
-    #         lr=self.hparams.lr,
-    #         weight_decay=self.hparams.weight_decay
-    #     )
-        
-    #     scheduler = torch.optim.lr_scheduler.CyclicLR(
-    #         optimizer,
-    #         **self.hparams.scheduler
-    #     )
-        
-    #     return {
-    #         'optimizer': optimizer,
-    #         'lr_scheduler': {
-    #             'scheduler': scheduler,
-    #             'interval': 'step',
-    #         }
-    #     }
