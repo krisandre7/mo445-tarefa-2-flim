@@ -8,6 +8,7 @@ import pyift.pyift as ift
 from pytorch_lightning import LightningModule
 from skimage.morphology import binary_dilation, binary_erosion, disk
 
+from torchmetrics import MaxMetric
 from src.modules.utils import f_beta_score, labnorm
 from src.models.graph_weight_estimator import GraphWeightEstimator
 from pytorch_lightning.trainer.states import RunningStage
@@ -70,7 +71,10 @@ class SchistoSegmentationModule(LightningModule):
         self.val_mlp_scores = []
         self.test_mlp_scores = []
         self.test_lab_scores = []
-
+        
+        # import maxmetric from pytorch_lightning.metrics
+        self.val_best_fbeta_mlp = MaxMetric()
+        self.test_best_fbeta_mlp = MaxMetric()
 
     def _get_tags_and_run_name(self):
         # ... (Your existing code for tags remains unchanged) ...
@@ -248,7 +252,8 @@ class SchistoSegmentationModule(LightningModule):
         l2_reg = sum(torch.norm(p, 2) for p in self.model.fc.parameters())
         loss += self.hparams.l2_reg_weight * l2_reg
         
-        self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True)
+        batch_size = x.shape[0]
+        self.log('train_loss', loss, on_step=True, on_epoch=True, prog_bar=True, batch_size=batch_size)
         return loss
     
     def test_lab(self, batch):
@@ -303,7 +308,8 @@ class SchistoSegmentationModule(LightningModule):
             # Accumulate Test LAB score
             self.test_lab_scores.append(loss_lab)
 
-        self.log(f'{stage}/fbeta_lab', loss_lab, on_step=False, on_epoch=True, prog_bar=True)
+        batch_size = x.shape[0]
+        self.log(f'{stage}/fbeta_lab', loss_lab, on_step=False, on_epoch=True, prog_bar=True, batch_size=batch_size)
 
     def get_saliency(self, x, y):
         if not self.hparams.use_gt:
@@ -375,7 +381,8 @@ class SchistoSegmentationModule(LightningModule):
             self.test_mlp_scores.append(loss_mlp)
         
         # This logs the MEAN
-        self.log(f'{stage}/fbeta_mlp', loss_mlp, on_step=False, on_epoch=True, prog_bar=True)
+        batch_size = x.shape[0]
+        self.log(f'{stage}/fbeta_mlp', loss_mlp, on_step=False, on_epoch=True, prog_bar=True, batch_size=batch_size)
         
         return loss_mlp
 
@@ -385,6 +392,9 @@ class SchistoSegmentationModule(LightningModule):
             scores_tensor = torch.tensor(self.val_mlp_scores, dtype=torch.float)
             std_dev = scores_tensor.std()
             self.log('val/fbeta_mlp_std', std_dev, prog_bar=True)
+        
+        self.val_best_fbeta_mlp.update(torch.tensor(np.mean(self.val_mlp_scores), dtype=torch.float))
+        self.log('val/best_fbeta_mlp', self.val_best_fbeta_mlp.compute(), prog_bar=True)
         
         # Clear list for next epoch
         self.val_mlp_scores.clear()
@@ -405,6 +415,9 @@ class SchistoSegmentationModule(LightningModule):
         # Clear lists
         self.test_mlp_scores.clear()
         self.test_lab_scores.clear()
+        
+        self.test_best_fbeta_mlp.update(torch.tensor(np.mean(self.test_mlp_scores), dtype=torch.float))
+        self.log('test/best_fbeta_mlp', self.test_best_fbeta_mlp.compute(), prog_bar=True)
         
     def test_step(self, batch, batch_idx):
         self.validation_step(batch, batch_idx)

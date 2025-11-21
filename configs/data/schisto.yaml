@@ -5,7 +5,7 @@ data:
     home: "/home/kris/projects/mo445-analise-de-imagem/tarefa_2"
     train_split_ratio: 0.5
     batch_size: 1
-    num_workers: 0
+    num_workers: 8
     seed: 2021
     image_size: 400
     use_flim_data: true
