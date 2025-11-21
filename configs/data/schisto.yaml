@@ -8,7 +8,7 @@ data:
     num_workers: 0
     seed: 2021
     image_size: 400
-    use_flim_data: false
+    use_flim_data: true
 
     # transforms:
       # train:
