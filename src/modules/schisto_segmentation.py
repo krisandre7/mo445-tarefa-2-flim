@@ -1,5 +1,8 @@
 from pathlib import Path
 import secrets
+
+import cv2
+from matplotlib import pyplot as plt
 from pyflim import layers
 import torch
 import torch.nn as nn
@@ -7,9 +10,13 @@ import numpy as np
 import pyift.pyift as ift
 from pytorch_lightning import LightningModule
 from skimage.morphology import binary_dilation, binary_erosion, disk
+from skimage.filters import threshold_otsu
+import torchvision
+from torchvision.utils import make_grid
+import wandb
 
 from torchmetrics import MaxMetric
-from src.modules.utils import f_beta_score, labnorm
+from src.modules.utils import f_beta_score, filter_component_by_area, labnorm, overlay_mask_on_image
 from src.models.graph_weight_estimator import GraphWeightEstimator
 from pytorch_lightning.trainer.states import RunningStage
 
@@ -28,6 +35,8 @@ class SchistoSegmentationModule(LightningModule):
         seed_selection: dict = None,
         f_beta: float = 0.3,
         seed: int = 2021,
+        worst_k: int = 5,
+        fixed_k: int = 5,
     ):
         super().__init__()
         self.save_hyperparameters()
@@ -75,6 +84,7 @@ class SchistoSegmentationModule(LightningModule):
         # import maxmetric from pytorch_lightning.metrics
         self.val_best_fbeta_mlp = MaxMetric()
         self.test_best_fbeta_mlp = MaxMetric()
+        
 
     def _get_tags_and_run_name(self):
         # ... (Your existing code for tags remains unchanged) ...
@@ -310,19 +320,24 @@ class SchistoSegmentationModule(LightningModule):
 
         batch_size = x.shape[0]
         self.log(f'{stage}/fbeta_lab', loss_lab, on_step=False, on_epoch=True, prog_bar=True, batch_size=batch_size)
+        
+    def get_flim_representation(self, x, decoder_layer=0):
+        x_t = labnorm(x)
+        with torch.no_grad():
+            y_t = self.flim_model.forward(x_t, decoder_layer=decoder_layer)
+        return y_t.squeeze().detach().cpu().numpy().astype(np.float32)
 
-    def get_saliency(self, x, y):
+    def get_saliency(self, x, y, decoder_layer=0, to_MImage=True):
         if not self.hparams.use_gt:
-            x_t = labnorm(x)
-            y_t = self.flim_model.forward(x_t, decoder_layer=0)
-            y_t = y_t.squeeze().detach().cpu().numpy()
+            y_t = self.get_flim_representation(x, decoder_layer=0)
             saliency = ift.CreateImageFromNumPy(
                 y_t.astype(np.int32), is3D=False
-            )
+            ) if to_MImage else y_t
         else:
+            y_t = (y * 255).astype(np.int32)
             saliency = ift.CreateImageFromNumPy(
-                (y * 255).astype(np.int32), is3D=False
-            )
+                y_t, is3D=False
+            ) if to_MImage else y_t
         return saliency
     
     def validation_step(self, batch, batch_idx):
@@ -332,7 +347,11 @@ class SchistoSegmentationModule(LightningModule):
         y = y[0].cpu().numpy()
 
         representation = self.model(x)
-        saliency = self.get_saliency(x, y)
+        saliency = self.get_saliency(x, y, to_MImage=False)
+        
+        saliency_mimg = ift.CreateImageFromNumPy(
+            saliency.astype(np.int32), is3D=False
+        )
 
         res_mimg = ift.CreateMImageFromNumPy(
             np.ascontiguousarray(
@@ -344,11 +363,23 @@ class SchistoSegmentationModule(LightningModule):
         )
         
         seg_config = self.hparams.dynamic_trees["segmentation"]
-
+        
+        saliency_mask = saliency.copy()
+        
+        th = threshold_otsu(saliency_mask)
+        saliency_mask[saliency_mask < th] = 0
+        saliency_mask[saliency_mask > th] = 1
+        
+        saliency_mask_filtered = filter_component_by_area(
+            saliency_mask.astype(np.uint8),
+            [seg_config["min_comp_area"],
+            seg_config["max_comp_area"]]
+        )
+        
         if self.hparams.arcw_id <= 0:
             res = ift.SMansoniDelineation(
                 res_mimg,
-                saliency,
+                saliency_mimg,
                 seg_config["border"],
                 seg_config["min_comp_area"],
                 seg_config["max_comp_area"],
@@ -358,7 +389,7 @@ class SchistoSegmentationModule(LightningModule):
         else:
             res = ift.mySMansoniDelineation(
                 res_mimg,
-                saliency,
+                saliency_mimg,
                 seg_config["border"],
                 seg_config["min_comp_area"],
                 seg_config["max_comp_area"],
@@ -384,7 +415,65 @@ class SchistoSegmentationModule(LightningModule):
         batch_size = x.shape[0]
         self.log(f'{stage}/fbeta_mlp', loss_mlp, on_step=False, on_epoch=True, prog_bar=True, batch_size=batch_size)
         
+        if not hasattr(self, "_val_samples"):
+            self._val_samples = []
+
+        # Detach and move to CPU for visualization        
+        img = x[0].detach().cpu()
+        img = cv2.cvtColor(img.permute(1, 2, 0).numpy(), cv2.COLOR_LAB2RGB)
+        img = torch.tensor(img).permute(2, 0, 1)
+        
+        # overlay the ground truth mask on the image
+        gt_mask = torch.tensor(y * 255, dtype=torch.uint8).unsqueeze(0)
+        
+        img = overlay_mask_on_image(img, gt_mask, color=(1, 0, 0), alpha=0.2)
+        img = (img * 255).type(torch.uint8)
+        
+        # Compute spatial derivatives using slicing (no padding)
+        dx = representation[1:, :, :] - representation[:-1, :, :]
+        dy = representation[:, 1:, :] - representation[:, :-1, :]
+
+        # Compute L2 norm across feature dimension (F)
+        grad_x = dx.norm(dim=-1)  # shape (B, H-1, W)
+        grad_y = dy.norm(dim=-1)  # shape (B, H, W-1)
+
+        # Initialize gradient tensor
+        H, W, _ = representation.shape
+        grad = torch.zeros((H, W), device=representation.device)
+
+        # Accumulate gradient components
+        grad[:-1, :] += grad_x
+        grad[:, :-1] += grad_y
+
+        # Gradient magnitude
+        rep_grad = torch.sqrt(grad).unsqueeze(0).cpu().numpy()
+        jet_cmap = plt.get_cmap("jet")
+        rep_grad = jet_cmap((rep_grad - rep_grad.min()) / (rep_grad.max() - rep_grad.min()))[:, :, :, :3]
+        rep_grad = torch.tensor(rep_grad, dtype=torch.float32).squeeze(0).permute(2, 0, 1)
+        rep_grad = (rep_grad * 255).type(torch.uint8)
+            
+        sal = torch.tensor(saliency_mask * 255, dtype=torch.uint8).unsqueeze(0)
+        sal_f = torch.tensor(saliency_mask_filtered * 255, dtype=torch.uint8).unsqueeze(0)
+        res_t = torch.tensor(res * 255, dtype=torch.uint8).unsqueeze(0)
+
+        self._val_samples.append({
+            "fbeta": loss_mlp,
+            "image": img,
+            "representation": rep_grad,
+            "saliency_mask": sal,
+            "saliency_mask_filtered": sal_f,
+            "res": res_t,
+        })
+        
         return loss_mlp
+
+    def log_val_images(self, title: str, images: list[torch.Tensor]) -> None:
+        """Helper function to log a grid of images to wandb."""
+        grid = make_grid(images, nrow=5, normalize=True, scale_each=True)
+        if hasattr(self.logger, "experiment"):
+            self.logger.experiment.log(
+                {title: [wandb.Image(grid, caption=title)], "global_step": self.global_step}
+            )
 
     def on_validation_epoch_end(self):
         # Calculate and log Standard Deviation for Validation
@@ -398,6 +487,60 @@ class SchistoSegmentationModule(LightningModule):
         
         # Clear list for next epoch
         self.val_mlp_scores.clear()
+        
+        if hasattr(self, "_val_samples") and len(self._val_samples) > 0:
+            # Sort samples by F-beta (lower is worse)
+            sorted_samples = sorted(self._val_samples, key=lambda s: s["fbeta"])
+            worst_samples = sorted_samples[:self.hparams.worst_k]  # get worst 5
+
+            # --- Build grid of worst samples ---
+            worst_rows = []
+            for s in worst_samples:
+                row = torch.cat([
+                    s["image"],
+                    s["representation"],
+                    s["saliency_mask"].repeat(3, 1, 1),
+                    s["saliency_mask_filtered"].repeat(3, 1, 1),
+                    s["res"].repeat(3, 1, 1),
+                ], dim=2)
+                worst_rows.append(row)
+            worst_grid = make_grid(worst_rows, nrow=1, normalize=False, scale_each=False)
+
+            # --- Log to WandB ---
+            if hasattr(self.logger, "experiment"):
+                self.logger.experiment.log({
+                    "val/worst_samples_grid": [
+                        wandb.Image(worst_grid, caption="Worst F-beta Samples")
+                    ],
+                    "global_step": self.global_step,
+                })
+
+            # --- Fixed validation samples for tracking evolution ---
+            if not hasattr(self, "_fixed_val_samples"):
+                self._fixed_val_samples = self._val_samples[:self.hparams.fixed_k]
+
+            fixed_rows = []
+            for s in self._fixed_val_samples:
+                row = torch.cat([
+                    s["image"],
+                    s["representation"],
+                    s["saliency_mask"].repeat(3, 1, 1),
+                    s["saliency_mask_filtered"].repeat(3, 1, 1),
+                    s["res"].repeat(3, 1, 1),
+                ], dim=2)
+                fixed_rows.append(row)
+            fixed_grid = make_grid(fixed_rows, nrow=1, normalize=False, scale_each=False)
+
+            if hasattr(self.logger, "experiment"):
+                self.logger.experiment.log({
+                    "val/fixed_samples_grid": [
+                        wandb.Image(fixed_grid, caption="Fixed Validation Samples")
+                    ],
+                    "global_step": self.global_step,
+                })
+
+            # Clear temporary storage for next epoch
+            self._val_samples.clear()
 
     def on_test_epoch_end(self):
         # Calculate and log Standard Deviation for Test MLP

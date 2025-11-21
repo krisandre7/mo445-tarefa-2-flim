@@ -53,14 +53,14 @@ trainer:
   gradient_clip_val: 1.0
   accumulate_grad_batches: 4
   # accumulate_grad_batches: 163
-  # log_every_n_steps: 1
+  log_every_n_steps: 1
   check_val_every_n_epoch: 10
   # check_val_every_n_epoch: 1
   callbacks:
     # https://lightning.ai/docs/pytorch/latest/api/lightning.pytorch.callbacks.ModelCheckpoint.html#lightning.pytorch.callbacks.ModelCheckpoint
     - class_path: callbacks.FixedModelCheckpoint
       init_args:
-        filename: epoch={epoch:02d}-val_fbeta={val/fbeta:.4f}
+        filename: epoch={epoch:02d}-val_fbeta={val/fbeta_mlp:.4f}
         monitor: val/fbeta_mlp
         verbose: true
         save_last: true
