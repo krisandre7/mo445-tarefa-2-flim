@@ -426,7 +426,7 @@ class SchistoSegmentationModule(LightningModule):
         # overlay the ground truth mask on the image
         gt_mask = torch.tensor(y * 255, dtype=torch.uint8).unsqueeze(0)
         
-        img = overlay_mask_on_image(img, gt_mask, color=(1, 0, 0), alpha=0.2)
+        img = overlay_mask_on_image(img, gt_mask, color=(1, 0, 0), alpha=0.3)
         img = (img * 255).type(torch.uint8)
         
         # Compute spatial derivatives using slicing (no padding)
