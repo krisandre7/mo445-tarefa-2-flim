@@ -24,8 +24,8 @@ model:
     dynamic_trees:
       segmentation:
         border: 1
-        min_comp_area: 1000
-        max_comp_area: 9000
+        min_comp_area: 500 #1000
+        max_comp_area: 7000 #9000
         saliency_erosion: 2
         saliency_dilation: 30
     f_beta: 0.3

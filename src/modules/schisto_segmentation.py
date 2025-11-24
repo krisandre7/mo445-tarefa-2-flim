@@ -216,6 +216,7 @@ class SchistoSegmentationModule(LightningModule):
             return None
 
         y = y[0].cpu().numpy()
+
         representation = self.model(x)
         seeds_in, seeds_out = self.prepare_seeds(y)
 
@@ -343,6 +344,8 @@ class SchistoSegmentationModule(LightningModule):
     def validation_step(self, batch, batch_idx):
         x = batch["image"].to(self.device)
         y = batch["label"]
+        img_name = batch['image_path'][0][-10:]
+
         y[y > 0] = 1
         y = y[0].cpu().numpy()
 
@@ -457,6 +460,7 @@ class SchistoSegmentationModule(LightningModule):
         res_t = torch.tensor(res * 255, dtype=torch.uint8).unsqueeze(0)
 
         self._val_samples.append({
+            "name": img_name,
             "fbeta": loss_mlp,
             "image": img,
             "representation": rep_grad,
@@ -495,6 +499,7 @@ class SchistoSegmentationModule(LightningModule):
 
             # --- Build grid of worst samples ---
             worst_rows = []
+            worst_names = []
             for s in worst_samples:
                 row = torch.cat([
                     s["image"],
@@ -504,13 +509,18 @@ class SchistoSegmentationModule(LightningModule):
                     s["res"].repeat(3, 1, 1),
                 ], dim=2)
                 worst_rows.append(row)
+                worst_names.append(s["name"])
             worst_grid = make_grid(worst_rows, nrow=1, normalize=False, scale_each=False)
+
+            # worst_names_table = wandb.Table(columns=["worst images' names"])
+            # for n in worst_names:
+            #     worst_names_table.add_data(n)
 
             # --- Log to WandB ---
             if hasattr(self.logger, "experiment"):
                 self.logger.experiment.log({
                     "val/worst_samples_grid": [
-                        wandb.Image(worst_grid, caption="Worst F-beta Samples")
+                        wandb.Image(worst_grid, caption=f"Worst F-beta Samples: {' '.join(worst_names)}")
                     ],
                     "global_step": self.global_step,
                 })

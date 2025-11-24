@@ -13,7 +13,8 @@ class SchistoDataModule(LightningDataModule):
     def __init__(
         self,
         split: int = 3,
-        home: str = "/home/kris/projects/mo445-analise-de-imagem/tarefa_2",
+        # home: str = "/home/kris/projects/mo445-analise-de-imagem/tarefa_2",
+        home: str = "/home/user/mo445/mo445-tarefa-2-flim/",
         train_split_ratio: float = 0.5,
         use_flim_data: bool = True,
         batch_size: int = 1,
