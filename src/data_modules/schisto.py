@@ -86,8 +86,14 @@ class SchistoDataModule(LightningDataModule):
         
         # Split GWE images into train/val
         split_idx = int(self.hparams.train_split_ratio * len(images_list_gwe_all))
-        images_list_gwe_train = images_list_gwe_all[:split_idx]
-        images_list_gwe_val = images_list_gwe_all[split_idx:]
+        
+        # if train_split_ratio is 1, then use all images for training
+        if split_idx == len(images_list_gwe_all):
+            images_list_gwe_train = images_list_gwe_all
+            images_list_gwe_val = images_list_gwe_all
+        else:
+            images_list_gwe_train = images_list_gwe_all[:split_idx]
+            images_list_gwe_val = images_list_gwe_all[split_idx:]
         
         # Test images
         test_df = pd.read_csv(self.test_split_file, header=None)

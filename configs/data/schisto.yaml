@@ -11,7 +11,15 @@ data:
     use_flim_data: true
 
     # transforms:
-      # train:
+    #   train:
+    #     - class_path: ToTensorV2
+    #       init_args: {}
+    #   val:
+    #     - class_path: ToTensorV2
+    #       init_args: {}
+    #   test:
+    #     - class_path: ToTensorV2
+    #       init_args: {}
       # - class_path: ShiftScaleRotate
       #   init_args:
       #     shift_limit: 0.1
