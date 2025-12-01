@@ -3,27 +3,29 @@ import secrets
 
 import cv2
 from matplotlib import pyplot as plt
-from pyflim import layers
+from pyflim import layers # type: ignore
 import torch
 import torch.nn as nn
 import numpy as np
-import pyift.pyift as ift
+import pyift.pyift as ift # type: ignore
 from pytorch_lightning import LightningModule
 from skimage.morphology import binary_dilation, binary_erosion, disk
 from skimage.filters import threshold_otsu
-import torchvision
 from torchvision.utils import make_grid
 import wandb
 
 from torchmetrics import MaxMetric
 from src.modules.utils import f_beta_score, filter_component_by_area, labnorm, overlay_mask_on_image
 from src.models.graph_weight_estimator import GraphWeightEstimator
+from src.models.dinov3_fg_segmentation import ForegroundSegmentationPipeline
 from pytorch_lightning.trainer.states import RunningStage
 
 class SchistoSegmentationModule(LightningModule):
     def __init__(
         self,
         use_gt: bool = False,
+        use_dinov3: bool = False,  # New flag
+        dinov3_config: dict = None, # New config
         arcw_id: int = 1,
         split: int = 3,
         graph_weight_estimator: dict = None,
@@ -43,7 +45,7 @@ class SchistoSegmentationModule(LightningModule):
         
         self.rng = np.random.default_rng(seed)
         
-        # Initialize model
+        # Initialize Graph Weight Estimator (MLP)
         self.model = GraphWeightEstimator(
             **graph_weight_estimator
         )
@@ -51,43 +53,57 @@ class SchistoSegmentationModule(LightningModule):
         # Loss function
         self.loss_fn = nn.TripletMarginLoss(margin=triplet_margin)
         
-        # Load FLIM model
-        if flim_model_path is None:
-            flim_model_path = f'models/flim/split{split}/flim_encoder_split{split}.pth'
+        # --- Saliency Generator Initialization (FLIM vs DINOv3) ---
+        self.flim_model = None
+        self.dinov3_pipeline = None
         
-        if not Path(flim_model_path).exists():
-            raise FileNotFoundError(
-                f"FLIM model not found at {flim_model_path}. Please provide a valid path."
+        if use_dinov3:
+            if dinov3_config is None:
+                raise ValueError("dinov3_config must be provided if use_dinov3 is True")
+            
+            print("Initializing DINOv3 Pipeline for saliency extraction...")
+            # We initialize with cpu first; Lightning will move the model attribute later
+            self.dinov3_pipeline = ForegroundSegmentationPipeline.from_pretrained(
+                device="cpu", 
+                **dinov3_config
             )
-        
-        self.flim_model = None 
-        self.flim_model_path = flim_model_path
-        
-        self.flim_model = torch.load(
-            self.flim_model_path, 
-            weights_only=False,
-        )
-        
-        self.flim_model.decoder = layers.FLIMAdaptiveDecoderLayer(
-            1,
-            device=str(self.device),
-            **self.hparams.flim_decoder
-        )
-        self.flim_model.eval()
+            # IMPORTANT: Assign the torch module to self so Lightning handles 
+            # device movement (cpu -> cuda) and precision automatically.
+            self.dinov3_model = self.dinov3_pipeline.model
+            
+        else:
+            # Load FLIM model
+            if flim_model_path is None:
+                flim_model_path = f'models/flim/split{split}/flim_encoder_split{split}.pth'
+            
+            if not Path(flim_model_path).exists():
+                raise FileNotFoundError(
+                    f"FLIM model not found at {flim_model_path}. Please provide a valid path."
+                )
+            
+            self.flim_model_path = flim_model_path
+            self.flim_model = torch.load(
+                self.flim_model_path, 
+                weights_only=False,
+            )
+            
+            self.flim_model.decoder = layers.FLIMAdaptiveDecoderLayer(
+                1,
+                device=str(self.device),
+                **self.hparams.flim_decoder
+            )
+            self.flim_model.eval()
 
         # --- METRIC STORAGE ---
-        # We initialize lists to store scores for std calculation
         self.val_mlp_scores = []
         self.test_mlp_scores = []
         self.test_lab_scores = []
         
-        # import maxmetric from pytorch_lightning.metrics
         self.val_best_fbeta_mlp = MaxMetric()
         self.test_best_fbeta_mlp = MaxMetric()
         
 
     def _get_tags_and_run_name(self):
-        # ... (Your existing code for tags remains unchanged) ...
         hparams = getattr(self, "hparams", None)
         if hparams is None:
             return [], "unnamed_run"
@@ -97,6 +113,7 @@ class SchistoSegmentationModule(LightningModule):
         
         stage = self.trainer.state.stage
         
+        # Stage tags
         if stage == RunningStage.TRAINING:
             tags.append("train")
             run_name_parts.append("train")
@@ -113,9 +130,14 @@ class SchistoSegmentationModule(LightningModule):
         run_name_parts.append("schist_seg")
         tags.append("schisto_seg")
 
+        # Method tags
         if hparams.use_gt:
             tags.append("use_gt")
             run_name_parts.append("gt")
+        elif hparams.use_dinov3:
+            tags.append("use_dinov3")
+            run_name_parts.append("dinov3")
+            tags.append(hparams.dinov3_config.get("model_name", "dino"))
         else:
             tags.append("use_flim")
             run_name_parts.append("flim")
@@ -130,11 +152,13 @@ class SchistoSegmentationModule(LightningModule):
         tags.append(f"embed{gcfg.get('embed_dim', 'na')}")
         run_name_parts.append(f"e{gcfg.get('embed_dim', 'na')}")
 
-        flim_decoder = hparams.flim_decoder
-        if flim_decoder and "decoder_type" in flim_decoder:
-            dec_type = flim_decoder["decoder_type"]
-            tags.append(dec_type)
-            run_name_parts.append(dec_type)
+        # FLIM specific tags
+        if not hparams.use_dinov3 and not hparams.use_gt:
+            flim_decoder = hparams.flim_decoder
+            if flim_decoder and "decoder_type" in flim_decoder:
+                dec_type = flim_decoder["decoder_type"]
+                tags.append(dec_type)
+                run_name_parts.append(dec_type)
 
         tags.append(f"triplet_margin_{hparams.triplet_margin}")
         tags.append(f"l2_{hparams.l2_reg_weight}")
@@ -207,7 +231,6 @@ class SchistoSegmentationModule(LightningModule):
         return seeds_in.astype(np.int32), seeds_out.astype(np.int32)
 
     def training_step(self, batch, batch_idx):
-        # ... (Your existing training logic) ...
         x = batch["image"]
         y = batch["label"]
         y[y > 0] = 1
@@ -326,18 +349,61 @@ class SchistoSegmentationModule(LightningModule):
         with torch.no_grad():
             y_t = self.flim_model.forward(x_t, decoder_layer=decoder_layer)
         return y_t.squeeze().detach().cpu().numpy().astype(np.float32)
+    
+    def get_dinov3_representation(self, x):
+        """
+        Get saliency using DINOv3 pipeline.
+        Returns the foreground probability score (fg_score) to be compatible with Otsu thresholding.
+        """
+        # Ensure the internal pipeline device matches the current module device
+        # This is necessary because the pipeline class stores a device string
+        self.dinov3_pipeline.device = str(self.device)
+        
+        saliencies = []
+        batch_size = x.shape[0]
+        
+        # The pipeline processes one image at a time
+        for i in range(batch_size):
+            # Pipeline returns: (fg_score, fg_score_bin, pred_mask, valid)
+            # We use fg_score (float prob) so that subsequent thresholding in validation_step works similarly to FLIM
+            fg_score, _, _, _ = self.dinov3_pipeline(x[i])
+            saliencies.append(fg_score)
+            
+        # Stack back into a batch if needed, or return single item if batch=1 and code expects it
+        if batch_size == 1:
+            return saliencies[0].astype(np.float32)
+        else:
+            return np.stack(saliencies).astype(np.float32)
 
     def get_saliency(self, x, y, decoder_layer=0, to_MImage=True):
-        if not self.hparams.use_gt:
-            y_t = self.get_flim_representation(x, decoder_layer=0)
-            saliency = ift.CreateImageFromNumPy(
-                y_t.astype(np.int32), is3D=False
-            ) if to_MImage else y_t
-        else:
+        if self.hparams.use_gt:
             y_t = (y * 255).astype(np.int32)
             saliency = ift.CreateImageFromNumPy(
                 y_t, is3D=False
             ) if to_MImage else y_t
+            return saliency
+
+        # Choose between DINOv3 and FLIM
+        if self.hparams.use_dinov3:
+            y_t = self.get_dinov3_representation(x)
+            # DINOv3 output is usually [0, 1] floats. 
+            # If to_MImage implies it needs integer-like values for standard image processing:
+            # However, logic in validation_step performs threshold_otsu on `saliency_mask` (which comes from here).
+            # If y_t is float 0-1, Otsu works fine.
+            # If to_MImage is True, IFT expects specific types.
+            if to_MImage:
+                # Scale to 0-255 for IFT compatibility if it expects image-like integers
+                y_t_int = (y_t * 255).astype(np.int32)
+                saliency = ift.CreateImageFromNumPy(y_t_int, is3D=False)
+            else:
+                saliency = y_t
+        else:
+            # FLIM
+            y_t = self.get_flim_representation(x, decoder_layer=0)
+            saliency = ift.CreateImageFromNumPy(
+                y_t.astype(np.int32), is3D=False
+            ) if to_MImage else y_t
+            
         return saliency
     
     def validation_step(self, batch, batch_idx):
@@ -350,7 +416,8 @@ class SchistoSegmentationModule(LightningModule):
         saliency = self.get_saliency(x, y, to_MImage=False)
         
         saliency_mimg = ift.CreateImageFromNumPy(
-            saliency.astype(np.int32), is3D=False
+            (saliency * 255).astype(np.int32) if saliency.max() <= 1.0 else saliency.astype(np.int32), 
+            is3D=False
         )
 
         res_mimg = ift.CreateMImageFromNumPy(
