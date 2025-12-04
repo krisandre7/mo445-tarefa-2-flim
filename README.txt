@@ -3,7 +3,7 @@
 ## Cria ambiente conda:
 ```bash
 mamba create -n flim python=3.11 -y
-mamba activate FLIM
+mamba activate flim
 ```
 ## Instala IFT:
 - configura a variável NEWIFT_DIR no seu ~/.bashrc
@@ -26,7 +26,7 @@ make
 ```bash
 cd ift/PyIFT
 pip install "numpy<2"
-pip install -e .
+pip install -e . --no-build-isolation
 ```
 Testa instalação:
 ```bash

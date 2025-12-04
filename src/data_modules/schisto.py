@@ -20,6 +20,7 @@ class SchistoDataModule(LightningDataModule):
         num_workers: int = 0,
         seed: int = 2021,
         transforms: Optional[dict[str, list[dict[str, Any]]]] = None,
+        use_lab: bool = True,
         image_size: int = 400,
     ):
         super().__init__()
@@ -119,7 +120,8 @@ class SchistoDataModule(LightningDataModule):
                 marker_ext="-seeds.txt",
                 label_ext=".png",
                 transform=self.transforms_train,
-                lab_norm=False
+                lab_norm=False,
+                lab=self.hparams.use_lab
             )
             
             self.train_dataset_gwe = data.FLIMData(
@@ -129,7 +131,8 @@ class SchistoDataModule(LightningDataModule):
                 orig_ext=".png",
                 label_ext=".png",
                 transform=self.transforms_train,
-                lab_norm=False
+                lab_norm=False,
+                lab=self.hparams.use_lab
             )
             
             self.val_dataset = data.FLIMData(
@@ -139,7 +142,8 @@ class SchistoDataModule(LightningDataModule):
                 orig_ext=".png",
                 label_ext=".png",
                 transform=self.transforms_val,
-                lab_norm=False
+                lab_norm=False,
+                lab=self.hparams.use_lab
             )
         
         if stage == "test" or stage is None:
@@ -150,7 +154,8 @@ class SchistoDataModule(LightningDataModule):
                 orig_ext=".png",
                 label_ext=".png",
                 transform=self.transforms_test,
-                lab_norm=False
+                lab_norm=False,
+                lab=self.hparams.use_lab
             )
     
     def train_dataloader(self):
