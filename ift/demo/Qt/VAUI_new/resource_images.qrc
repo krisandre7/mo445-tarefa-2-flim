@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/resource_images">
+        <file>Images/imageMissing.png</file>
+        <file>Images/Next-icon.png</file>
+        <file>Images/Previous-icon.png</file>
+        <file>Images/Save-icon.png</file>
+        <file>Images/open-icon.png</file>
+        <file>Images/folder-icon.png</file>
+        <file>Images/plot-icon.png</file>
+        <file>Images/main-icon.png</file>
+        <file>Images/logo_lids.jpg</file>
+        <file>Images/page-icon.png</file>
+        <file>Images/text.ico</file>
+        <file>Images/scatterPlot.png</file>
+        <file>Images/SceneSettings.png</file>
+        <file>Images/SceneSettings2.png</file>
+    </qresource>
+    <qresource prefix="/">
+        <file>Images/scatterPlot.png</file>
+    </qresource>
+</RCC>

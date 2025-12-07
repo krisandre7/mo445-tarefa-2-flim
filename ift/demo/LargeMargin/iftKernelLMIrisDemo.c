@@ -1,0 +1,70 @@
+#include "ift.h"
+
+void iftLoadIris(double **data, int **label, int n, int d)
+{
+    *data = iftAlloc(n * d, sizeof **data);
+    *label = iftAlloc(n, sizeof **label);
+
+    FILE *f = fopen("iris-data.csv", "r");
+    for (int i = 0; i < n*d; i+=4) {
+        fscanf(f, "%lf,%lf,%lf,%lf\n", &(*data)[i], &(*data)[i+1], &(*data)[i+2], &(*data)[i+3]);
+    }
+    fclose(f);
+
+    f = fopen("iris-label.csv", "r");
+    for (int i = 0; i < n; i++) {
+        fscanf(f, "%d ", &(*label)[i]);
+    }
+    fclose(f);
+}
+
+void iftPrintDouble(  double *data, int n, int d)
+{
+    printf("[");
+    for (int i = 0; i < n; i++) {
+        printf("[");
+        for (int j = 0; j < d; j++) {
+            printf("%lf", data[i * d + j]);
+            if (j != (d-1)) printf(",");
+        }
+        printf("]");
+        if (i != (n-1)) printf(",\n");
+    }
+    printf("]\n");
+}
+
+int main(int argc, const char *argv[])
+{
+    if (argc != 6) {
+        iftError("iftKernelIrisDemo <number of targets> <number of iterations (1000)> <learning rate (1e-7)>"
+                 "<sigma> <impostor rate>", "iftIrisDemo");
+    }
+
+    int k_targets = atoi(argv[1]);
+    int iterations = atoi(argv[2]);
+    double learn_rate = atof(argv[3]);
+    double sigma = atof(argv[4]);
+    double c = atof(argv[5]);
+
+    int n = 150;
+    int d = 4;
+    int d_out = 2;
+    double *data = NULL;
+    int *label = NULL;
+    iftLoadIris(&data, &label, n, d);
+
+    iftCheckNumberOfTargets(label, n, &k_targets);
+
+    iftKernelFunction *K = iftMetricLearnKernel(KERNEL_GAUSSIAN);
+    double *gram = iftGramianMatrix(data, n, d, K, sigma, 0);
+    double *new_L = iftKernelLMCA(gram, label, n, d_out, k_targets, c, learn_rate, iterations, true);
+
+    iftPrintDouble(new_L, d_out, n);
+
+    iftFree(gram);
+    iftFree(data);
+    iftFree(label);
+    iftFree(new_L);
+
+    return 0;
+}

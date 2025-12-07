@@ -1,0 +1,569 @@
+--------------------------------
+Image Database: ./base/test/orig/
+Number of Images: 10
+IFT Algorithm: DIFFERENTIAL
+Segmentation: RELAXED
+Smooth Iterations: 25
+Robot: GEODESIC
+Segmentation Iterations: 15
+Seeds per Iteration: 8
+Basins Type: Image Basins
+--------------------------------
+
+Processing: 000001_000001.ppm and 000001_0000001.pgm
+j= 0 edt= 5813.2021
+j= 1 edt= 1535.1003
+j= 2 edt= 15.5780
+j= 3 edt= 3.8530
+j= 4 edt= 2.2184
+j= 5 edt= 2.2366
+j= 6 edt= 2.1918
+j= 7 edt= 2.1737
+j= 8 edt= 2.1737
+It: 8 FinalErr: 2.1737	FinalItert.: 8.00
+Processing: 000001_000002.ppm and 000001_0000002.pgm
+j= 0 edt= 182.3450
+j= 1 edt= 189.0674
+j= 2 edt= 151.8763
+j= 3 edt= 120.2897
+j= 4 edt= 147.7811
+j= 5 edt= 98.9512
+j= 6 edt= 5.1216
+j= 7 edt= 2.8382
+j= 8 edt= 76.1481
+j= 9 edt= 2.1425
+j= 10 edt= 2.0774
+j= 11 edt= 2.0090
+j= 12 edt= 2.0209
+j= 13 edt= 2.0157
+j= 14 edt= 2.0157
+It: 14 FinalErr: 2.0157	FinalItert.: 14.00
+Processing: 000001_000003.ppm and 000001_0000003.pgm
+j= 0 edt= 8376.5928
+j= 1 edt= 18.9369
+j= 2 edt= 5.9218
+j= 3 edt= 1.4348
+j= 4 edt= 1.3632
+j= 5 edt= 1.3656
+j= 6 edt= 1.3638
+j= 7 edt= 1.3638
+It: 7 FinalErr: 1.3638	FinalItert.: 7.00
+Processing: 000001_000004.ppm and 000001_0000004.pgm
+j= 0 edt= 2178.6753
+j= 1 edt= 1157.7532
+j= 2 edt= 2279.0710
+j= 3 edt= 700.0999
+j= 4 edt= 206.3779
+j= 5 edt= 149.0559
+j= 6 edt= 48.2098
+j= 7 edt= 32.5904
+j= 8 edt= 20.2812
+j= 9 edt= 6.5360
+j= 10 edt= 4.7109
+j= 11 edt= 2.8449
+j= 12 edt= 2.4241
+j= 13 edt= 2.2329
+j= 14 edt= 2.2146
+It: 14 FinalErr: 2.2146	FinalItert.: 15.00
+Processing: 000001_000005.ppm and 000001_0000005.pgm
+j= 0 edt= 1815.2919
+j= 1 edt= 173.2477
+j= 2 edt= 103.4869
+j= 3 edt= 95.2957
+j= 4 edt= 44.5269
+j= 5 edt= 27.7722
+j= 6 edt= 20.4649
+j= 7 edt= 12.1615
+j= 8 edt= 1716.3593
+j= 9 edt= 1691.9250
+j= 10 edt= 1646.8756
+j= 11 edt= 10.3190
+j= 12 edt= 2.9349
+j= 13 edt= 2.3426
+j= 14 edt= 1.8949
+It: 14 FinalErr: 1.8949	FinalItert.: 15.00
+Processing: 000001_000006.ppm and 000001_0000006.pgm
+j= 0 edt= 37.3363
+j= 1 edt= 8138.1494
+j= 2 edt= 7280.5566
+j= 3 edt= 6262.2700
+j= 4 edt= 6905.6138
+j= 5 edt= 40.3914
+j= 6 edt= 6.4775
+j= 7 edt= 3.8072
+j= 8 edt= 3.4511
+j= 9 edt= 0.9822
+j= 10 edt= 0.9416
+j= 11 edt= 0.9416
+It: 11 FinalErr: 0.9416	FinalItert.: 11.00
+Processing: 000001_000007.ppm and 000001_0000007.pgm
+j= 0 edt= 2494.8101
+j= 1 edt= 2051.5642
+j= 2 edt= 1674.6329
+j= 3 edt= 1583.5774
+j= 4 edt= 578.1617
+j= 5 edt= 11649.3320
+j= 6 edt= 13760.8818
+j= 7 edt= 9847.2031
+j= 8 edt= 7886.1616
+j= 9 edt= 2265.2451
+j= 10 edt= 656.8605
+j= 11 edt= 37.9202
+j= 12 edt= 4.4259
+j= 13 edt= 4689.5459
+j= 14 edt= 3.4905
+It: 14 FinalErr: 3.4905	FinalItert.: 15.00
+Processing: 000001_000008.ppm and 000001_0000008.pgm
+j= 0 edt= 32.2368
+j= 1 edt= 193.5355
+j= 2 edt= 703.7857
+j= 3 edt= 22.9965
+j= 4 edt= 4.2918
+j= 5 edt= 1.4181
+j= 6 edt= 1.4932
+j= 7 edt= 1.2647
+j= 8 edt= 1.2600
+j= 9 edt= 1.2537
+j= 10 edt= 1.2525
+j= 11 edt= 1.2513
+j= 12 edt= 1.2513
+It: 12 FinalErr: 1.2513	FinalItert.: 12.00
+Processing: 000001_000009.ppm and 000001_0000009.pgm
+j= 0 edt= 1445.4266
+j= 1 edt= 198.9239
+j= 2 edt= 3479.4490
+j= 3 edt= 985.8286
+j= 4 edt= 1.9827
+j= 5 edt= 1.4322
+j= 6 edt= 1.1939
+j= 7 edt= 1.1775
+j= 8 edt= 1.1680
+j= 9 edt= 1.1628
+j= 10 edt= 1.1463
+j= 11 edt= 1.1463
+It: 11 FinalErr: 1.1463	FinalItert.: 11.00
+Processing: 000001_000010.ppm and 000001_0000010.pgm
+j= 0 edt= 22483.2539
+j= 1 edt= 7232.3696
+j= 2 edt= 4600.6567
+j= 3 edt= 3776.3303
+j= 4 edt= 458.2556
+j= 5 edt= 666.2825
+j= 6 edt= 200.6915
+j= 7 edt= 171.3428
+j= 8 edt= 10.2613
+j= 9 edt= 4.5929
+j= 10 edt= 2.7151
+j= 11 edt= 2.6114
+j= 12 edt= 2.6121
+j= 13 edt= 2.6086
+j= 14 edt= 2.6086
+It: 14 FinalErr: 2.6086	FinalItert.: 14.00
+X		EDT_ERROR		PRECISION		RECALL		FSCORE		ACCURACY
+0		4485.917		0.746			0.586		0.509		0.737		
+1		2088.865		0.808			0.754		0.685		0.856		
+2		2029.502		0.754			0.808		0.716		0.856		
+3		1355.198		0.875			0.828		0.810		0.929		
+4		835.057			0.905			0.893		0.890		0.957		
+5		1263.824		0.871			0.873		0.851		0.886		
+6		1404.809		0.895			0.961		0.899		0.906		
+7		1007.592		0.910			0.959		0.915		0.942		
+8		971.726			0.811			0.868		0.827		0.858		
+9		397.384			0.740			0.774		0.750		0.775		
+10		231.658			0.765			0.768		0.766		0.786		
+11		5.904			0.789			0.776		0.783		0.792		
+12		1.567			0.594			0.583		0.588		0.595		
+13		469.875			0.455			0.487		0.467		0.485		
+14		1.222			0.495			0.487		0.491		0.496		
+Mean final error: 1.9101
+Mean final iteration: 12.2000
+
+Variance final error: 0.54
+Std Deviation final error: 0.74
+Variance final iteration: 7.76
+Std Deviation final iteration: 2.79
+
+Worst final error was: 3.49 with 000001_000007.ppm
+Best final error was 0.94 with 000001_000006.ppm
+Worst final iteration was: 15.00 with 000001_000004.ppm
+Best final iteration was 7.00 with 000001_000003.ppm
+
+
+=======================================================================================================
+--------------------------------
+Image Database: ./base/test/orig/
+Number of Images: 10
+IFT Algorithm: DIFFERENTIAL
+Segmentation: REGULAR
+Robot: GEODESIC
+Segmentation Iterations: 15
+Seeds per Iteration: 8
+Basins Type: Image Basins
+--------------------------------
+
+Processing: 000001_000001.ppm and 000001_0000001.pgm
+j= 0 edt= 5669.4131
+j= 1 edt= 1477.6915
+j= 2 edt= 57.1906
+j= 3 edt= 11.5392
+j= 4 edt= 4.5850
+j= 5 edt= 2.9935
+j= 6 edt= 2.4230
+j= 7 edt= 1.9390
+j= 8 edt= 1.9390
+It: 8 FinalErr: 1.9390	FinalItert.: 8.00
+Processing: 000001_000002.ppm and 000001_0000002.pgm
+j= 0 edt= 180.3546
+j= 1 edt= 189.2120
+j= 2 edt= 167.9119
+j= 3 edt= 127.7323
+j= 4 edt= 103.3390
+j= 5 edt= 61.3600
+j= 6 edt= 50.2794
+j= 7 edt= 3.5896
+j= 8 edt= 71.5849
+j= 9 edt= 2.8539
+j= 10 edt= 2.8539
+It: 10 FinalErr: 2.8539	FinalItert.: 10.00
+Processing: 000001_000003.ppm and 000001_0000003.pgm
+j= 0 edt= 8182.5552
+j= 1 edt= 19.0504
+j= 2 edt= 8.6787
+j= 3 edt= 1.9791
+j= 4 edt= 2.4078
+j= 5 edt= 2.3798
+j= 6 edt= 208.0951
+j= 7 edt= 3.7268
+j= 8 edt= 1.5456
+j= 9 edt= 1.4938
+j= 10 edt= 1.4938
+It: 10 FinalErr: 1.4938	FinalItert.: 10.00
+Processing: 000001_000004.ppm and 000001_0000004.pgm
+j= 0 edt= 2146.1135
+j= 1 edt= 1212.9558
+j= 2 edt= 2196.5566
+j= 3 edt= 702.9896
+j= 4 edt= 200.6681
+j= 5 edt= 148.9812
+j= 6 edt= 46.9271
+j= 7 edt= 34.5742
+j= 8 edt= 25.5116
+j= 9 edt= 11.3931
+j= 10 edt= 9.5991
+j= 11 edt= 6.4729
+j= 12 edt= 5.2801
+j= 13 edt= 3.9642
+j= 14 edt= 3.4595
+It: 14 FinalErr: 3.4595	FinalItert.: 15.00
+Processing: 000001_000005.ppm and 000001_0000005.pgm
+j= 0 edt= 1778.9570
+j= 1 edt= 169.8051
+j= 2 edt= 116.5712
+j= 3 edt= 136.9708
+j= 4 edt= 114.6032
+j= 5 edt= 107.1759
+j= 6 edt= 1684.4348
+j= 7 edt= 1603.6384
+j= 8 edt= 1582.9252
+j= 9 edt= 3.0839
+j= 10 edt= 7.7042
+j= 11 edt= 5.2191
+j= 12 edt= 3.2327
+j= 13 edt= 2.6892
+j= 14 edt= 1.9528
+It: 14 FinalErr: 1.9528	FinalItert.: 15.00
+Processing: 000001_000006.ppm and 000001_0000006.pgm
+j= 0 edt= 43.5074
+j= 1 edt= 8200.1357
+j= 2 edt= 7379.3276
+j= 3 edt= 6468.4365
+j= 4 edt= 7518.1084
+j= 5 edt= 45.7469
+j= 6 edt= 8.3828
+j= 7 edt= 4.2699
+j= 8 edt= 4.1312
+j= 9 edt= 4.1312
+It: 9 FinalErr: 4.1312	FinalItert.: 9.00
+Processing: 000001_000007.ppm and 000001_0000007.pgm
+j= 0 edt= 2414.1091
+j= 1 edt= 1999.2709
+j= 2 edt= 1619.1167
+j= 3 edt= 1514.1244
+j= 4 edt= 663.0067
+j= 5 edt= 1077.6663
+j= 6 edt= 6290.8296
+j= 7 edt= 545.2388
+j= 8 edt= 11216.7256
+j= 9 edt= 6594.1719
+j= 10 edt= 2625.4502
+j= 11 edt= 2060.6892
+j= 12 edt= 35.0733
+j= 13 edt= 9.2238
+j= 14 edt= 4.9521
+It: 14 FinalErr: 4.9521	FinalItert.: 15.00
+Processing: 000001_000008.ppm and 000001_0000008.pgm
+j= 0 edt= 31.7705
+j= 1 edt= 193.6578
+j= 2 edt= 682.7063
+j= 3 edt= 33.8945
+j= 4 edt= 4.6934
+j= 5 edt= 2.3400
+j= 6 edt= 1.6488
+j= 7 edt= 1.6488
+It: 7 FinalErr: 1.6488	FinalItert.: 7.00
+Processing: 000001_000009.ppm and 000001_0000009.pgm
+j= 0 edt= 1413.5752
+j= 1 edt= 196.9797
+j= 2 edt= 3384.3494
+j= 3 edt= 955.0776
+j= 4 edt= 2.2172
+j= 5 edt= 1.5431
+j= 6 edt= 1.2832
+j= 7 edt= 1.2350
+j= 8 edt= 1.2227
+j= 9 edt= 1.2227
+It: 9 FinalErr: 1.2227	FinalItert.: 9.00
+Processing: 000001_000010.ppm and 000001_0000010.pgm
+j= 0 edt= 22265.7637
+j= 1 edt= 7002.7700
+j= 2 edt= 4145.9165
+j= 3 edt= 637.8275
+j= 4 edt= 3066.3962
+j= 5 edt= 456.0700
+j= 6 edt= 406.7504
+j= 7 edt= 163.5764
+j= 8 edt= 6.7923
+j= 9 edt= 6.6852
+j= 10 edt= 7.7053
+j= 11 edt= 6.9770
+j= 12 edt= 6.9000
+j= 13 edt= 6.8455
+j= 14 edt= 6.8455
+It: 14 FinalErr: 6.8455	FinalItert.: 14.00
+X		EDT_ERROR		PRECISION		RECALL		FSCORE		ACCURACY
+0		4412.612		0.746			0.586		0.510		0.737		
+1		2066.153		0.808			0.755		0.685		0.856		
+2		1975.833		0.751			0.810		0.716		0.856		
+3		1059.057		0.894			0.795		0.803		0.933		
+4		1168.002		0.894			0.892		0.882		0.953		
+5		190.626			0.969			0.876		0.899		0.968		
+6		870.105			0.881			0.902		0.889		0.946		
+7		236.344			0.985			0.931		0.953		0.983		
+8		1291.238		0.797			0.870		0.807		0.817		
+9		662.504			0.721			0.769		0.730		0.755		
+10		265.481			0.540			0.575		0.550		0.576		
+11		207.936			0.348			0.387		0.362		0.382		
+12		5.049			0.391			0.387		0.389		0.395		
+13		2.272			0.395			0.389		0.392		0.396		
+14		1.721			0.395			0.390		0.393		0.396		
+Mean final error: 3.0499
+Mean final iteration: 11.2000
+
+Variance final error: 2.96
+Std Deviation final error: 1.72
+Variance final iteration: 9.16
+Std Deviation final iteration: 3.03
+
+Worst final error was: 6.85 with 000001_000010.ppm
+Best final error was 1.22 with 000001_000009.ppm
+Worst final iteration was: 15.00 with 000001_000004.ppm
+Best final iteration was 7.00 with 000001_000008.ppm
+
+
+=======================================================================================================
+--------------------------------
+Image Database: ./base/test/orig/
+Number of Images: 10
+IFT Algorithm: DIFFERENTIAL
+Segmentation: RELAX LAST ITERATION
+Robot: GEODESIC
+Segmentation Iterations: 15
+Seeds per Iteration: 8
+Basins Type: Image Basins
+--------------------------------
+
+Processing: 000001_000001.ppm and 000001_0000001.pgm
+j= 0 edt= 5669.4131
+j= 1 edt= 1477.6915
+j= 2 edt= 57.1906
+j= 3 edt= 11.5392
+j= 4 edt= 4.5850
+j= 5 edt= 2.9935
+j= 6 edt= 2.4230
+j= 7 edt= 1.9390
+j= 8 edt= 1.9390
+Relaxing at last iteration 8
+EDT relaxing last: 1.4410
+It: 8 FinalErr: 1.4410	FinalItert.: 9.00
+Processing: 000001_000002.ppm and 000001_0000002.pgm
+j= 0 edt= 180.3546
+j= 1 edt= 189.2120
+j= 2 edt= 167.9119
+j= 3 edt= 127.7323
+j= 4 edt= 103.3390
+j= 5 edt= 61.3600
+j= 6 edt= 50.2794
+j= 7 edt= 3.5896
+j= 8 edt= 71.5849
+j= 9 edt= 2.8539
+j= 10 edt= 2.8539
+Relaxing at last iteration 10
+EDT relaxing last: 2.1320
+It: 10 FinalErr: 2.1320	FinalItert.: 11.00
+Processing: 000001_000003.ppm and 000001_0000003.pgm
+j= 0 edt= 8182.5552
+j= 1 edt= 19.0504
+j= 2 edt= 8.6787
+j= 3 edt= 1.9791
+j= 4 edt= 2.4078
+j= 5 edt= 2.3798
+j= 6 edt= 208.0951
+j= 7 edt= 3.7268
+j= 8 edt= 1.5456
+j= 9 edt= 1.4938
+j= 10 edt= 1.4938
+Relaxing at last iteration 10
+EDT relaxing last: 1.2884
+It: 10 FinalErr: 1.2884	FinalItert.: 11.00
+Processing: 000001_000004.ppm and 000001_0000004.pgm
+j= 0 edt= 2146.1135
+j= 1 edt= 1212.9558
+j= 2 edt= 2196.5566
+j= 3 edt= 702.9896
+j= 4 edt= 200.6681
+j= 5 edt= 148.9812
+j= 6 edt= 46.9271
+j= 7 edt= 34.5742
+j= 8 edt= 25.5116
+j= 9 edt= 11.3931
+j= 10 edt= 9.5991
+j= 11 edt= 6.4729
+j= 12 edt= 5.2801
+j= 13 edt= 3.9642
+j= 14 edt= 3.4595
+It: 14 FinalErr: 3.4595	FinalItert.: 15.00
+Processing: 000001_000005.ppm and 000001_0000005.pgm
+j= 0 edt= 1778.9570
+j= 1 edt= 169.8051
+j= 2 edt= 116.5712
+j= 3 edt= 136.9708
+j= 4 edt= 114.6032
+j= 5 edt= 107.1759
+j= 6 edt= 1684.4348
+j= 7 edt= 1603.6384
+j= 8 edt= 1582.9252
+j= 9 edt= 3.0839
+j= 10 edt= 7.7042
+j= 11 edt= 5.2191
+j= 12 edt= 3.2327
+j= 13 edt= 2.6892
+j= 14 edt= 1.9528
+It: 14 FinalErr: 1.9528	FinalItert.: 15.00
+Processing: 000001_000006.ppm and 000001_0000006.pgm
+j= 0 edt= 43.5074
+j= 1 edt= 8200.1357
+j= 2 edt= 7379.3276
+j= 3 edt= 6468.4365
+j= 4 edt= 7518.1084
+j= 5 edt= 45.7469
+j= 6 edt= 8.3828
+j= 7 edt= 4.2699
+j= 8 edt= 4.1312
+j= 9 edt= 4.1312
+Relaxing at last iteration 9
+EDT relaxing last: 3.7617
+It: 9 FinalErr: 3.7617	FinalItert.: 10.00
+Processing: 000001_000007.ppm and 000001_0000007.pgm
+j= 0 edt= 2414.1091
+j= 1 edt= 1999.2709
+j= 2 edt= 1619.1167
+j= 3 edt= 1514.1244
+j= 4 edt= 663.0067
+j= 5 edt= 1077.6663
+j= 6 edt= 6290.8296
+j= 7 edt= 545.2388
+j= 8 edt= 11216.7256
+j= 9 edt= 6594.1719
+j= 10 edt= 2625.4502
+j= 11 edt= 2060.6892
+j= 12 edt= 35.0733
+j= 13 edt= 9.2238
+j= 14 edt= 4.9521
+It: 14 FinalErr: 4.9521	FinalItert.: 15.00
+Processing: 000001_000008.ppm and 000001_0000008.pgm
+j= 0 edt= 31.7705
+j= 1 edt= 193.6578
+j= 2 edt= 682.7063
+j= 3 edt= 33.8945
+j= 4 edt= 4.6934
+j= 5 edt= 2.3400
+j= 6 edt= 1.6488
+j= 7 edt= 1.6488
+Relaxing at last iteration 7
+EDT relaxing last: 1.5937
+It: 7 FinalErr: 1.5937	FinalItert.: 8.00
+Processing: 000001_000009.ppm and 000001_0000009.pgm
+j= 0 edt= 1413.5752
+j= 1 edt= 196.9797
+j= 2 edt= 3384.3494
+j= 3 edt= 955.0776
+j= 4 edt= 2.2172
+j= 5 edt= 1.5431
+j= 6 edt= 1.2832
+j= 7 edt= 1.2350
+j= 8 edt= 1.2227
+j= 9 edt= 1.2227
+Relaxing at last iteration 9
+EDT relaxing last: 1.1324
+It: 9 FinalErr: 1.1324	FinalItert.: 10.00
+Processing: 000001_000010.ppm and 000001_0000010.pgm
+j= 0 edt= 22265.7637
+j= 1 edt= 7002.7700
+j= 2 edt= 4145.9165
+j= 3 edt= 637.8275
+j= 4 edt= 3066.3962
+j= 5 edt= 224.8859
+j= 6 edt= 167.8970
+j= 7 edt= 163.5764
+j= 8 edt= 6.7923
+j= 9 edt= 6.6852
+j= 10 edt= 7.7053
+j= 11 edt= 6.9770
+j= 12 edt= 6.9000
+j= 13 edt= 6.8455
+j= 14 edt= 6.8455
+Relaxing at last iteration 14
+EDT relaxing last: 6.2960
+It: 14 FinalErr: 6.2960	FinalItert.: 15.00
+X		EDT_ERROR		PRECISION		RECALL		FSCORE		ACCURACY
+0		4412.612		0.746			0.586		0.510		0.737		
+1		2066.153		0.808			0.755		0.685		0.856		
+2		1975.833		0.751			0.810		0.716		0.856		
+3		1059.057		0.894			0.795		0.803		0.933		
+4		1168.002		0.894			0.892		0.882		0.953		
+5		167.507			0.969			0.876		0.900		0.969		
+6		846.220			0.882			0.902		0.889		0.946		
+7		236.338			0.985			0.930		0.953		0.983		
+8		1291.188		0.797			0.870		0.807		0.817		
+9		662.458			0.721			0.769		0.730		0.755		
+10		265.388			0.540			0.576		0.551		0.576		
+11		207.936			0.348			0.387		0.362		0.382		
+12		5.049			0.391			0.387		0.389		0.395		
+13		2.272			0.395			0.389		0.392		0.396		
+14		1.666			0.396			0.390		0.393		0.397		
+Mean final error: 2.8010
+Mean final iteration: 11.9000
+
+Variance final error: 2.77
+Std Deviation final error: 1.67
+Variance final iteration: 7.09
+Std Deviation final iteration: 2.66
+
+Worst final error was: 6.30 with 000001_000010.ppm
+Best final error was 1.13 with 000001_000009.ppm
+Worst final iteration was: 15.00 with 000001_000004.ppm
+Best final iteration was 8.00 with 000001_000008.ppm
+
+
+=======================================================================================================
+Difference Mean: -0.890857 Diff. Std. Deviation: 1.340764 N: 10 t-test Result: -2.101144

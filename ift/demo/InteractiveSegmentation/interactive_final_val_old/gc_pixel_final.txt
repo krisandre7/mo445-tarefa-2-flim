@@ -1,0 +1,168 @@
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 9, 'colorspace': 1, 'spatial_radius': 3.0}
+Auc: 0.864877195236
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 9, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.864370339944
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 9, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.863314864835
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 7, 'colorspace': 1, 'spatial_radius': 3.0}
+Auc: 0.862389775141
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 9, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.855938171758
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 7, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.851933972257
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 7, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.847145667936
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 9, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.845400961736
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 9, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.845119723355
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 7, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.838408775347
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 9, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.835349027365
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 9, 'colorspace': 1, 'spatial_radius': 1.5}
+Auc: 0.833345159348
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 7, 'colorspace': 1, 'spatial_radius': 1.5}
+Auc: 0.829054271996
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 7, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.828320531116
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 7, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.826719677186
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 9, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.82605841398
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 9, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.82487317036
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 3, 'colorspace': 1, 'spatial_radius': 3.0}
+Auc: 0.817745829922
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 9, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.810282179037
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 7, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.81007020156
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 9, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.808328723303
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 9, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.806866940309
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 7, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.805799153617
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 7, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.796453497364
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 7, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.793304961677
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 9, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.791147655241
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 7, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.770842757259
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 7, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.763072130565
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 3, 'colorspace': 1, 'spatial_radius': 1.5}
+Auc: 0.757082825841
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 7, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.73654266353
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 3, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.712482763582
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 3, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.700670239645
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 3, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.669122320896
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 3, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.650583022969
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 3, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.635686223358
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 3, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.628499242037
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 3, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.603347403753
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 3, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.601683144702
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 3, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.595124963097
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 3, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.591971453837
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 1, 'colorspace': 1, 'spatial_radius': 3.0}
+Auc: 0.569335382673
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 3, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.535148975068
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 3, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.529033483808
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 1, 'colorspace': 1, 'spatial_radius': 1.5}
+Auc: 0.513932278295
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 1, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.374746887009
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 1, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.346561949077
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 1, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.346449688972
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 1, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.331538613584
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'beta': 1, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.329414512123
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 1, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.313651559366
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 1, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.311465342865
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'beta': 1, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.286967036665
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 1, 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.275435062668
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 1, 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.263664468439
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 1, 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.258167708907
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'beta': 1, 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.248209554023
+

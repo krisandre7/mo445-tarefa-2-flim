@@ -1,0 +1,74 @@
+iftBkgRemoval2D.c:  /*--------------------------------------------------------*/
+iftBkgRemoval2D.c:  /*--------------------------------------------------------*/
+iftBkgRemoval2D.c:      exit(-1);
+iftBkgRemoval2D.c:  Z1->iftArcWeight = iftDistance1;
+iftBkgRemoval2D.c:  if (Z1->nfeats==3){
+iftBkgRemoval2D.c:    Z1->alpha[0] = 0.20;
+iftBkgRemoval2D.c:    Z1->alpha[1] = 1.00;
+iftBkgRemoval2D.c:    Z1->alpha[2] = 1.00;
+iftBkgRemoval2D.c:  fprintf(stdout,"clustering in %f ms with %d groups\n",iftCompTime(t1,t2),Z->nlabels);
+iftBkgRemoval2D.c:  for (s=0; s < graph->nnodes; s++) {
+iftBkgRemoval2D.c:    p = graph->Z->sample[graph->node[s].sample].id;
+iftBkgRemoval2D.c:  for (p=0; p < dens->n; p++) 
+iftBkgRemoval2D.c:    aux->val[p] = (int) (((float)dens->val[p]/dens->maxval)*255);
+iftBkgRemoval2D.c:  for (s=0; s < graph->nnodes; s++) {
+iftBkgRemoval2D.c:    if (graph->node[s].root==s){
+iftBkgRemoval2D.c:      p = graph->Z->sample[graph->node[s].sample].id;
+iftBkgRemoval2D.c:  /* ---------------------------------------------------------- */
+iftDiffWatershed2D.c:  /*--------------------------------------------------------*/
+iftDiffWatershed2D.c:  /*--------------------------------------------------------*/
+iftDiffWatershed2D.c:      exit(-1);
+iftDiffWatershed2D.c:      exit(-1);
+iftDiffWatershed2D.c:	S->label = NIL; // mark for removal
+iftDiffWatershed2D.c:	S = S->next;
+iftDiffWatershed2D.c:    sprintf(filename,"labels-%d.pgm",iteration);
+iftDiffWatershed2D.c:    iftCopyVoxelSize(img,fst->label);
+iftDiffWatershed2D.c:    iftWriteImageP2(fst->label,filename); 
+iftDiffWatershed2D.c:  /* ---------------------------------------------------------- */
+iftDualWaterGray2D.c:  /*--------------------------------------------------------*/
+iftDualWaterGray2D.c:  /*--------------------------------------------------------*/
+iftDualWaterGray2D.c:      exit(-1);
+iftDualWaterGray2D.c:  fprintf(stdout,"dual-watergray in %f ms with %d regions\n",iftCompTime(t1,t2),iftMaximumValue(label));
+iftDualWaterGray2D.c:  /* ---------------------------------------------------------- */
+iftImageCluster2D.c:  /*--------------------------------------------------------*/
+iftImageCluster2D.c:  /*--------------------------------------------------------*/
+iftImageCluster2D.c:      exit(-1);
+iftImageCluster2D.c:  if (Z->nfeats==3){
+iftImageCluster2D.c:    Z->alpha[0] = 0.20;
+iftImageCluster2D.c:    Z->alpha[1] = 1.00;
+iftImageCluster2D.c:    Z->alpha[2] = 1.00;
+iftImageCluster2D.c:  Z->iftArcWeight = iftDistance1;
+iftImageCluster2D.c:  fprintf(stdout,"clustering in %f ms with %d groups\n",iftCompTime(t1,t2),Z->nlabels);
+iftImageCluster2D.c:  for (s=0; s < graph->nnodes; s++) {
+iftImageCluster2D.c:    p = graph->Z->sample[graph->node[s].sample].id;
+iftImageCluster2D.c:  for (p=0; p < dens->n; p++) 
+iftImageCluster2D.c:    aux->val[p] = (int) (((float)dens->val[p]/dens->maxval)*255);
+iftImageCluster2D.c:  for (s=0; s < graph->nnodes; s++) {
+iftImageCluster2D.c:    if (graph->node[s].root==s){
+iftImageCluster2D.c:      p = graph->Z->sample[graph->node[s].sample].id;
+iftImageCluster2D.c:  /* ---------------------------------------------------------- */
+iftIncWatershed2D.c:  /*--------------------------------------------------------*/
+iftIncWatershed2D.c:  /*--------------------------------------------------------*/
+iftIncWatershed2D.c:      exit(-1);
+iftIncWatershed2D.c:    fprintf(stdout,"Chose operation mode: 0 - select object trees, 1 - Inc IFT\n");
+iftIncWatershed2D.c:      exit(-1);
+iftIncWatershed2D.c:      sprintf(filename,"labels%d-%d.pgm",mode,iteration);
+iftIncWatershed2D.c:	iftDestroyImage(&fst->label);
+iftIncWatershed2D.c:	fst->label = tmp_label;
+iftIncWatershed2D.c:      sprintf(filename,"labels%d-%d.pgm",mode,iteration);
+iftIncWatershed2D.c:      iftCopyVoxelSize(img,fst->label);
+iftIncWatershed2D.c:      iftWriteImageP2(fst->label,filename); 
+iftIncWatershed2D.c:  /* ---------------------------------------------------------- */
+iftWaterGray2D.c:  /*--------------------------------------------------------*/
+iftWaterGray2D.c:  /*--------------------------------------------------------*/
+iftWaterGray2D.c:      exit(-1);
+iftWaterGray2D.c:  /* ---------------------------------------------------------- */
+iftWaterGray.c:  /*--------------------------------------------------------*/
+iftWaterGray.c:  /*--------------------------------------------------------*/
+iftWaterGray.c:    exit(-1);
+iftWaterGray.c:  /* ---------------------------------------------------------- */
+iftWatershed2D.c:  /*--------------------------------------------------------*/
+iftWatershed2D.c:  /*--------------------------------------------------------*/
+iftWatershed2D.c:      exit(-1);
+iftWatershed2D.c:    exit(-1);
+iftWatershed2D.c:  /* ---------------------------------------------------------- */

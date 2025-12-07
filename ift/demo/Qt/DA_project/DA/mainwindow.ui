@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1316</width>
+    <height>715</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="DataSetViewer" name="graphicsViewProjectionArea">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="contextMenuPolicy">
+         <enum>Qt::CustomContextMenu</enum>
+        </property>
+        <property name="verticalScrollBarPolicy">
+         <enum>Qt::ScrollBarAsNeeded</enum>
+        </property>
+        <property name="dragMode">
+         <enum>QGraphicsView::RubberBandDrag</enum>
+        </property>
+        <property name="cacheMode">
+         <set>QGraphicsView::CacheBackground</set>
+        </property>
+        <property name="transformationAnchor">
+         <enum>QGraphicsView::NoAnchor</enum>
+        </property>
+        <property name="resizeAnchor">
+         <enum>QGraphicsView::AnchorViewCenter</enum>
+        </property>
+        <property name="viewportUpdateMode">
+         <enum>QGraphicsView::MinimalViewportUpdate</enum>
+        </property>
+        <property name="rubberBandSelectionMode">
+         <enum>Qt::IntersectsItemShape</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>Sample info</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QFormLayout" name="formLayout_2">
+             <item row="0" column="0">
+              <widget class="QLabel" name="label">
+               <property name="text">
+                <string>True Label</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="lineEdit">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string> Id</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="lineEdit_2"/>
+             </item>
+             <item row="2" column="1">
+              <widget class="QPushButton" name="pushButton_4">
+               <property name="text">
+                <string>Update info</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <item>
+              <widget class="QPushButton" name="pushButton_3">
+               <property name="text">
+                <string>Save</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton">
+               <property name="text">
+                <string>Remove</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_2">
+               <property name="text">
+                <string>Support Vectors</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Minimum">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="title">
+           <string>General options</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <layout class="QFormLayout" name="formLayout">
+             <item row="0" column="0">
+              <widget class="QLabel" name="kNearestLabel">
+               <property name="text">
+                <string>k-nearest:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QSpinBox" name="kNearestSpinBox">
+               <property name="minimum">
+                <number>1</number>
+               </property>
+               <property name="maximum">
+                <number>99999999</number>
+               </property>
+               <property name="value">
+                <number>1</number>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="preProcessLabel">
+               <property name="text">
+                <string>Pre process</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="preProcessComboBox">
+               <item>
+                <property name="text">
+                 <string>None</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>PCA</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>LDA</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="pca_componentsLabel">
+               <property name="text">
+                <string>pca_components:</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QDoubleSpinBox" name="pca_componentsDoubleSpinBox">
+               <property name="decimals">
+                <number>3</number>
+               </property>
+               <property name="maximum">
+                <double>1.000000000000000</double>
+               </property>
+               <property name="singleStep">
+                <double>0.100000000000000</double>
+               </property>
+               <property name="value">
+                <double>0.990000000000000</double>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1316</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuOpen">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <widget class="QMenu" name="menuOpen_2">
+     <property name="title">
+      <string>Open</string>
+     </property>
+     <addaction name="actionDataSet"/>
+     <addaction name="actionDataset_Images_Directory_2"/>
+     <addaction name="actionCategories_2"/>
+     <addaction name="actionDataset_Test"/>
+     <addaction name="actionDataset_Validation"/>
+    </widget>
+    <widget class="QMenu" name="menuSave">
+     <property name="title">
+      <string>Save</string>
+     </property>
+     <addaction name="actionSave_dataset"/>
+    </widget>
+    <addaction name="menuOpen_2"/>
+    <addaction name="menuSave"/>
+   </widget>
+   <addaction name="menuOpen"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionDataSet">
+   <property name="text">
+    <string>DataSet</string>
+   </property>
+  </action>
+  <action name="actionDataset_Images_Directory_2">
+   <property name="text">
+    <string>Dataset Images Directory</string>
+   </property>
+  </action>
+  <action name="actionCategories_2">
+   <property name="text">
+    <string>Categories</string>
+   </property>
+  </action>
+  <action name="actionSave_dataset">
+   <property name="text">
+    <string>Save dataset</string>
+   </property>
+  </action>
+  <action name="actionDataset_Test">
+   <property name="text">
+    <string>Dataset Test</string>
+   </property>
+  </action>
+  <action name="actionDataset_Validation">
+   <property name="text">
+    <string>Dataset Validation</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>DataSetViewer</class>
+   <extends>QGraphicsView</extends>
+   <header>datasetviewer.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

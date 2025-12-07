@@ -1,0 +1,82 @@
+1.1) First, download elastix at http://elastix.isi.uu.nl/download.php
+There is an anonymous download, so it is not necessary to register
+yourself.
+You can download the binaries already compiled, they will be
+in the "bin" directory.
+1.2) Then, extract the elastix to the directory of your choice.
+
+2) There two ways to set up elastix in your Machine (Linux and Mac)
+a) Copy the elastix files to /usr/local:
+    cp elastix_directory/bin/* /usr/local/bin
+    cp elastix_directory/lib/* /usr/local/lib
+
+b) Set the environment variables "to see" the elastix_directory files
+2.1) Set elastix bin directory in your PATH variable.
+E.g:
+insert into /your_home/.bashrc or /your_home/.profile
+	export PATH=$PATH:/your_home/elastix_directory/bin
+
+On terminal, reload the bashrc:
+$ source /your_home/.bashrc
+
+
+* The path /your_home/elastix_directory/ is the directory where you extracted the elastix
+
+2.2) Elastix may not find the libANNlib.so library in your system. 
+Then, set the following environment variable:
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/your_home/elastix_directory/lib
+We can put this command inside your .bashrc
+
+The command below does not work due to System Integrity Protection of Mac OS:
+    export DYLD_LIBRARY_PATH=$DYLD_LIBRARY_PATH:/your_home/elastix_directory/lib
+
+2.3) Test if the library was installed correctly.
+$ elastix
+
+If the following error happens:
+elastix: error while loading shared libraries: libOpenCL.so.1: cannot open shared
+
+Install:
+sudo apt -y install ocl-icd-opencl-dev
+
+
+3) Then, you need the configuration files for elastix. The ElastixConfiguration directory contains the configuration files commonly used. They set an affine registration followed by a bspline local deformation.
+These files detail each element of the registration process. A deep explanation of them can be found in http://elastix.isi.uu.nl/. Also, http://elastix.bigr.nl/wiki/index.php/Parameter_file_database contains many other configuration files, which could help you improve your application.
+
+4) Elastix supports a limited number of file extensions, so scene images (.scn) have to be converted to .hdr images by using the demo/Miscellaneous/iftScn2Analyze method.
+
+5) Once all images are in .hdr format, you can register them by using the command below in a terminal. Note that the fixed image is the reference image found in previous steps.
+
+elastix -f /home/fixedImage.hdr -m /home/movingImage.hdr -p /home/ElastixConfiguration/Par0000affine.txt -p /home/ElastixConfiguration/Par0000bspline.txt -out /home/OutDirectory
+
+6) OutDirectory will contain the following important files:
+
+6.1) result.1.hdr and result.1.img --> Both files contain the registered moving image. Please note, that we are only considering registration of images and not of its corresponding binary masks. This files have to be transformed back to the .scn format in order to be processed. Use the BIA software to do that.
+
+5.2)TransformParameters.0.txt and TransformParameters.1.txt --> Both files contain the affine transformations and local deformations required applied for registration.
+They will be used later to transform the binary masks, so keep them in a safe place.
+
+5.3)All other generated files are just logs, so they are not too important.
+
+6)Now, we will proceed to register the binary masks.
+In order to do this, first, we have to convert them to the .hdr format using the demo/Miscellaneous/iftScn2Analyze method.
+
+7)Next, we have to modify both TransformParameters.0.txt and TransformParameters.1.txt files. Change this option: 
+FinalBSplineInterpolationOrder 3
+by this other:
+FinalBSplineInterpolationOrder 0
+It means that we will interpolate the binary masks just by looking at the k-neighborhood of a voxel.
+If this line is not modified, the resulting binary mask will present some holes.
+
+8)Also review the line saying (InitialTransformParametersFileName "/home/OutDirectory/TransformParameters.0.txt") in file TransformParameters.1.txt.
+It will indicate Elastix where i s TransformParameters.0.txt file.
+So, make sure everything is on the right location.
+
+9)Now, we can execute the following command:
+
+transformix -in /home/aBinaryMask.hdr -out /home/OutDirectoryForRegisteredMasks -tp /home/OutDirectory/TransformParameters.1.txt 
+
+As expected, files result.1.hdr and result.1.img inside directory OutDirectoryForRegisteredMasks will contain the transformed binary mask.
+Note that we only indicate one transformation file, because the other will be found in the route explained on step 8). Transform back the result to the .scn format using the demo/Miscellaneous/iftAnalyze2Scn method.
+
+10)That's it. A pair of images and its corresponding binary masks are already registered.

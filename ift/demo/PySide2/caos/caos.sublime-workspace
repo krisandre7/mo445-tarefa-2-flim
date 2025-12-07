@@ -1,0 +1,3088 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"creat",
+				"createDefaultAxes"
+			],
+			[
+				"setAxis",
+				"setAxisX"
+			],
+			[
+				"proj",
+				"proj_data\tparam"
+			],
+			[
+				"hide",
+				"hide_chart_legends\tfunction"
+			],
+			[
+				"dat",
+				"dataset_path"
+			],
+			[
+				"exe",
+				"exec"
+			],
+			[
+				"data",
+				"dataset_path"
+			],
+			[
+				"ope",
+				"open_dataset"
+			],
+			[
+				"setSt",
+				"setStyleSheet"
+			],
+			[
+				"menu",
+				"menu_bar"
+			],
+			[
+				"Qm",
+				"QMenu"
+			],
+			[
+				"setMenu",
+				"setMenuBar"
+			],
+			[
+				"MENU",
+				"menubar\tstatement"
+			],
+			[
+				"setWidth",
+				"setFixedWidth\tfunction"
+			],
+			[
+				"setSi",
+				"setFixedSize\tfunction"
+			],
+			[
+				"de",
+				"default_value"
+			],
+			[
+				"defaul",
+				"default_value\tparam"
+			],
+			[
+				"defa",
+				"default_val\tparam"
+			],
+			[
+				"ts",
+				"tsne_perplexity_slider"
+			],
+			[
+				"valu",
+				"valueChanged\tinstance"
+			],
+			[
+				"setS",
+				"setStretch\tfunction"
+			],
+			[
+				"main",
+				"main_layout\tstatement"
+			],
+			[
+				"la",
+				"layout\tstatement"
+			],
+			[
+				"size",
+				"sizeHint\tfunction"
+			],
+			[
+				"setStyl",
+				"setStyleSheet\tfunction"
+			],
+			[
+				"QtO",
+				"QToolTip\tclass"
+			],
+			[
+				"im",
+				"image_panel\tstatement"
+			],
+			[
+				"omp_get_thr",
+				"omp_get_thread_num()\tint"
+			],
+			[
+				"incd",
+				"include <header>\tKeyWord"
+			],
+			[
+				"merg",
+				"merge_Z\tiftDataSet *"
+			],
+			[
+				"ref_da",
+				"ref_data_type\tiftRefDataType"
+			],
+			[
+				"incl",
+				"include <header>\tKeyWord"
+			],
+			[
+				"lab",
+				"label_img\tiftImage *"
+			],
+			[
+				"labe",
+				"label_img_path\tconst char *"
+			],
+			[
+				"lesi",
+				"lesions_dict\tiftDict *"
+			],
+			[
+				"iftDestroyFi",
+				"iftDestroyFileSet(iftFileSet **farr)\tvoid"
+			],
+			[
+				"iftDictFile",
+				"iftFileSetToDict(  iftFileSet *fset)\tiftDict *"
+			],
+			[
+				"iftCreateImage",
+				"iftCreateImage(int xsize, int ysize, int zsize)\tiftImage *"
+			],
+			[
+				"flag",
+				"FLAGS"
+			],
+			[
+				"ctb_rai",
+				"ctb_rainbow"
+			],
+			[
+				"ctb_ra",
+				"ctb_rainbow_shuffle"
+			],
+			[
+				"n_",
+				"n_colors\tint"
+			],
+			[
+				"ctb_r",
+				"ctb_rainbow_shuffle\tiftColorTable *"
+			],
+			[
+				"iftLabNorm",
+				"iftRGBtoLabNorm2(iftColor rgb, int normalization_value)\tiftFColor"
+			],
+			[
+				"label",
+				"label_img\tconst iftImage *"
+			],
+			[
+				"iftImgV",
+				"iftImgVoxelVal(i, v)\tMacro"
+			],
+			[
+				"labels",
+				"labels_dict\tiftDict *"
+			],
+			[
+				"IFT_REF",
+				"IFT_REF_DATA_MIMAGE\tiftRefDataType"
+			],
+			[
+				"n",
+				"n_bands"
+			],
+			[
+				"iftIs3D",
+				"iftIs3DImage(  iftImage *img)\tbool"
+			],
+			[
+				"iftGetVoxel",
+				"iftGetVoxelCoord(  iftImage *img, int p)\tiftVoxel"
+			],
+			[
+				"norm",
+				"norm_val\tfloat"
+			],
+			[
+				"iftAdja",
+				"iftAdjacentVoxels(iftImage *img, iftAdjRel *A, iftVoxel u, iftVoxel v)\tchar"
+			],
+			[
+				"iftVerifyIm",
+				"iftVerifyImageDomains(  iftImage *img1,   iftImage *img2, const char *function)\tvoid"
+			],
+			[
+				"iftAdj",
+				"iftAdjRel\tTypedef"
+			],
+			[
+				"IFT_TRA",
+				"IFT_TRAIN\tenum ift_sample_status"
+			],
+			[
+				"bias",
+				"bias\tdouble"
+			],
+			[
+				"der",
+				"deriv_bias\tdouble"
+			],
+			[
+				"IFT_FINI",
+				"IFT_INFINITY_INT_NEG\tMacro"
+			],
+			[
+				"csv",
+				"csv_merge\tiftCSV *"
+			],
+			[
+				"iftWriteCSV",
+				"iftWriteCSV(iftCSV *csv, const char *filename, const char separator)\tvoid"
+			],
+			[
+				"X",
+				"X_norm\tiftMatrix *"
+			],
+			[
+				"iftMat",
+				"iftMatrixElem"
+			],
+			[
+				"fun",
+				"func(x1, b0, b1)\tMacro"
+			],
+			[
+				"y",
+				"y_pred\tiftDblArray *"
+			],
+			[
+				"iftM",
+				"iftMatrixElem"
+			],
+			[
+				"seg_",
+				"seg_obj_img\tiftImage *"
+			],
+			[
+				"seg",
+				"seg_obj_img\tiftImage *"
+			],
+			[
+				"iftSelectLa",
+				"iftSelectLargestComp(  iftImage *bin,   iftAdjRel *Ain)\tiftImage *"
+			],
+			[
+				"PROB",
+				"prob_atlas"
+			],
+			[
+				"iftSele",
+				"iftSelectLargestRegion(  iftImage *label_img)\tiftImage *"
+			],
+			[
+				"MIN",
+				"MINVALUE\tMacro"
+			],
+			[
+				"path",
+				"pathval_bg\tiftImage *"
+			],
+			[
+				"YcbC",
+				"YCbCr"
+			],
+			[
+				"filt",
+				"filterSize\tiftSize"
+			],
+			[
+				"iftVoxelIn",
+				"iftGetVoxelIndex(s, v)\tMacro"
+			],
+			[
+				"str",
+				"stride_z\tint"
+			],
+			[
+				"n_po",
+				"n_points_y\tint"
+			],
+			[
+				"iftBoun",
+				"iftBoundingBox\tTypedef"
+			],
+			[
+				"ski",
+				"skip_registration"
+			],
+			[
+				"filter",
+				"filters_centralized\tiftMatrix *"
+			],
+			[
+				"iftUniNorm",
+				"iftUnitNormMatrix(  iftMatrix *M)\tiftMatrix *"
+			],
+			[
+				"iftCentral",
+				"iftCentralizeMatrix(  iftMatrix *M)\tiftMatrix *"
+			],
+			[
+				"iftHeat",
+				"iftHeatMapBlueGreenRedColorTable(int n_colors, iftColorSpace cspace)\tiftColorTable *"
+			],
+			[
+				"max",
+				"maxval\tint"
+			],
+			[
+				"hist",
+				"hist_norm_acc\tiftHistogram *"
+			],
+			[
+				"iftMinMax",
+				"iftMinMaxValue(  iftImage *img, int *min, int *max)\tvoid"
+			],
+			[
+				"iftGray",
+				"iftGrayColorTable(int n_colors, iftColorSpace cspace)\tiftColorTable *"
+			],
+			[
+				"iftPrint",
+				"iftPrintFloatArray(float *v, int n)\tvoid"
+			],
+			[
+				"iftFileEx",
+				"iftFileExists(const char *pathname)\tbool"
+			],
+			[
+				"tra",
+				"train_dataset"
+			],
+			[
+				"out_da",
+				"out_dataset_dir"
+			],
+			[
+				"set",
+				"set_name"
+			],
+			[
+				"base",
+				"basename"
+			],
+			[
+				"hipp",
+				"hippo_interp"
+			],
+			[
+				"hi",
+				"hippo_labels_dir"
+			],
+			[
+				"or",
+				"orig_dir"
+			],
+			[
+				"temp",
+				"template_img"
+			],
+			[
+				"last",
+				"lastKey"
+			],
+			[
+				"iftCompare",
+				"iftCompareStrings(const char *str1, const char *str2)\tbool"
+			],
+			[
+				"iftGetDict",
+				"iftGetDictFromDict(KEY, DICT)\tMacro"
+			],
+			[
+				"anom",
+				"anomalous_unknown_patches_idxs\tiftList *"
+			],
+			[
+				"output",
+				"output-dir"
+			],
+			[
+				"out",
+				"out_dir"
+			],
+			[
+				"int",
+				"intersec_rate\tfloat"
+			],
+			[
+				"mask",
+				"mask_mbb_vol\tint"
+			],
+			[
+				"mask_",
+				"mask_mbb\tiftBoundingBox"
+			],
+			[
+				"img",
+				"img_path\tconst char *"
+			],
+			[
+				"iftSplit",
+				"iftSplitStringAt(const char *phrase, const char *delimiter, long position)\tchar *"
+			],
+			[
+				"autoen",
+				"autoencoder_path"
+			],
+			[
+				"_iftRead",
+				"_iftReadBISOneClassSVM(iftBIS *bis, const char *clf_dir)\tvoid"
+			],
+			[
+				"new",
+				"new_clf_path\tchar *"
+			],
+			[
+				"feat_extractor",
+				"feat_extractor_alg"
+			],
+			[
+				"iftFindPatches",
+				"iftFindPatchesAlongBrain(  iftImage *brain_mask, int stride, int ref_sagittal_slice, int patch_size)\tiftPairPatchArray *"
+			],
+			[
+				"IFT_BIS_ONE",
+				"IFT_BIS_ONE_CLASS_SVM\tiftBISClassifierAlg"
+			],
+			[
+				"iftPA",
+				"iftPatchAnalyzer\tTypedef"
+			],
+			[
+				"iftSetup",
+				"iftSetupOneClasSVMBIS(iftBIS *bis, const char *kernel, float nu, float gamma)\tvoid"
+			],
+			[
+				"iftMakeTemp",
+				"iftMakeTempPathname(const char *prefix, const char *suffix, const char *dir_name)\tchar *"
+			],
+			[
+				"iftGetDbk",
+				"iftGetDblArrayFromDict(KEY, DICT)\tMacro"
+			],
+			[
+				"iftGetConstS",
+				"iftGetConstStrValFromDict(KEY, DICT)\tMacro"
+			],
+			[
+				"auto",
+				"autoencoder-dir"
+			],
+			[
+				"au",
+				"autoencoder_path\tchar *"
+			],
+			[
+				"patch",
+				"patch_filename\tchar [512]"
+			],
+			[
+				"pat",
+				"patch_str\tchar [16]"
+			],
+			[
+				"patc",
+				"patches_dir\tchar *"
+			],
+			[
+				"fir",
+				"first_path\tchar *"
+			],
+			[
+				"img_",
+				"img_ext\tconst int *"
+			],
+			[
+				"pa",
+				"patch_dir\tchar *"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "ui/main_window.py",
+			"settings":
+			{
+				"buffer_size": 5608,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "ui/main_panel.py",
+			"settings":
+			{
+				"buffer_size": 6838,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "",
+			"settings":
+			{
+				"buffer_size": 0,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/samuel/Dropbox/workspace/apps/ift/demo/BrainAsymmetryAnalysis_old/plots/project_and_plot_two_datasets.py",
+			"settings":
+			{
+				"buffer_size": 943,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/samuel/Dropbox/workspace/apps/ift/demo/BrainAsymmetryAnalysis_old/plots/plot_two_datasets.py",
+			"settings":
+			{
+				"buffer_size": 2735,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "import sys\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nimport pyift as ift\n\n\ndef main():\n    if len(sys.argv) != 4:\n        sys.exit(\"python <dataset.zip> <output_projected_dataset.zip> <output_plot.pdf>\")\n\n    Z = ift.ReadDataSet(sys.argv[1])\n    \n    print(\"- Projecting by t-SNE\")\n    Zproj = ift.DimReductionByTSNE(Z, 2, 50, 2000)\n\n    print(\"- Writing Projected DataSet\")\n    ift.WriteDataSet(Zproj, sys.argv[2])\n\n    true_labels = Zproj.GetTrueLabels()\n\n    max_true_label = int(true_labels.max())  # the parameter for CategoricalColorTable must be 'int' and not 'numpy.int'\n    cmap = ift.CategoricalColorTable(max_true_label)  # YCbCr Color Map\n    cmap = ift.ConvertYCbCrColorTableToRGBColorTable(cmap, 255)  # RGB Color Map\n    cmap = cmap.GetColors()\n    cmap = np.insert(cmap, 0, [0, 0, 0], axis=0)  # adding the black color for the truelabel 0\n\n    colors = np.array([list(cmap[truelabel]) for truelabel in true_labels])\n\n    data = Zproj.GetData()\n    x = data[:, 0]\n    y = data[:, 1]\n\n    fig = plt.figure(figsize=(20, 20))\n    plt.scatter(x, y, c=(colors / 255.0), alpha=0.7)\n    plt.show()\n\n    fig.savefig(sys.argv[3], bbox_inches='tight')\n\n\nif __name__ == \"__main__\":\n    main()\n\n",
+			"settings":
+			{
+				"buffer_size": 1209,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "/****************************************************************************\n**\n** Copyright (C) 2016 The Qt Company Ltd.\n** Contact: https://www.qt.io/licensing/\n**\n** This file is part of the Qt Charts module of the Qt Toolkit.\n**\n** $QT_BEGIN_LICENSE:GPL$\n** Commercial License Usage\n** Licensees holding valid commercial Qt licenses may use this file in\n** accordance with the commercial license agreement provided with the\n** Software or, alternatively, in accordance with the terms contained in\n** a written agreement between you and The Qt Company. For licensing terms\n** and conditions see https://www.qt.io/terms-conditions. For further\n** information use the contact form at https://www.qt.io/contact-us.\n**\n** GNU General Public License Usage\n** Alternatively, this file may be used under the terms of the GNU\n** General Public License version 3 or (at your option) any later version\n** approved by the KDE Free Qt Foundation. The licenses are as published by\n** the Free Software Foundation and appearing in the file LICENSE.GPL3\n** included in the packaging of this file. Please review the following\n** information to ensure the GNU General Public License requirements will\n** be met: https://www.gnu.org/licenses/gpl-3.0.html.\n**\n** $QT_END_LICENSE$\n**\n****************************************************************************/\n\n#include \"chartview.h\"\n#include <QtCore/QtMath>\n#include <QtCore/QDebug>\n\nQT_CHARTS_USE_NAMESPACE\n\nChartView::ChartView(QWidget *parent)\n    : QChartView(new QChart(), parent),\n      m_scatter(0),\n      m_scatter2(0)\n{\n    setRenderHint(QPainter::Antialiasing);\n\n    chart()->setTitle(\"Click to interact with scatter points\");\n\n    m_scatter = new QScatterSeries();\n    m_scatter->setName(\"scatter1\");\n    for (qreal x(0.5); x <= 4.0; x += 0.5) {\n        for (qreal y(0.5); y <= 4.0; y += 0.5)\n            *m_scatter << QPointF(x, y);\n    }\n    m_scatter2 = new QScatterSeries();\n    m_scatter2->setName(\"scatter2\");\n\n    chart()->addSeries(m_scatter2);\n    chart()->addSeries(m_scatter);\n    chart()->createDefaultAxes();\n    chart()->setAxisX()->setRange(0, 4.5);\n    chart()->setAxisY()->setRange(0, 4.5);\n\n    connect(m_scatter, &QScatterSeries::clicked, this, &ChartView::handleClickedPoint);\n}\n\nChartView::~ChartView()\n{\n}\n\nvoid ChartView::handleClickedPoint(  QPointF &point)\n{\n    QPointF clickedPoint = point;\n    // Find the closest point from series 1\n    QPointF closest(INT_MAX, INT_MAX);\n    qreal distance(INT_MAX);\n      auto points = m_scatter->points();\n    for (  QPointF &currentPoint : points) {\n        qreal currentDistance = qSqrt((currentPoint.x() - clickedPoint.x())\n                                      * (currentPoint.x() - clickedPoint.x())\n                                      + (currentPoint.y() - clickedPoint.y())\n                                      * (currentPoint.y() - clickedPoint.y()));\n        if (currentDistance < distance) {\n            distance = currentDistance;\n            closest = currentPoint;\n        }\n    }\n\n    // Remove the closes point from series 1 and append it to series 2\n    m_scatter->remove(closest);\n    m_scatter2->append(closest);\n}\n",
+			"settings":
+			{
+				"buffer_size": 3161,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "Packages/Python/Python.sublime-build",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Anaconda Python Builder",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"set c",
+				"Set Syntax: C++"
+			],
+			[
+				"set pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"SORT",
+				"Sort Lines"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"REMOV",
+				"Package Control: Remove Package"
+			],
+			[
+				"set C",
+				"Set Syntax: C"
+			],
+			[
+				"set bash",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"wor",
+				"Word Wrap: Toggle"
+			],
+			[
+				"w",
+				"Word Wrap: Toggle"
+			],
+			[
+				"wo",
+				"Word Wrap: Toggle"
+			],
+			[
+				"set L",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"set late",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"W",
+				"Word Wrap: Toggle"
+			],
+			[
+				"set pyh",
+				"Set Syntax: Python"
+			],
+			[
+				"set bas",
+				"Set Syntax: Bourne Again Shell (bash)"
+			],
+			[
+				"pyt",
+				"Set Syntax: Python"
+			],
+			[
+				"set La",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"set Py",
+				"Set Syntax: Python"
+			],
+			[
+				"latex",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"set txt",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set",
+				"Set Syntax: Tcl"
+			],
+			[
+				"set tex",
+				"Set Syntax: TeX"
+			],
+			[
+				"srot",
+				"Sort Lines"
+			],
+			[
+				"set plai",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"set pytho",
+				"Set Syntax: Python"
+			],
+			[
+				"SET",
+				"Set Syntax: Tcl"
+			],
+			[
+				"set pl",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"sor",
+				"Sort Lines"
+			],
+			[
+				"set ht",
+				"Set Syntax: HTML"
+			],
+			[
+				"set pla",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"s",
+				"Sort Lines"
+			],
+			[
+				"so",
+				"Sort Lines"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"py",
+				"Set Syntax: Python"
+			],
+			[
+				"la",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set alte",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"set Lat",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"set py",
+				"Set Syntax: Python"
+			],
+			[
+				"late",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"set pal",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set lat",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"set la",
+				"Set Syntax: LaTeX"
+			],
+			[
+				"lowe",
+				"Convert Case: Lower Case"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Package Control: Remove Package"
+			],
+			[
+				"mark pre",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markd",
+				"Set Syntax: Markdown"
+			],
+			[
+				"ma",
+				"Markdown Slideshow"
+			],
+			[
+				"set plain",
+				"Set Syntax: Plain Text"
+			],
+			[
+				"set text",
+				"Set Syntax: Textile"
+			],
+			[
+				"set te",
+				"Set Syntax: Textile"
+			],
+			[
+				"UNI",
+				"Permute Lines: Unique"
+			],
+			[
+				"set t",
+				"Set Syntax: Tcl"
+			],
+			[
+				"set textile",
+				"Set Syntax: Textile"
+			],
+			[
+				"INSTAL",
+				"Package Control: Install Package"
+			],
+			[
+				"set sinta",
+				"Preferences: Settings – Syntax Specific"
+			],
+			[
+				"Ja",
+				"Set Syntax: Java"
+			],
+			[
+				"INSTA",
+				"Package Control: Install Package"
+			],
+			[
+				"toog",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 540.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/ui",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/ui/icons"
+	],
+	"file_history":
+	[
+		"/Users/samuel/Dropbox/workspace/apps/ift/a.html",
+		"/Users/samuel/.profile",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/caos.sublime-project",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PyQt5/caos/ui/main_window.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PyQt5/caos/ui/main_panel.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PyQt5/caos/ui/menu_bar.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/ui/icons/README.txt",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PyQt5/caos/ui/numpy_qt.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PyQt5/caos/ui/util.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/test.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PyQt5/caos/ui/styles/style.qss",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/app.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/ui/main_window.py",
+		"/Users/samuel/Library/Application Support/Sublime Text 3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/Users/samuel/Library/Application Support/Sublime Text 3/Packages/User/Anaconda.sublime-settings",
+		"/Users/samuel/Library/Application Support/Sublime Text 3/Packages/PySide/README.markdown",
+		"/Users/samuel/local/ninja-ide-2.2/README.md",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/Qt/ClassifierLearning/Makefile",
+		"/Users/samuel/Dropbox/workspace/apps/ift/PyIFT/a.py",
+		"/Users/samuel/Dropbox/workspace/apps/ift/PyIFT/README.txt",
+		"/Users/samuel/Dropbox/workspace/apps/ift/PyIFT/src/iftImage.i",
+		"/Users/samuel/workspace/exps/2019_Martins_ISBI/scripts/prepare_workspace.sh",
+		"/Users/samuel/Dropbox/workspace/apps/ift/ift.sublime-project",
+		"/Users/samuel/demos/HelloWorld/main.cpp",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/Makefile",
+		"/Users/samuel/Dropbox/workspace/apps/ift/Makefile",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/Qt/ClassifierLearning/ClassifierLearning.pro",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/Miscellaneous/iftTest.c",
+		"/Users/samuel/Qt/Examples/Qt-5.11.1/widgets/mainwindows/application/application.pro.user",
+		"/Users/samuel/Qt/Examples/Qt-5.11.1/widgets/mainwindows/application/application.pro",
+		"/Users/samuel/Qt/Examples/Qt-5.11.1/widgets/mainwindows/application/Makefile",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftClassification.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftActiveLearning.h",
+		"/Users/samuel/macOS_scripts/README.md",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftBasicDataTypes.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftMemory.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftDict.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftMatrix.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/externals/libsvm/Makefile",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftDescriptors.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftClustering.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftBMap.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftSeeds.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftSegmentation.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftFiltering.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftRegion.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftKmeans.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftCommon.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftRepresentation.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftDataSet.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftRegistration.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftDict.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftCompression.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftParamOptimizer.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftMatrix.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftDataSet.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftMemory.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftBagOfVisualWords.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftMaxflow.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftParamOptimizationProblems.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftSlic.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftBagOfVisualWords.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/demo/Miscellaneous/a.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftImage.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftPatchLocalizer.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/src/iftCommon.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/externals/libpng/src/pngread.c",
+		"/Users/samuel/Dropbox/workspace/apps/ift/externals/zlib/src/infback.c",
+		"/Users/samuelmartins/Qt/Examples/Qt-5.10.1/widgets/layouts/basiclayouts/basiclayouts.pro",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftLabeledSet.h",
+		"/Users/samuel/Dropbox/workspace/apps/ift/include/iftSeeds.h",
+		"/Users/samuelmartins/.profile",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/externals/libpng/Makefile",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftALTIS.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftAutoLungSegm.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftAutoLungSegmByDomes.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftDynamicOAM.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftFastThoraxSegmentation.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftThoraxSegmentation.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/BagOfVisualWords/iftRISF_segmentation",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/CellSegmentation/iftObjectModelsOld.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/CellSegmentation/iftSeedsFromLabel.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/CellSegmentation/iftWaterGrayFromGTSeeds.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/CellSegmentation/iftWaterGraySeeds.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/CellSegmentation/iftWatershedFromGTGeodesicSeeds.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Classification/iftExtendSeedSet.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Classification/iftTrainImageClassifierByLogReg.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Classification/iftTrainImageClassifierByOPF.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Classification/iftTrainImageClassifierBySVM.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftRobotDynamicIFT.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Miscellaneous/iftMergeMarkers.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/ObjectModels/BrainSubStructLocalization_ISBI/iftSegmentByVolBrainIFT.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Qt/build-ClassifierLearning-Desktop_Qt_5_10_1_GCC_64bit-Debug/ClassifierLearning",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Qt/DA_project/DA/VA_UI",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Qt/MedicalImageVisualization/MedicalImageVisualization/mainwindow.cpp",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Qt/VA_UI_code/VA_UI/VA_UI",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/SeedObjectModel/iftSeedObjectModel.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/VISVA/visva.cpp",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/src/iftParamOptimizationProblems.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/src/iftSeeds.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/src/iftSegmentationResuming.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/TreePruningML/iftDescendantMapToDataSet.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/SegmentationResuming/iftResumeImageSetSegmentation.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/SegmentationResuming/iftResumeImageSegmentation.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Segmentation/iftSeedCompByPathMean.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/GraphCut/iftGraphCut.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftTieZones.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftSetEvaluation_CIARP.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftSetEvaluation.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftGraphCutDynamic.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftDynamicSet_CIARP.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftDynamicSet.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftDynamicIFTObjectMap.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftDynamicIFT.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/DynamicIFT/iftAlgorithmsEvaluation.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Classification/iftLabelDatasetFromSeeds.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftSegmentLungLobes.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftScorePleuralAnomaly.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Asbestos/iftCountMarkers.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Miscellaneous/iftTest.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/include/iftColor.h",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/demo/Miscellaneous/iftGenerateColorTable.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/src/iftColor.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/bin/iftThreshold",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/bin/iftTest",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/include/iftMImage.h",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/src/iftMImage.c",
+		"/Users/samuelmartins/Dropbox/workspace/apps/ift/include/iftDataSet.h"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 143.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"MAC",
+			"_x",
+			"0.5",
+			"_x",
+			"self.chart()",
+			"hide",
+			"sample[0, :]",
+			" * 10",
+			"proj_data",
+			"sample",
+			"axisX",
+			";",
+			"->",
+			";",
+			"->",
+			"self.data.dataset",
+			"getcwd",
+			"load_menu",
+			"hart_view.plot_dataset(proj_data, true_labels)",
+			".chart",
+			"size",
+			"Size",
+			"0",
+			"QColor",
+			"axis",
+			"axisX",
+			"4.5",
+			"->",
+			"chart",
+			";",
+			"image_panel",
+			"->",
+			"QtCharts",
+			"QMessageBox",
+			"o",
+			"self.data.datataset",
+			"tool_panel.",
+			"plot_panel",
+			"main_image_path",
+			"open_dataset",
+			"pictures_dir_list",
+			"first_dialog_main_image",
+			"30",
+			"24",
+			"32",
+			"48",
+			"self.open_act",
+			"QActio",
+			"icon",
+			"menubar",
+			"fileMenu",
+			"MenuBar",
+			"setMenuBar",
+			"layout",
+			"Layout",
+			"layout",
+			"QVBoxLayout",
+			"tsne_maxiter_slider",
+			"slider",
+			"Slider",
+			"99",
+			"Slider",
+			"slider",
+			"Slider",
+			"default_val",
+			"Slider",
+			"tsne_perplexity_slider.",
+			"reset_tsne_group_box",
+			"tsne_perplexity_slider",
+			"tsne_perplexity_spinbox",
+			"tsne_perplexity_slider",
+			"tsne_gbox",
+			"1",
+			"0.5",
+			"0",
+			"btn",
+			"32",
+			"clicked.",
+			"btn2.clicked.",
+			"ImageScene",
+			"load_ui",
+			"ImageScene",
+			"plot_panel",
+			"self.setStyleSheet(\"background-color:black;\")",
+			"MAC",
+			"LINT",
+			","
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "ui/main_window.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 5608,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5264,
+								5230
+							]
+						],
+						"settings":
+						{
+							"SL.26.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.33.region_keys":
+							[
+								"SL.flake8.Highlights.|041e5ccb30b973ea497be3e5b9d152fe6571673aca515d3313bc3370e8cffd6e|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|a8dbd2b0f0e027519aed61daa50a4a6c1e73e1ee00c941f5023982b233cac40e|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot"
+							],
+							"SL.35.region_keys":
+							[
+								"SL.flake8.Highlights.|7cbbcd2596c6dee7b9be132aaa7af61f1511f6d686ef632abc19e1ebeeaf7df3|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Highlights.|60a32e51fffe4d77d54df902ae7a90b8c9fc662b264f0517eb78434b269662b0|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|4a123a553ccd8ce202f019e54598e4280b15ecc8ddf285255bf47b3e152e17af|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"SL.42.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.89.region_keys":
+							[
+								"SL.flake8.Highlights.|5aad1b166af2d8e16ce3cd5d0c2c2345e3a3cfc404411af7f442e6f7122a0542|region.redish markup.error.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Gutter.|region.redish markup.error.sublime_linter|dot"
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2311,
+										2312
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/double_quote.png",
+										"region.greenish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										2290,
+										2291
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"spell_check": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2446.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "ui/main_panel.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6463,
+								6463
+							]
+						],
+						"settings":
+						{
+							"SL.27.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.36.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.37.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.44.region_keys":
+							[
+								"sublime_linter.protected_regions"
+							],
+							"SL.90.region_keys":
+							[
+							],
+							"auto_complete_triggers":
+							[
+								{
+									"characters": ".",
+									"selector": "source.python - string - comment - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								},
+								{
+									"characters": ".",
+									"selector": "source.python - string - constant.numeric"
+								}
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										6462,
+										6463
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										6409,
+										6410
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										6462,
+										6463
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"region.yellowish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										6409,
+										6410
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"open_with_edit": true,
+							"spell_check": true,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2484.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 0,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"default_dir": "/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/ui",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "/Users/samuel/Dropbox/workspace/apps/ift/demo/BrainAsymmetryAnalysis_old/plots/project_and_plot_two_datasets.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.113.region_keys":
+							[
+								"SL.flake8.Highlights.|25c58b37ba42a22630c70f1ef5c545b83778c02b21fb554544261296361f2c15|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|648daf9153926203e987aa24272400f20e655f13d5ddfaf8ddeb0d0dbc711324|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|9520cd3f3dcd03a22c6320d5d24bdb54e15ea9c3cba9146b5d533129f6c6430e|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Highlights.|10f95e1feae12841f9ef4e0eb2040710927c53c4eed415c320c23bf28ad9f97d|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|48a467a6574816aea2211c17117ac26ce9568dfb25d01fc4d30889eebf13bdcf|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|2cc15f54e0afeb27b2831b90d4016e6396a8dda47fb30cd03d495f8bf4bcdc02|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|bf9360a5fac700763a528b1d2bb4cbff728455fca615e61fed95c293871f3888|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|38e8b0141d952e15e2526f0e58f6b1a1f1bf78155c5b41d5f2f5fc10169212a5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|bcc6a966d1925c8de65fe1502aa4dc695a4fc2d7f38f40ab9a15ac04cf106cfd|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|3371e986ab276bccc16bceb132ecaeaa2204dc98aaf28a7018ad4978873c511f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|efd37656da0bd1f08d3f02a9afb06b2553484f318697774afed751c87145d981|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|7f875baeb603afe08063480b325429d7f757e045a45902bc5c11f54d44755841|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 75.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/Users/samuel/Dropbox/workspace/apps/ift/demo/BrainAsymmetryAnalysis_old/plots/plot_two_datasets.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2735,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"SL.114.region_keys":
+							[
+								"SL.flake8.Highlights.|a45442030f6fafa2544bafdf9bde91f1ddb2e617ac419936692df9a5b6d777e6|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|a0d17c9bee78df042e90568bf56eabb09855d177a6ebd779b248b03c94a8087c|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|c677f4cc99394a555e1c3e030b0a4f622b388418936815e4cdf991ca85dab620|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|d1e326863b8ac6b00504e2ebf0772ac7fccf4cfd0292067f92fc52079011bb8f|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|62104eed43e21e095ec8a6dd4f86d0bbbb5650d85d93a68924681db0e87507d0|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|74e9949d6852d774d7416570aa2bd158ef1f81c36a64f039478c7d794351df00|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|2cc15f54e0afeb27b2831b90d4016e6396a8dda47fb30cd03d495f8bf4bcdc02|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|bf9360a5fac700763a528b1d2bb4cbff728455fca615e61fed95c293871f3888|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|38e8b0141d952e15e2526f0e58f6b1a1f1bf78155c5b41d5f2f5fc10169212a5|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Highlights.|f26be0ccac8ae8a2f2b85efdfe97dd7185230209180573ecfd2460c66c1d02c8|region.yellowish markup.warning.sublime_linter|32",
+								"sublime_linter.protected_regions",
+								"SL.flake8.Highlights.|675102f6d4bbcc3fa70aae798c1acc1914288ba2a058d2b7c032e30e2ba441ca|region.yellowish markup.warning.sublime_linter|32",
+								"SL.flake8.Gutter.|region.yellowish markup.warning.sublime_linter|dot",
+								"SL.flake8.Highlights.|86ca08191f81a2e142ac48f4727cf84e86746d1165246162cec68a5182b91d30|region.yellowish markup.warning.sublime_linter|32"
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 607.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1209,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1209,
+								1209
+							]
+						],
+						"settings":
+						{
+							"SL.70.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"default_dir": "/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/ui",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 205.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3161,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								158,
+								160
+							]
+						],
+						"settings":
+						{
+							"SL.45.region_keys":
+							[
+							],
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.clone": -1,
+							"bracket_highlighter.clone_locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										2245,
+										2246
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/curly_bracket.png",
+										"region.purplish"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										1564,
+										1565
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.clone_regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content"
+							],
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+								},
+								"icon":
+								{
+								},
+								"open":
+								{
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"default_dir": "/Users/samuel/Dropbox/workspace/apps/ift/demo/PySide2/caos/ui",
+							"syntax": "Packages/C++/C++.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 892.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 45.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 150.0
+	},
+	"output.cc":
+	{
+		"height": 172.0
+	},
+	"output.exec":
+	{
+		"height": 150.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Anaconda Python Builder",
+	"project": "caos.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"IFTdata",
+				"include/iftDataSet.h"
+			],
+			[
+				"iftBuidP",
+				"demo/BrainAsymmetryAnalysis/iftBuildPatchDataSet.c"
+			],
+			[
+				"Make",
+				"demo/Makefile"
+			],
+			[
+				"iftTest.c",
+				"demo/Miscellaneous/iftTest.c"
+			],
+			[
+				"iftBasi",
+				"include/iftBasicDataTypes.h"
+			],
+			[
+				"iftLabele",
+				"include/iftLabeledSet.h"
+			],
+			[
+				"iftSeed",
+				"include/iftSeeds.h"
+			],
+			[
+				"IFTgENEREcOL",
+				"demo/Miscellaneous/iftGenerateColorTable.c"
+			],
+			[
+				"iftColor",
+				"include/iftColor.h"
+			],
+			[
+				"iftDataSet",
+				"include/iftDataSet.h"
+			],
+			[
+				"iftTestEx",
+				"demo/Miscellaneous/iftTestExtractImageFeatures.c"
+			],
+			[
+				"iftObject",
+				"include/iftObjectModels.h"
+			],
+			[
+				"iftObjec",
+				"src/iftObjectModels.c"
+			],
+			[
+				"iftMI",
+				"include/iftMImage.h"
+			],
+			[
+				"iftClassifySVMA",
+				"demo/ObjectModels/iftClassifyImageBySVMAdjacencyFeats.c"
+			],
+			[
+				"iftSegmentBy",
+				"demo/ObjectModels/iftSegmentByAdaPro.c"
+			],
+			[
+				"iftCSV",
+				"include/iftCSV.h"
+			],
+			[
+				"iftRegex",
+				"demo/Miscellaneous/Utilities/iftRegexExamples.c"
+			],
+			[
+				"iftTrainAda",
+				"demo/ObjectModels/iftTrainAdaPro.c"
+			],
+			[
+				"iftSegmentByAda",
+				"demo/ObjectModels/iftSegmentByAdaPro.c"
+			],
+			[
+				"iftMath",
+				"include/iftMathMorph.h"
+			],
+			[
+				"iftObjectMo",
+				"src/iftObjectModels.c"
+			],
+			[
+				"iftGenerate",
+				"demo/Miscellaneous/iftGenerateColorTable.c"
+			],
+			[
+				"iftSee",
+				"include/iftSeeds.h"
+			],
+			[
+				"iftSlic",
+				"include/iftSlic.h"
+			],
+			[
+				"iftDeepLearnin",
+				"src/iftDeepLearning.c"
+			],
+			[
+				"iftMatrix",
+				"include/iftMatrix.h"
+			],
+			[
+				"iftPara",
+				"src/iftParamOptimizer.c"
+			],
+			[
+				"iftRegisterIma",
+				"demo/Registration/iftRegisterImageByElastix.c"
+			],
+			[
+				"IFTgENETcO",
+				"demo/Miscellaneous/iftGenerateColorTable.c"
+			],
+			[
+				"iftRegisterImageSet",
+				"demo/Registration/iftRegisterImageSetByElastix.c"
+			],
+			[
+				"iftRegisterImageByElastix",
+				"demo/Registration/iftRegisterImageByElastix.c"
+			],
+			[
+				"iftObj",
+				"include/iftObjectModels.h"
+			],
+			[
+				"iftGenerateC",
+				"demo/Miscellaneous/iftGenerateGradientColorTable.c"
+			],
+			[
+				"iftExtractImageROI",
+				"demo/Miscellaneous/ImageObjectExtractors/iftExtractImageROI.c"
+			],
+			[
+				"PatchLo",
+				"src/iftPatchLocalizer.c"
+			],
+			[
+				"iftSelectVox",
+				"demo/BrainAsymmetryAnalysis/iftTrainBISByAutoEncoderOneClassOPF_SelectedVoxels.c"
+			],
+			[
+				"iftSeleVo",
+				"demo/BrainAsymmetryAnalysis/iftTrainBISByAutoEncoderOneClassOPF_SelectedVoxels.c"
+			],
+			[
+				"iftTest",
+				"demo/BrainAsymmetryAnalysis/iftTest.c"
+			],
+			[
+				"iftExtr",
+				"demo/ObjectModels/BrainSubStructLocalization/iftExtractPatch.c"
+			],
+			[
+				"iftExtractPatch",
+				"demo/ObjectModels/BrainSubStructLocalization/iftExtractPatch.c"
+			],
+			[
+				"iftDefa",
+				"demo/ObjectModels/iftDefaultBrainPreProcessing.c"
+			],
+			[
+				"iftDataEx",
+				"PyIFT/extend/iftDataSetExt.i"
+			],
+			[
+				"train_",
+				"demo/BrainAsymmetryAnalysis/python/train_autoencoder.py"
+			],
+			[
+				"TrainB",
+				"demo/ObjectModels/BrainSubStructLocalization/iftTrainBrainPatchLocalizer.c"
+			],
+			[
+				"iftTrainBrainPatchLocalizer",
+				"demo/ObjectModels/BrainSubStructLocalization/iftTrainBrainPatchLocalizer.c"
+			],
+			[
+				"iftSegmeBySt",
+				"demo/ObjectModels/iftSegmentByMALF-STAPLE.c"
+			],
+			[
+				"iftBrainAn",
+				"src/iftBrainAnalysis.c"
+			],
+			[
+				"iftDataClassOne",
+				"demo/Classification/iftDataClassifyByOneClassOPF.c"
+			],
+			[
+				"iftBrain",
+				"include/iftBrainAnalysis.h"
+			],
+			[
+				"iftClust",
+				"src/iftClustering.c"
+			],
+			[
+				"iftCluster",
+				"include/iftClustering.h"
+			],
+			[
+				"iftJs",
+				"src/iftJson.c"
+			],
+			[
+				"iftJson",
+				"src/iftJson.c"
+			],
+			[
+				"iftDataCOneC",
+				"demo/Classification/iftDataClassifyByOneClassOPF.c"
+			],
+			[
+				"iftClassifyDataSet",
+				"demo/BrainAsymmetryAnalysis/iftClassifyDataSetsByBIS.c"
+			],
+			[
+				"iftClassifyDaa",
+				"demo/BrainAsymmetryAnalysis/iftClassifyDataSetsByBIS.c"
+			],
+			[
+				"iftDataClassifyByOn",
+				"demo/Classification/iftDataClassifyByOneClassOPF.c"
+			],
+			[
+				"iftBina",
+				"demo/Miscellaneous/iftBinarizeImage.c"
+			],
+			[
+				"iRegex",
+				"demo/Miscellaneous/Utilities/iftRegexExamples.c"
+			],
+			[
+				"iftSVM",
+				"include/iftSVM.h"
+			],
+			[
+				"plot_",
+				"demo/BrainAsymmetryAnalysis/plots_MICCAI/plot_dataset.py"
+			],
+			[
+				"project_Data",
+				"demo/BrainAsymmetryAnalysis/plots_MICCAI/project_and_plot_dataset.py"
+			],
+			[
+				"project",
+				"demo/BrainAsymmetryAnalysis/plots_MICCAI/project_datasets.py"
+			],
+			[
+				"plot_d",
+				"demo/BrainAsymmetryAnalysis/plots_MICCAI/plot_dataset.py"
+			],
+			[
+				"iftMani",
+				"include/iftManifold.h"
+			],
+			[
+				"IFTtRAINaUT",
+				"demo/BrainAsymmetryAnalysis/iftTrainBISByAutoEncoderOneClassSVM.c"
+			],
+			[
+				"iftBrainA",
+				"src/iftBrainAnalysis.c"
+			],
+			[
+				"iftFindPat",
+				"demo/BrainAsymmetryAnalysis/iftFindPatchesAlongBrain.c"
+			],
+			[
+				"iftTrainAu",
+				"demo/BrainAsymmetryAnalysis/iftTrainBISByAutoEncoderOneClassSVM.c"
+			],
+			[
+				"iftImage.i",
+				"PyIFT/pyfunc/iftImage.i"
+			],
+			[
+				"DataOneCla",
+				"demo/Classification/iftDataClassifyByOneClassOPF.c"
+			],
+			[
+				"iftOneClass",
+				"demo/Classification/iftDataClassifyByOneClassOPF.c"
+			],
+			[
+				"iftTrainBIS",
+				"demo/BrainAsymmetryAnalysis/iftTrainBISByAutoencoderOneClassSVM.c"
+			],
+			[
+				"iftFli",
+				"demo/Miscellaneous/iftFlipImage.c"
+			],
+			[
+				"iftFlip",
+				"demo/Miscellaneous/iftFlipFImage.c"
+			],
+			[
+				"iftImage",
+				"include/iftImage.h"
+			],
+			[
+				"iftRegi",
+				"include/iftRegistration.h"
+			],
+			[
+				"train_a",
+				"demo/BrainAsymmetryAnalysis/train_autoencoder.py"
+			],
+			[
+				"iftFind",
+				"demo/BrainAsymmetryAnalysis/iftFindPatchesByRegularGrid.c"
+			],
+			[
+				"iftSL",
+				"include/iftSlic.h"
+			],
+			[
+				"iftRegis",
+				"include/iftRegistration.h"
+			],
+			[
+				"iftFindPa",
+				"demo/BrainAsymmetryAnalysis/iftFindPatchesAlongBrain.c"
+			],
+			[
+				"iftGridOn",
+				"demo/Miscellaneous/Sampling/iftGridSamplingOnMask.c"
+			],
+			[
+				"iftDataSetEx",
+				"PyIFT/extend/iftDataSetExt.i"
+			],
+			[
+				"iftDat",
+				"include/iftDataSet.h"
+			],
+			[
+				"iftimageex",
+				"PyIFT/extend/iftImageExt.i"
+			],
+			[
+				"ifttrainsvm",
+				"demo/ObjectModels/iftTrainSVMImageClassifierByAdjacencyFeats.c"
+			],
+			[
+				"iftdatasete",
+				"PyIFT/extend/iftDataSetExt.i"
+			],
+			[
+				"iftsegmentada",
+				"demo/ObjectModels/iftSegmentByAdaPro.c"
+			],
+			[
+				"iftobjm",
+				"src/iftObjectModels.c"
+			],
+			[
+				"iftfindpatch",
+				"demo/BrainAsymmetryAnalysis/iftFindPatchesByGrid.c"
+			],
+			[
+				"ifttrainada",
+				"demo/ObjectModels/iftTrainAdaPro.c"
+			],
+			[
+				"iftsegmenb",
+				"demo/ObjectModels/iftSegmentByAdaPro.c"
+			],
+			[
+				"iftobj",
+				"src/iftObjectModels.c"
+			],
+			[
+				"iftselectlar",
+				"demo/Miscellaneous/iftSelectLargestComponent.c"
+			],
+			[
+				"iftbina",
+				"demo/Miscellaneous/iftBinarizeImage.c"
+			],
+			[
+				"iftregister",
+				"demo/Registration/iftRegisterImageByElastix.c"
+			],
+			[
+				"visva.c",
+				"demo/VISVA/visva.cpp"
+			],
+			[
+				"share_",
+				"docs/general_docs/sharing_folder_by_sshfs.txt"
+			],
+			[
+				"iftfindalong",
+				"demo/BrainAsymmetryAnalysis/iftFindPatchesAlongBrain.c"
+			],
+			[
+				"iftfindpatchesalongbrain.c",
+				"demo/BrainAsymmetryAnalysis/iftFindPatchesAlongBrain.c"
+			],
+			[
+				"make",
+				"Makefile"
+			],
+			[
+				"iftcommo",
+				"include/iftCommon.h"
+			],
+			[
+				"iftfhea",
+				"include/iftFHeap.h"
+			],
+			[
+				"gridsampl",
+				"demo/Miscellaneous/Sampling/iftGridSamplingOnMask.c"
+			],
+			[
+				"iftsee",
+				"include/iftSeeds.h"
+			],
+			[
+				"ift.h",
+				"include/ift.h"
+			],
+			[
+				"iftbo",
+				"include/iftBoundingBox.h"
+			],
+			[
+				"iftbrain",
+				"include/iftBrainAnalysis.h"
+			],
+			[
+				"ifterodi",
+				"demo/MathMorphology/iftErodeLabelImage.c"
+			],
+			[
+				"gridsa",
+				"demo/Miscellaneous/Sampling/iftGridSamplingOnMask.c"
+			],
+			[
+				"iftextractlab",
+				"demo/Miscellaneous/ImageObjectExtractors/iftExtractLabels.c"
+			],
+			[
+				"iftbound",
+				"src/iftBoundingBox.c"
+			],
+			[
+				"iftad",
+				"include/iftAdjacency.h"
+			],
+			[
+				"grdis",
+				"demo/Miscellaneous/Sampling/iftGridSamplingOnMask.c"
+			],
+			[
+				"iftsegmenta",
+				"unused_codes/iftSegmentation.h"
+			],
+			[
+				"iftextraobj",
+				"demo/Miscellaneous/ImageObjectExtractors/iftExtractObject.c"
+			],
+			[
+				"extractobj",
+				"demo/Miscellaneous/ImageObjectExtractors/iftExtractObject.c"
+			],
+			[
+				"iftcom",
+				"include/iftCommon.h"
+			],
+			[
+				"iftbas",
+				"include/iftBasicDataTypes.h"
+			],
+			[
+				"iftstri",
+				"include/iftString.h"
+			],
+			[
+				"iftgridon",
+				"demo/Miscellaneous/Sampling/iftGeodesicGridSamplingOnMask.c"
+			],
+			[
+				"basicd",
+				"include/iftBasicDataTypes.h"
+			],
+			[
+				"iftsegmentb",
+				"demo/ObjectModels/iftSegmentByAdaPro.c"
+			],
+			[
+				"iftinter",
+				"demo/Miscellaneous/iftInterp.c"
+			],
+			[
+				"iftinte",
+				"demo/Miscellaneous/iftInterp.c"
+			],
+			[
+				"iftgeom",
+				"include/iftGeometric.h"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 908.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 294.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

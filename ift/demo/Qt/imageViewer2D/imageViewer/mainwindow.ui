@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label2DImageArea">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="ClickableLabel" name="label3DImageArea">
+    <property name="geometry">
+     <rect>
+      <x>500</x>
+      <y>0</y>
+      <width>500</width>
+      <height>500</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBoxThetaX">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>0</y>
+      <width>66</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-360.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>360.000000000000000</double>
+    </property>
+   </widget>
+   <widget class="QDoubleSpinBox" name="doubleSpinBoxThetaY">
+    <property name="geometry">
+     <rect>
+      <x>1000</x>
+      <y>40</y>
+      <width>66</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="minimum">
+     <double>-360.000000000000000</double>
+    </property>
+    <property name="maximum">
+     <double>360.000000000000000</double>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1200</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionOpen"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen">
+   <property name="text">
+    <string>Open</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>ClickableLabel</class>
+   <extends>QLabel</extends>
+   <header>clickablelabel.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>

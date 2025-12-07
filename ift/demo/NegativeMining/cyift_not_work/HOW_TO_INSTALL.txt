@@ -1,0 +1,25 @@
+###### Installing the CyIFT ######
+1) Go to the CyIFT root
+2) ln -s /home/samuka/workspace/ift/libsvm . # Create a symbolic link of libSVM
+3) mkdir libift # Create the directory for the include and libift.a
+4) ln -s /home/samuka/workspace/ift/lib/ ./libift/ # Create a symbolic link of the libIFT already compiled
+5) ln -s /home/samuka/workspace/ift/include ./libift # Create a symbolic link of the ift include folder
+6) make # install the package via pip
+
+* Every symbolic links must be the ABSOLUTE PATH else they cannot work correctly.
+
+####### Setting the Makefile ########
+--> Pip installed in the system
+- If the pip is installed in the system, we must have sudo privileges to install the package.
+- Set the variable like the below:
+PIP_CYIFT_DIR=/usr/local/lib/python2.7/dist-packages/cyift/
+
+- Use sudo before all pip calls in the Makefile;
+
+--> Pip installed localy
+- If the pip is installed localy, e.g. via virtual_env:
+- Set the variable like the below:
+PIP_CYIFT_DIR=/home/samuel.martins/samuka_env/lib/python2.7/site-packages/cyift/
+
+- Just use pip in the calls in the Makefile;
+##################################

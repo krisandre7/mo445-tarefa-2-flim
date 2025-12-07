@@ -1,0 +1,18 @@
+exec-flim.py apresenta um exemplo de como usar esses códigos,
+pré-filtrando as imagens com o filtro mediana que está em
+auxiliary_operations.
+
+iftBagOfFeatPoints cria o dicionário de pontos para as imagens
+marcadas.
+
+Opção 1: Cria, codifica e decodifica um modelo por imagem:
+
+iftCreateLayerModel, iftEncodeLayer e iftDecodeLayer com opção 0
+
+Opção 2: Cria, une modelos das imagens, codifica e decodifica usando o
+modelo consolidado.
+
+iftCreateLayerModel, iftMergeLayerModels, iftEncodeMergedLayer, e
+iftDecodeLayer com opções 1 ou 2 (a opção 2 requer um decoder
+adaptativo para a aplicação de interesse).
+      

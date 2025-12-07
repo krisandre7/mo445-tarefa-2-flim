@@ -1,0 +1,65 @@
+register_modules.cpp
+Use this file to comment functions of the menu.
+
+
+visva.cpp 
+Is the main file of the app. All the specifics are inside the modules folder.
+General buttons are commented here.
+
+
+The gradient is APP->arcw and it is computed by BrainGrad3(Scene *scn). Which is an Otsu and a threshold.
+
+
+
+Each interactive dialog window has its correspondent .h. So add button id and wxButton pointer there.
+
+The relax button appears when the semi-automatic segmentation method is clicked. You can configure the button and the action in the files:
+Create and define the function:
+interactivedialog.cpp
+
+The function that it runs (Relax())
+moduleinteractive.cpp
+
+
+Use moduleinteractive.h and interactivedialog.h to fix the functions protypes.
+
+
+
+The spinbox component is called: wxSpinCtrl *spinSlice;
+Example on file sliceview.h and sliceview.cpp
+
+
+
+
+
+A imagem original fica em APP->data.orig
+O formato é scene.
+
+Função que salva imagem: 
+void MyFrame::OnSaveVolume(wxCommandEvent & event)
+void MyFrame::OnSaveLabel(wxCommandEvent & event)
+void MyFrame::OnSaveObject(wxCommandEvent & event)
+void MyFrame::OnSaveObjectMask(wxCommandEvent & event)
+
+void MyFrame::OnSaveMarkers(wxCommandEvent & event)
+
+
+Abertura:
+void MyFrame::OnLoadMarkers(wxCommandEvent & event) 
+void MyFrame::OnLoadVolume(wxCommandEvent & event)
+void MyFrame::LoadVolume(char *filename)
+void MyFrame::OnLoadScnGradient(wxCommandEvent & event)
+void MyFrame::LoadScnGradient(char *filename)
+void MyFrame::OnLoadLabel(wxCommandEvent & event)
+void MyFrame::LoadLabel(char *filename, char *name, int color)
+
+
+
+
+	#ar -x $(VISVA_DIR)/lib/libift.a  	# This extracts all the .o files from the oldift lib file.
+	#ar -x $(NEWIFT_DIR)/lib/libift.a    # This extracts all the .o files from the newift lib file.
+	#mv *.o ./lib/
+	# This merges all the .o files from the old and newift into a new lib file which is included in the compilation.
+	#ar -r ./lib/libmerged.a ./lib/*.o   
+
+	#rm ./lib/*.o

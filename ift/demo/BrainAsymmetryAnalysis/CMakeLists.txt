@@ -1,0 +1,6 @@
+add_executable(iftSymmISF SAAD/iftSymmISF.c)
+target_link_libraries(iftSymmISF ift)
+add_executable(iftExtractSVoxelStats EveryDayExps/UnderstandingWhyLowSegmAcc/PoorSVoxels/iftExtractSVoxelStats.c)
+target_link_libraries(iftExtractSVoxelStats ift)
+add_executable(iftSymmISF_UniformGridSampling TBME/exp01_why_good_supervoxels/iftSymmISF_UniformGridSampling.c)
+target_link_libraries(iftSymmISF_UniformGridSampling ift)

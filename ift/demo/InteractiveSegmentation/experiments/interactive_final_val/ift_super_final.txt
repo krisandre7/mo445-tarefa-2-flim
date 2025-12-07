@@ -1,0 +1,1320 @@
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.841041254635
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.838700053415
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.838501864054
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.838012305051
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.837605906278
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.837314545917
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.835966581127
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.834467268097
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.834413393204
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.832488282387
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.831754465635
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.830458378302
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.829557134083
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.82889974245
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.828204244737
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.827941113902
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.827916639958
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.827875765307
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.827204286222
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.82701161061
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.826949061326
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.826720636508
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.826078849094
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.825996319226
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.825935328965
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.825775841996
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.825652852921
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.825635169372
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.825531614018
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.825189419261
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.825116606791
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.824999616763
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.824653127726
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.824195976215
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.823927942046
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.823401307166
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.823259591673
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.82310406488
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.822855347608
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.822679971659
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.822609151889
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.82238336082
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.821617755837
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.821494846046
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.818109846669
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.81804216816
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.817657805873
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.817559158632
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.817498635894
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.817353374266
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.81726555224
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.817168654927
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.817121665297
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.817090747654
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.816995646602
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.816205441207
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.816161478492
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.815975694358
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.815867474398
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.81583032409
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.815427108929
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.815356097477
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.815341695771
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.814891593541
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.814693881263
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.814632760286
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.814628013234
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.814415458962
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.814396408285
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.814294743474
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.813965375679
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.813946790685
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.813876747819
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.813446197499
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.813355215958
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.813347905236
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.813231774345
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.813086928651
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.812972505018
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.812825951321
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.812822280068
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.812768591738
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.812735616107
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.81267772301
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.812024693542
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.812019139784
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.812004043577
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.811666001773
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.811550242177
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.811479610439
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.81141663282
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.811352485535
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.811305262308
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.81127511149
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.81121562531
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.810800464994
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.810679390154
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.810590374119
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.810431511455
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.810255052043
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.810242330123
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.810104178488
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.810046715428
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.810035596501
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.809969277201
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.809911044315
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.809840612167
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.809605478634
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.809591605344
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.80933303022
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.80925736339
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.809217120185
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.809188011076
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.809157138254
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.809003175348
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.80896197963
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.808959780548
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.808802501517
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.808744339187
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.808552997102
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.808498968014
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.80838944847
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.808143072341
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.808136195413
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.808135505138
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.808106407832
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.808004623726
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.807974837273
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.807802403271
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.807795375639
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.807770985397
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.807767901378
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.807630856165
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.807488760224
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.807404630301
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.807001650142
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.806860036935
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.806832599353
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.806815583387
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.806666022209
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.806620227482
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.806604234715
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.806409517846
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.806382449195
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.806231308026
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.805909294348
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.80584629227
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.805805498127
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.805795381378
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.805623564507
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.805582304746
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.805555551872
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.805461173622
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.80545575391
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.8054384915
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.80527853027
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.805141529324
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.805031321102
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804842413813
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804830688813
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804748408166
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804723689279
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.804718408829
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.804697430719
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.804697338726
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804687386283
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.804650083599
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804454911969
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.804400108169
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.804381732206
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804380493888
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804160123861
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.804054376494
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.804022935001
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.804022120738
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.803995465849
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.803839029648
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.803833492494
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.803687018816
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.803640990917
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.803533221409
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.803505061226
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.8034374871
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.803345621452
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.803274825215
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.803201243718
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.803198144957
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.803111060624
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.803052530534
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.802947530097
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.802937415019
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.802790365357
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.802656424929
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.802654602134
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.802621096788
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.802582878971
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.802570948654
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.802549545627
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.802542721374
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.80246477208
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.802428792896
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.80232759051
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.802322942013
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.802180622369
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.802087343197
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.802032123847
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.801733667755
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.801669610324
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.801644909754
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.80146774606
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.801291442354
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.801095200958
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.801016248092
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.800713306037
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.800606495866
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.800577823701
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.800443468328
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.800410872496
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.800122230745
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.799913625494
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.799903993404
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.799870416277
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.799848533518
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.799740780603
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.799710888628
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.799684509422
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.799682586001
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.799676698702
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.799637652795
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.79929076364
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.799254879238
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.799232729684
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.799022830927
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.798948929448
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.798489991565
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.798403027718
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.798361436299
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.798233488298
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.798180040536
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.798131937076
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.79786162518
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.797804629696
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.797641705381
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.797301305841
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.797005408183
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.796733896009
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.796721938614
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.796629206815
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.796571156776
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.796546261694
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.79641546854
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.796361091956
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.796335339823
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.796254461461
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.796236881539
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.796129933149
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.796033927628
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.795720796553
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.795472860432
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.795345288185
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.795187441504
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.795152212456
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.795143499162
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.795089715655
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.795021430893
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.794957543122
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.794705813804
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.794644051588
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.794617246602
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.794605973161
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.79439771285
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.794197362001
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.794065651212
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.793954818738
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.793892783842
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.793849654368
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.79369093019
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.793605054872
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.793236325702
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.793179921455
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.793165857409
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.793082694699
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.79307738716
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.792899248568
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.792871081733
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.792842431813
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.792763655654
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.792635097397
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.792628954404
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.792551694353
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.792392590355
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.792390762514
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.792388625911
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.792353676462
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.792350023261
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.792316754748
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.79218764005
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.792088641077
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.792036290296
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.792012833027
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.791715307842
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.791630205767
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.791614732742
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.791388792523
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.791292724716
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.791286451327
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.791228041032
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.791206248552
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.791176624937
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.791113444705
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.790892764362
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.790779008088
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.790674074718
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.790632679377
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.79033806903
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.790221574157
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.790111407893
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.789931796789
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.789821996625
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.789803078856
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.789397679046
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.788945256035
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.788870780713
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.788796982339
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.788568336783
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.788440312482
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.788366025037
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.788066651034
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.788042589756
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.787673677089
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.787557006798
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.787344136334
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.787241436999
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.787096999351
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.786951281003
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.786528302399
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.786400353142
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.786308814798
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.785862121997
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.785813875699
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.785806133513
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.785676680825
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.785612287074
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.78559585567
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.785569833102
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.785394003168
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.784981841413
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.784851093058
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.7845933205
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.784579423826
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.784565675131
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.784515679244
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.784504917429
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.784168996236
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.783660647529
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.783280575031
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.782511524845
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.782113166952
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.780087594874
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.779574163231
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.779406610887
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.778915897682
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.778566820292
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.777905195031
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.777753914339
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.77770024297
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.777107906576
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.777021768891
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.776629504838
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 1.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.776580477229
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.776421446598
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.776092515524
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.776046259669
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.775566628288
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.774655752704
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.773852932767
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.773275504895
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.773001060795
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.772966458345
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.772859719071
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.770455416867
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.769763645104
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.769392381811
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.769057751958
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.768312646683
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.768185873351
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.767506994594
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.766332216252
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.766035188862
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.764519789783
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 1, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.764244661927
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.763899875326
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.763270751014
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.76326061468
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.763103378883
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.762672601874
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.761278276678
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.760782077344
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.759329460923
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.758828940306
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.757687374779
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.757124293361
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.755404279796
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.754751944252
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.753689173918
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.753623573482
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.753562778969
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.753384778446
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.752584661416
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 100, 'spatial_radius': 3.0}
+Auc: 0.751819592118
+
+Parameters: {'alpha': [0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 400, 'spatial_radius': 3.0}
+Auc: 0.75173583747
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.751719232915
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.75169226098
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.751137691616
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.750807570357
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.750683200782
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.750528362596
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.750094107099
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.749899297495
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.749641207284
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.743967221017
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.743746142928
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.742454888938
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.74196658574
+
+Parameters: {'alpha': [1.1111111111111112e-05, 1.1111111111111112e-05, 1.1111111111111112e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.741887723237
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.741122063098
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.740036317578
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.738638002859
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.738202336303
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 50, 'spatial_radius': 3.0}
+Auc: 0.737737422585
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 0, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.73772348326
+
+Parameters: {'alpha': [7.621247113163973e-06, 1.1547344110854504e-05, 1.1547344110854504e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.736746256434
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.735203299435
+
+Parameters: {'alpha': [3.9615846338535415e-06, 1.2004801920768307e-05, 1.2004801920768307e-05, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.728010372432
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.715789050883
+
+Parameters: {'alpha': [5.126233499935922e-06, 5.126233499935922e-06, 5.126233499935922e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.715643469774
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.715082796889
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 4, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.712427638958
+
+Parameters: {'alpha': [2.178099212419126e-06, 6.6003006436943206e-06, 6.6003006436943206e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.710745251554
+
+Parameters: {'alpha': [3.815767793185386e-06, 5.7814663533111904e-06, 5.7814663533111904e-06, 0.0, 0.0, 1.0, 0.0], 'colorspace': 4, 'bins_per_band': 8, 'volume_threshold': 10, 'spatial_radius': 3.0}
+Auc: 0.710526913934
+

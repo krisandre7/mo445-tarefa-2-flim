@@ -1,0 +1,220 @@
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include "resizefilter.h"
+
+
+
+void MainWindow::initComponents(){
+    messageBox.setFixedSize(500,200);
+
+
+}
+
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
+{
+    ui->setupUi(this);
+    ui->labelProjectionArea->setStyleSheet("border: 1px solid black");
+    ui->listWidgetImagesThumb->setStyleSheet("border: 1px solid black");
+    ui->listWidgetImagesThumb->setViewMode(QListWidget::IconMode);
+    ui->listWidgetImagesThumb->setIconSize(QSize(50,50));
+    ui->listWidgetImagesThumb->setResizeMode(QListWidget::Adjust);
+    //ui->listWidgetImagesThumb->addItem(new QListWidgetItem(QIcon("lena.png"),"lena1"));
+}
+
+
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
+void MainWindow::on_actionDataset_triggered()
+{
+
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Open File"), QString(),
+                                                    tr("Dataset Files (*.*);;C++ Files (*.cpp *.h)"));
+
+    if (!fileName.isEmpty()) {
+
+        try{
+            workDataset = iftReadOPFDataSet(fileName.toLatin1().data());
+            workDataset->ntrainsamples = workDataset->nsamples;
+            for (int i = 0; i < workDataset->nsamples; ++i) {
+                workDataset->sample[i].status = IFT_TRAIN;
+                QString sampleName = QString("sample%1").arg(i);
+                ui->listWidgetImagesThumb->addItem(new QListWidgetItem(QIcon("icons/imageMissing.png"),sampleName));
+            }
+            iftColorTable* colorTable = iftCreateColorTable(workDataset->nclasses+1,RGB_CSPACE);
+            iftKnnGraph *opfClusteringGrapgh =  iftUnsupLearn(workDataset, 0.2, iftNormalizedCut, 10);
+
+            //iftOPFClusteringVisualization(opfClusteringGrapgh);
+            //workDatasetLowDimension = iftDimReductionByTSNE(workDataset, 2, 40, 1000, false);
+            //minMaxdataset(workDatasetLowDimension);
+            //displaySamplesTrueLabel2D(workDatasetLowDimension,colorTable,255);
+            //iftMatrix* matrix = iftDataSetToFeatureMatrix(workDatasetLowDimension);
+            //fprintf(stderr,"%d %d", workDatasetLowDimension->nsamples,workDatasetLowDimension->nfeats);
+            //iftPrintMatrix(matrix);
+
+
+        }catch (int e){
+            messageBox.critical(0,"Error","File is not a iftdataset");
+        }
+    }
+    else{
+        messageBox.critical(0,"Error","File is empty");
+    }
+}
+
+void MainWindow::displaySamplesTrueLabel2D(iftDataSet *normalizedDataset, iftColorTable *colorTable, float alpha){
+    float heightScalingFactor = labelProjectionAreaHeight-sampleVerticalRadius-viewShift;
+    float widthScalingFactor = labelProjectionAreaWidth-sampleHorizontalRadius-viewShift;
+    QPixmap *pix = new QPixmap(labelProjectionAreaWidth,labelProjectionAreaHeight);
+    pix->fill(Qt::white);
+    QPainter painter(pix);
+    painter.setPen(Qt::black);
+    for(int i=0; i<normalizedDataset->nsamples; i++){
+        //drawSampleTrueLabel(&(normalizedDataset->sample[i]), &painter, heightScalingFactor,widthScalingFactor,colorTable);
+        drawSampleTrueLabel(&(normalizedDataset->sample[i]), &painter, heightScalingFactor,
+                            widthScalingFactor, colorTable, alpha);
+    }
+    //painter.drawEllipse(50,50,5,5);
+    //painter.drawEllipse(50,100,5,5);
+    ui->labelProjectionArea->setPixmap(*pix);
+
+}
+
+void MainWindow::drawSampleTrueLabel(iftSample *sample,QPainter *painter, float heightScalingFactor,
+                                     float widthScalingFactor, iftColorTable *colorTable, float alpha){
+    int R = colorTable->color[sample->truelabel].val[0];
+    int G = colorTable->color[sample->truelabel].val[1];
+    int B = colorTable->color[sample->truelabel].val[2];
+
+
+    painter->setBrush(QBrush(QColor(R, G, B, alpha)));
+    //fprintf(stderr,"%f %f ",sample->feat[0],sample->feat[1]);
+    painter->drawEllipse((int)(sample->feat[0]*widthScalingFactor),(int)(sample->feat[1]*heightScalingFactor),
+            sampleHorizontalRadius,sampleVerticalRadius);
+}
+
+
+void MainWindow::on_pushButton_clicked()
+{
+    //QLabel *test = new QLabel("test");
+    //test->setGeometry(30,30,50,50);
+    iftImage *image2D = iftReadImagePNG("lena.png");
+    iftImage *image3D = iftLiftImage2(image2D,255);
+    iftImage *imageLabels = iftLiftImage2(image2D,1);
+    iftWriteScene(image3D,"lena3D.scn");
+    iftWriteScene(imageLabels,"lena3D_labels.scn");
+
+}
+
+void MainWindow::minMaxdataset(iftDataSet* dataset){
+    float *minimus = (float*)iftAlloc(dataset->nfeats,sizeof(float));
+    float *maximus = (float*)iftAlloc(dataset->nfeats,sizeof(float));
+
+    for (int j = 0; j < dataset->nfeats; ++j) {
+        minimus[j] = dataset->sample[0].feat[j];
+        maximus[j] = dataset->sample[0].feat[j];
+    }
+
+    for (int j = 0; j < dataset->nfeats; ++j) {
+        for (int i = 0; i < dataset->nsamples; ++i) {
+
+            if(minimus[j] > dataset->sample[i].feat[j]){
+                minimus[j] = dataset->sample[i].feat[j];
+            }
+
+            if(maximus[j] < dataset->sample[i].feat[j]){
+                maximus[j] = dataset->sample[i].feat[j];
+            }
+        }
+    }
+
+    for (int j = 0; j < dataset->nfeats; ++j) {
+        for (int i = 0; i < dataset->nsamples; ++i) {
+            dataset->sample[i].feat[j] = (dataset->sample[i].feat[j] - minimus[j])/(maximus[j]-minimus[j]);
+        }
+    }
+}
+
+void MainWindow::windowSizeChangedSlot(QSize size){
+    qDebug() << size;
+}
+
+void MainWindow::resizeEvent(QResizeEvent* event)
+{
+    if(mainWindowInitHeight == 0 && mainWindowInitWidth == 0){
+        mainWindowInitHeight = event->size().height();
+        mainWindowInitWidth = event->size().width();
+        mainWindowHeight = mainWindowInitHeight;
+        mainWindowWidth = mainWindowInitWidth;
+    }else{
+        mainWindowHeight = event->size().height();
+        mainWindowWidth = event->size().width();
+        //int minDimension = iftMin(mainWindowHeight,mainWindowWidth);
+        labelProjectionAreaHeight = 0.7*mainWindowHeight;
+        labelProjectionAreaWidth = 0.7*mainWindowHeight;
+        labelProjectionAreaX = (mainWindowWidth/2.)+20;
+        labelProjectionAreaY = 20;
+        ui->labelProjectionArea->setGeometry(labelProjectionAreaX,
+                                             labelProjectionAreaY,
+                                             labelProjectionAreaWidth,
+                                             labelProjectionAreaHeight);
+        scrollAreaHeight = 120;
+        scrollAreaWidth = mainWindowWidth*0.95;
+        scrollAreaX = mainWindowWidth*0.025;
+        scrollAreaY = mainWindowHeight-120-(0.08*mainWindowHeight);
+
+        //ui->scrollAreaSamplesImage->setGeometry(scrollAreaX,scrollAreaY,scrollAreaWidth,scrollAreaHeight);
+
+        QImage image("lena.png");
+        QLabel *imageLabel = new QLabel;
+        QLabel *imageLabel2 = new QLabel;
+        imageLabel->setPixmap(QPixmap::fromImage(image));
+        imageLabel2->setPixmap(QPixmap::fromImage(image));
+
+        //ui->scrollAreaSamplesImage->setBackgroundRole(QPalette::Dark);
+        //ui->scrollAreaSamplesImage->setWidget(imageLabel);
+        //ui->scrollAreaSamplesImage->addScrollBarWidget(imageLabel2,Qt::AlignRight);
+        ui->listWidgetImagesThumb->setGeometry(scrollAreaX,scrollAreaY,scrollAreaWidth,scrollAreaHeight);
+    }
+}
+
+void MainWindow::on_listWidgetImagesThumb_doubleClicked(const QModelIndex &index)
+{
+    int col = index.column();
+    int row = index.row();
+    qDebug() << row << " " << col;
+}
+
+void MainWindow::on_actionDataset_Images_Directory_triggered()
+{
+    QString directoryName = QFileDialog::getExistingDirectory(this, tr("Open Directory"),
+                                                 "/home",
+                                                 QFileDialog::ShowDirsOnly
+                                                 | QFileDialog::DontResolveSymlinks);
+     if (!directoryName.isEmpty()) {
+        if(workDataset != NULL){
+            QDirIterator it(directoryName, QDirIterator::Subdirectories);
+            QString fileName;
+            while (it.hasNext()) {
+                fileName << it.next();
+                for(int i=0; i<workDataset->nsamples;i++){
+                    QString sampleName = QString("sample%1").arg(i);
+                    if(fileName.contains(sampleName,Qt::CaseSensitivity)){
+                        qDebug() << "entrei: " <<  sampleName;
+                    }
+                    qDebug() <<  sampleName;
+                }
+                // /etc/.
+                // /etc/..
+                // /etc/X11
+                // /etc/X11/fs
+                // ...
+            }
+        }
+     }
+}

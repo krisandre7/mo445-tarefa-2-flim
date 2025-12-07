@@ -1,0 +1,304 @@
+Author: Alexandre Falcao (e-mail: afalcao@ic.unicamp.br)
+
+This readme file describes the main components to use the IFTRoot3D
+package for Trait Selection, Trait Grouping, and GWAA (Genome-Wide
+Association Analysis). The core source code is in src/iftRoot3D.h and
+src/ift3DRoot.c, where you will find the main data structures and
+routines to manipulate phenotype and genotype informations. The main
+programs and a few extra programs are also provided in src. The
+experiments should be executed in a data directory, created by the
+user according to the Usage instructions. In order to facilitate the
+experiments, scripts have been included in the python directory.
+
+All programs work with the following subpopulation code:
+
+Temperate Japonica -- TEJ
+Tropical Japonica  -- TRJ
+Indica             -- IND
+Aromatic           -- ARO
+Admix              -- ADM
+Aus                -- AUS
+NA                 -- NA
+
+Useful Commands:
+
+     man <command> -- Display the usage of the commands below and their parameters  
+     mkdir -- Open a directory
+     rmdir -- Remove a directory
+     cd    -- Goes to a directory in a given path
+     display <image> --- Displays an image on the screen (this requires installation of the ImageMagick package) 
+     mv    -- to rename a file
+     rm    -- to remove a file
+     cp    -- to copy a file
+     ln -s -- to link files/directories
+     pwd   -- to tell the current directory
+     ls -s -- to list files/directories
+     sudo  -- to execute any command as root (administrator)
+     tar -cvzf -- to create a ball of a directory with all its files (tar.gz extension)
+     tar -xvzf -- to decompress the files from a ball of a directory (tar.gz extension)
+     tar -cvjf -- to create a ball of a directory with all its files (tar.bz2 extension)
+     tar -xvjf -- to decompress the files from a ball of a directory (tar.bz2 extension)
+  
+Installation:
+
+   Place the ift in your root directory by 
+
+   tar -xvjf ift.tar.bz2
+
+   Edit the .bashrc file in the root directory with the following commands at its end.
+       
+   export IFT_DIR=/home/<username>/ift
+   export PATH=$PATH:.:$IFT_DIR/bin 
+
+   The .bashrc will be executed everytime you open an xterminal. You may also execute it whenever you change its content by typing
+
+   source .bashrc 				
+
+   in the root directory. 
+
+Compilation:
+
+   Go to ift/demo/IFTRoot3D and compile the programs by typing 
+
+   cd ift/demo/IFTRoot3D   
+   make all 
+
+   You may also need to remove binaries and recompile everything someday. In this case, type 
+
+   make clean
+   make all
+
+   After compilation, you may return to the root directory by typing
+
+   cd 
+
+Usage:
+
+   In the root directory, you will open a data directory to execute your experiment
+
+   e.g.: mkdir data_GWAA_07012012
+    
+   Inside the data directory
+
+   e.g.: cd data_GWAA_07012012
+
+   you will follow the next instructions.
+  
+   Copy the scripts in ~/ift/demo/IFTRoot3D/python to this data directory and change them if necessary
+ 
+   cp ~/ift/demo/IFTRoot3D/python/*.py .
+
+   Now link the files with genotype, subpopulation, and trait informations to standard names Genotype.csv, Subpops.csv, and Traits.csv
+
+   example:
+
+   ln -s ~/cornell_projects/Genotypes/Genotype.csv  Genotype.csv 
+   ln -s ~/cornell_projects/Subpops/Subpops.csv  Subpops.csv 
+   ln -s ~/cornell_projects/Traits/Traits.csv Traits.csv
+
+   Finally, you can execute your experiments by using both scripts,
+   createPhenotype.py, first, and then, createPValues.py. The usage of
+   these scripts and the main programs, which can also be executed
+   from the command line, is given below.
+
+Scripts: 
+
+1. createPhenotype.py <P1> <P2> <P3>
+
+   This script creates the phenotype file with all or a given
+   subpopulation by merging trait and subpopulation files. It can also
+   generate a file with all traits selected (SelectedTraits.csv) for
+   manual edition or select traits by MSPS (MultiScale Parameter
+   Search) or VPS (Varsity Player Selection) methodologies.
+
+   The input parameters are: 
+
+   P1 - subpopulation: e.g., TEJ, TRJ, ALL; 
+   P2 - trait selection: 
+        0 - Do not select traits,
+        1 - Select traits by MSPS,
+        2 - Select traits by VPS
+   P3 - maximum scale for trait selection: (0.0,1.0], e.g., 0.08
+
+2. createPValues.py -i <P1> <P2> <P3> <P4> <P5> <P6>
+
+   This script executes grouping and genotype-phenotype analysis,
+   creating an output file with the p-values and other informations
+   for each pair (SNP, Group). It can select groups interactively, by
+   allowing the user to change the maximum scale and the minimum
+   number of individuals per group, or the groups may be defined
+   automatically, if the user knows those parameters ahead. It will
+   also eliminate groups with less than a desired number of
+   individuals.
+
+   The input parameters are:
+      
+   -i (optional): for interactive grouping only. The user will be
+    asked to input maximum scales for regrouping until a desired
+    value.
+
+    P1 - subpopulation: e.g., TEJ, TRJ, ALL.
+    P2 - maximum scale for grouping: (0.0,1.0], e.g., 0.08.
+    P3 - minimum number of individuals per group: e.g., 5.
+    P4 - number of permutations for GWAA: e.g., 1000.
+    P5 - tolerance with respect to random p-values in GWAA: e.g., 0.05 (5%).
+    P6 - inital p-value threshold in GWAA: e.g., 0.01 (10^-2).
+
+Main programs:
+
+1. iftCreatePhenotypeFile <subpop/ALL>
+   
+   This program takes an option of subpopulation (or all
+   subpopulations), reads two files, one with line and subpopulation
+   identifications and the other with line and trait values, and
+   creates a phenotype file with line identification, subpopulation
+   identification, and trait values for the selected subpopulation (or
+   for all subpopulations as default). Before the merging, it sorts
+   both files by the increasing order of their line identification
+   number for merging and output generation. An individual without
+   subpopulation is assumed as NA in the phenotype file. It also
+   outputs a trait selection file (SelectedTraits.csv) with all traits
+   automatically selected. If you want to deselect a trait, you must
+   edit this file.
+
+2. iftSelectTraitsByMSPS <phenotype file> <maximum scale (0,1]>
+
+   This program reads a phenotype file and assigns weights to the
+   traits by executing the Multi-Scale Parameter Search (MSPS)
+   algorithm. It outputs a trait selection file (SelectedTraits.csv)
+   with the weights of each trait.
+
+3. iftSelectTraitsByVPS <phenotype file> <maximum scale (0,1]>
+
+   This program reads a phenotype file and selects the best traits by
+   executing the Varsity Player Selection (VPS) algorithm. It outputs
+   a trait selection file (SelectedTraits.csv) with the selected
+   traits .
+
+4. iftGroupTraits  <phenotype file> <maximum scale (0,1]>
+   
+   This program reads a phenotype file and the SelectedTraits.csv file
+   and computes groups by optimum-path forest. The resulting groups
+   are updated in the phenotype file.
+
+5. iftSelectSubpop <subpop>
+
+   This program reads the Phenotype_ALL.csv file and selects a given
+   subpopulation SSS, writing a new phenotype file Phenotype_SSS.csv
+   for that subpopulation.
+   
+6. iftEliminateSmallGroups <phenotype file> <minimum number of individuals per group>
+
+   This program reads a phenotype file and eliminates groups with less
+   than a minimum number of individuals. The phenotype file is
+   rewritten with the individuals ordered by group label.
+
+7. iftGWAA <input (phenotype file)> <output (p-values file)> <number of permutations> <tolerance> <initial p-value threshold>
+
+   This program reads Genotype.csv and a phenotype.csv file from a
+   given subpopulation and performs the genotype-phenotype association
+   analysis. It ouputs SNP, chromosome, position, minor allele
+   frequency, and for each group: the number of individuals, p-value,
+   first random p-value, the minimum random p-value, the maximum
+   random p-value among those that satisfy a tolerance percentage, and
+   the relevance of the group. The program takes as input parameters:
+   an initial p-value threshold, number of random permutations, and a
+   tolerance percentage on the number of times that a random p-value
+   can be better than the p-value of the group. Pairs (SNP,GROUP),
+   that do not satisfy the initial threshold, or the tolerance
+   percentage, are considered irrelevant.
+
+   Currently, it is creating another output file with identification
+   "Simpler" in the name (e.g., PValues_SSS_Simpler.csv if the main
+   output file is PValues_SSS.csv), which can be used to compute and
+   visualize the Manhattan plot using iftGenoPlots and display
+   commands. The main idea is that iftGenoPlots should also generate
+   the Q-Q plot in the future.
+
+Extra Programs:
+
+1. iftStatTable <number of trials>
+
+   For a given number of trials, this program creates a statistical
+   table (StatTable.csv) with significance levels for the binomial
+   distribution upto overflow in factorial computation, and completes
+   the table with the significance levels for the normal
+   distribution. In both cases, the probability alpha of the expected
+   value is 0.5 to create the null hypotesis H0 (we use one-tail
+   analysis, but we will consider two alternative hypotheses H1 and H2
+   around H0).
+
+2. iftGenoPlots <PValues_SSS_Simpler.csv> <output_image.jpg>
+
+   This program currently generates a Manhattan plot from a simpler
+   p-value file, created by iftGWAA.c (PValues_SSS_Simpler.csv), where
+   SSS is a subpopulation. The idea is to create also the Q-Q plot
+   from that file in the future. The output image can be displayed
+   with the display command (e.g.: display output_image.jpg).
+
+3. iftDetectRootMesh <basename> <number of images>
+
+   This program reads a sequence of 2D tif images containing a root
+   system with a colored mesh on a colored background, both with the
+   same red color, removes the mesh and outputs a sequence of 2D
+   binary tif images with the root pixels for 3D reconstruction.
+
+   All images of the input sequence must be named by following the
+   template %s_%03d.tif (%s is a basename and %03d is a number with 3
+   digits from 001 to 999). The output sequence will be named
+   %s_bin_%03d.tif. It also creates another sequence %s_root_%03d.tif
+   that illustrates the segmented pixels on the original colored
+   images.
+
+
+Some examples (See example 4):
+
+1. Create a phenotype file for Temperate Japonica, compute the number
+of groups using maximum scale at 5% of the total number of
+individuals, eliminate small groups with less than 5 individuals, and
+compute GWAA with 1000 permutations, 5% tolerance and 10^-2 initial
+threshold, creating the output file PValues_TEJ.csv.
+
+  iftCreatePhenotypeFile TEJ
+  iftGroupTraits Phenotype_TEJ.csv 0.05
+  iftEliminateSmallGroups Phenotype_TEJ.csv 5 
+  iftGWAA Phenotype_TEJ.csv PValues_TEJ.csv 1000 0.05 0.01
+ 
+2. Create a phenotype file with ALL lines, compute the number of
+groups using maximum scale at 3% of the total number of individuals,
+select subpopulation Temperate Japonica, eliminate small groups with
+less than 5 individuals, and compute GWAA with 1000 permutations, 5%
+tolerance, and 10^-2 initial threshold, creating the output file
+PValues_TEJ.csv.
+
+  iftCreatePhenotypeFile ALL
+  iftGroupTraits Phenotype_ALL.csv 0.03
+  iftSelectSubpop TEJ
+  iftEliminateSmallGroups Phenotype_TEJ.csv 5 
+  iftGWAA Phenotype_TEJ.csv PValues_TEJ.csv 1000 0.05 0.01
+
+3. After iftGWAA, you may want to see the Manhattan plot. For that,
+iftGWAA also outputs a temporary file, called PValuesSimpler.csv. The
+execution
+
+   iftGenoPlots	PValuesSimpler.csv 
+
+will create a file Manhattan.ppm with that plot.
+
+4. You may need to execute the following sequence of commands for
+every subpopulation in order to adjust the best maximum scale and
+minimum number of individuals per group, in the case you group traits
+using all individuals. This will show how many groups and individuals
+per group will remain for each given subpopulation. The example below
+uses maximum scale 0.03, at least 5 individuals per group, and
+evaluates the results for Temperate Japonica. If you repeat the
+example with the same maximum scale for Aromatic. You will observe a
+single group. This may indicate two options: either you have a few
+lines only of Aromatic and this is not enough for GWAA or you will
+need a lower maximum scale (e.g., try 0.02).
+
+  iftCreatePhenotypeFile ALL
+  iftGroupTraits Phenotype_ALL.csv 0.03
+  iftSelectSubpop TEJ
+  iftEliminateSmallGroups Phenotype_TEJ.csv 5 
+

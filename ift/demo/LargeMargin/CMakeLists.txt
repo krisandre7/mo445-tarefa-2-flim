@@ -1,0 +1,11 @@
+add_executable(iftLargeMarginIrisDemo iftLargeMarginIrisDemo.c)
+target_link_libraries(iftLargeMarginIrisDemo ift)
+
+add_executable(iftKernelLMIrisDemo iftKernelLMIrisDemo.c)
+target_link_libraries(iftKernelLMIrisDemo ift)
+
+add_executable(iftLargeMarginOPF iftLargeMarginOPF.c)
+target_link_libraries(iftLargeMarginOPF ift)
+
+add_executable(iftLargeMarginContour iftLargeMarginContour)
+target_link_libraries(iftLargeMarginContour ift)

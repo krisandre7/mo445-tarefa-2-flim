@@ -1,0 +1,54 @@
+This is the Analysis of Variance (ANOVA) and Tukey's HSD code. These methods
+are enough to test statistical significance between sets of samples. It works
+for 2, 3, ..., N set of samples.
+
+
+Parameters:
+	Directory: A directory containing sets of samples. Each set is a text
+			   file with the values separated by a delimiter.
+
+	Example of directory:
+		./error/
+			method1.txt
+			method2.txt
+			method3.txt
+
+		Inside each file:
+			method1.txt
+				0.5 0.6 0.7 0.8 0.9
+			method2.txt
+				0.5 0.6 0.7 0.8 0.9
+			method3.txt
+				0.5 0.6 0.7 0.8 0.9
+
+	Delimiter: in the above example, the delimiter is space. Use '\ ' in the 
+			   program call.
+
+	Order: defines if the best possible result is a low number or
+	a high number. For instance, measuring error, it is desired that the value
+	is close to zero. But measuring accuracy, the closer to 1, the better.
+
+	Confidence: It is the complement of the interval of confidence required.
+				For a 95% confidence interval, use 1-0.95 = 0.05
+
+	Output: The name of the text file that will be generated with the results.
+
+
+Results:
+	method1.txt = method2.txt
+	method1.txt < method3.txt
+	method2.txt = method3.txt
+
+
+Interpretation:
+	If the the order parameter was lowest, the results will be ordered in
+	crescent order. (First line is the best method, and so on).
+	The equal signs means that the method in the left is equivalent to the
+	method in the right.
+	The < sign means that the method in the left is statistically significant
+	compared to the method in the right. And you also know that the method in
+	the left is better, since it is an ordered list and it appeared first.
+
+
+The qsturng.py file is a statistical table and should be kept together with the
+anova_tukey_test.py

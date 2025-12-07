@@ -1,0 +1,25 @@
+
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<objtree version="1.0">
+
+  <obj name="Brain">
+     <obj name="Cortical Dysplasias"></obj>
+     <obj name="White Matter">
+          <obj name="Corpus Callosum"></obj>
+     </obj>
+     <obj name="Gray Matter">
+          <obj name="Cortex"></obj>
+          <obj name="Caudate Nuclei"></obj>
+          <obj name="Hipocampi"></obj>
+          <obj name="Talamus"></obj>
+     </obj>
+     <obj name="Cerebellum">
+          <obj name="White Matter"></obj>
+	  <obj name="Gray Matter"></obj>
+     </obj>	  
+     <obj name="Lateral Ventricles"></obj>
+  </obj>
+
+</objtree>
+

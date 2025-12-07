@@ -1,0 +1,836 @@
+#####################################################################
+# 1 - Brief description
+#####################################################################
+
+  This demo has all the necessary programs and scripts to prepare and
+  run the hybrid classification pipeline for parasites using SVM and
+  a Neural Network (currently Vgg16).
+
+- Structure:
+  2 - Author Information
+  3 - Training Data
+  4 - Training/setup
+  5 - Testing
+  6 - Online Operation
+  7 - Full Operation Example
+  8 - C++ Tensorflow Operation (to be integrated with other sections)
+
+#####################################################################
+# 2 - Author Information
+#####################################################################
+
+  Daniel Osaku
+    - Original work validating the hybrid and simplification methods
+  Alan Peixinho
+    - Original IFT neural network implementation
+  Felipe L. Galvao 
+    - Preparing this demo
+    - Interfacing Osaku's work with IFT
+    - Optimizing the IFT neural network implementation
+
+#####################################################################
+# 3 - Training Data
+#####################################################################
+
+### Sub-Sections
+# 3.1 Datasets in the IFT standard
+# 3.2 Datasets in Celso's standard
+# 3.3 Pre-trained data
+
+### 3.1 Datasets in the IFT standard
+
+- Original images and masks:
+    @lutz:/dados/bases/LIDS/datasets/biomedical_images/parasitology/Eggs/raw/
+    @lutz:/dados/bases/LIDS/datasets/biomedical_images/parasitology/Larvae/raw/
+    @lutz:/dados/bases/LIDS/datasets/biomedical_images/parasitology/Protozoan/raw/
+
+### 3.2 Datasets in Celso's standard
+
+- Base folder:
+    @lutz:/dados/bases/Bases_formatadas/parasites/
+
+- CSVs indicating the relevant sub-folders for each group within the base folder:
+    <this_folder>/raw_path_celso/eggs.csv
+    <this_folder>/raw_path_celso/larvae.csv
+    <this_folder>/raw_path_celso/protozoan.csv
+
+  Within each sub-folder indicated by the CSV, images and masks come in pairs with
+    extension .obj.png and .msk.pgm (or .msk.png), respectively. The CSV also
+    indicates the unique label of the samples in a given folder.
+
+
+### 3.3 Pre-trained data
+
+  Note that all the current pre-trained data is based on the
+    datasets from Section 3.1.
+
+- Pre-trained data for the entire pipeline:
+    @lutz:/dados/bases/hybrid-classification/
+    @lutz:/dados/bases/hybrid-classification/Eggs/
+    @lutz:/dados/bases/hybrid-classification/Larvae/
+    @lutz:/dados/bases/hybrid-classification/Protozoan/
+
+  Includes:
+    - 'vgg16_imagenet_weights_notop.h5'
+          Keras network pretrained on ImageNet. (Used in all 3 datasets)
+
+    - '<dataset>/PreProc'
+          Pre-processed images for the network.
+
+    - '<dataset>/train.csv', '<dataset>/val.csv', and '<dataset>/test.csv'
+          Pre-defined 40/30/30 split of pre-processed images into train/validation/test.
+          Contain only sample base names, update with iftUpdateSampleCsvDir
+            before using (see Section 4.2.4).
+
+    - '<dataset>/keras_network.h5'
+          Keras network trained on '<dataset>/train.csv'.
+
+    - '<dataset>/ift_network.json', and '<dataset>/ift_network.weights'
+          IFT network and weights trained on '<dataset>/train.csv' images.
+
+    - '<dataset>/keras_network_pruned.h5', '<dataset>/ift_network_pruned.json', 
+      and '<dataset>/ift_network_pruned.weights'
+          Simplified versions of the corresponding networks after running
+            the pruning scripts (see Section 4.3.3).
+
+    - '<dataset>/celsofeats_full.zip', '<dataset>/celsofeats_train.zip',
+      '<dataset>/celsofeats_val.zip', and '<dataset>/celsofeats_test.zip'
+          iftDataSet with Celso's descriptors for the corresponding splits
+            in the csv files, plus the full dataset.
+          The associated filesets with image paths contains only sample base
+            names, update with iftUpdateDataSetFileDir before using (see Section 4.2.5).
+
+    - '<dataset>/svm.zip', and '<dataset>/svm_params.txt'
+        SVM classifier trained on '<dataset>/celsofeats_train.zip' and
+          its corresponding parameters.
+
+    - '<dataset>/error_data.npy'
+        Error data from SVM classification over validation set for histogram computation.
+
+#####################################################################
+# 4 - Training/setup
+#####################################################################
+
+### Sub-Sections
+# 4.1 Build (compile/install)
+# 4.2 Prepare Dataset
+# 4.3 Training Neural Network
+# 4.4 Training SVM & error histogram
+# 4.5 Full training example
+
+### 4.1 Build (compile/install)
+
+  For C programs, the dependencies are only the standard IFT dependencies.
+    By default it assumes GPU will be used, comment the 'IFT_GPU=1' line at
+  the start of the Makefile to compile without GPU. Note that the compilation
+  of the main IFT library should also match this option.
+  
+  Make sure the following two lines are added to ~/.bashrc to use GPU assuming
+    CUDA is already installed:
+        export PATH=/usr/local/cuda/bin:${PATH}
+        export LD_LIBRARY_PATH=/usr/local/cuda/lib64:${LD_LIBRARY_PATH}
+
+- Compile all C programs in this folder:
+    make
+- Compile a specific C program:
+    make <program name>
+
+  For python scripts, the dependencies are:
+    - tensorflow-gpu (>= 1.13)
+    - numpy
+    - scipy
+    - sklearn
+    - pillow
+
+- Install python dependency:
+    pip3 <dependency name>
+
+  It is recommended to use the the Docker environment 'hybrid-learning:latest'
+    when running the network train/test scripts to make sure gpu is used during
+    the process. Note that you do not need to install the python dependencies
+    when using Docker. These are the steps for using the docker image in this demo:
+
+- Check active images to see if 'hybrid-learning:latest' already exists:
+    docker images
+  If it does not, install it with:
+    docker build -t hybrid-learning:latest py_docker/
+
+- Access the docker image ready to run the scripts:
+    docker run --rm -it --gpus all -v /path/to/your/data/:/path/within/image/ hybrid-learning:latest bash
+  
+  The script, dataset and any other input should be inside '/path/to/your/data/',
+    being available at '/path/within/image/' after you access the docker image.
+  Also make sure to save any result inside '/path/within/image/' to make it
+    available outside the docker image. See Section 4.5 or the file
+    'dockerExamples.txt' for practical examples.
+
+### 4.2 Prepare Dataset
+
+# 4.2.1 Pre-process original images (crop, align and resize)
+
+  - Case 1: dataset in IFT standard (see Section 3.1)
+
+  input:  [1] folder with original images
+          [2] folder with original ground truth labels
+          [3] label number where impurities start (eggs = 9, larvae = 2, protozoa = 7)
+  output: [4] folder with pre-processed images
+
+- Usage:
+    iftNetworkPreProcImgs_iftStd <orig folder> <label folder> <impurity start> <output folder>
+
+  - Case 2: dataset in Celso's standard (see Section 3.2)
+
+  input:  [1] base folder with all parasite images and ground truth labels
+          [2] per dataset reference csv indicating relevant sub-folders
+  output: [3] folder with pre-processed images
+
+- Usage:
+    iftNetworkPreProcImgs_celsoStd <base folder> <reference.csv> <output folder>
+
+# 4.2.2 Create dataset .csv with sample paths
+
+  The script and documentation is available at:
+    $NEWIFT_DIR/python_scripts/SplitDataSets/
+
+- Usage:
+  python3 create_CSV_with_filepaths.py <image directory> <file extension> <fileout.csv>
+
+  Note that the csv will contain full paths which should be changed if the data is moved.
+  See Section 4.2.4 if csv paths needs to be updated.
+
+# 4.2.3 Create .csv with Train/Test splits
+
+  The script and documentation is available at:
+    $NEWIFT_DIR/python_scripts/SplitDataSets/
+
+- Usage:
+  python3 split_dataset.py <input csv file> <output folder> <number of splits> <type of sampling> <percentage of training samples/number of images per class>
+
+  Default operation in this context is stratified (type of sampling = 2) and
+    0.7 percentage of training+val samples, later divided into 0.4/0.3 train/val
+    by setting percentage as ~0.571.
+  Note that the csv will contain full paths which should be changed if the data is moved.
+  See Section 4.2.4 if csv paths needs to be updated.
+
+# 4.2.4 Update .csv sample directory
+
+  input/output:  [1] .csv with sample data to be updated
+                 [2] new directory path
+
+- Usage:
+  iftUpdateSampleCsvDir <fileset.csv> <new dir path>
+
+  For example, '/dados/bases/Eggs/orig/sample.png' in fileset.csv would
+    be changed to '<new dir path>/sample.png'.
+
+# 4.2.5 Update iftDataSet (.zip) ref_data sample directory
+
+  input/output:  [1] .zip with iftDataSet to be updated
+                 [2] new directory path
+
+- Usage:
+  iftUpdateDataSetFileSetDir <dataset.zip> <new dir path>
+
+  Analogous to 4.2.4 but for datasets which have their own fileset.
+
+# 4.2.6 Partition full iftDataSet (.zip) based on a split (.csv)
+
+  input:  [1] .zip with the full iftDataSet
+          [2] .csv with the split samples (e.g., train.csv)
+  output: [3] .zip with the iftDataSet containing only samples from the split
+
+- Usage:
+  iftPartitionSVMDataset <full dataset.zip> <partition.csv> <partition dataset.zip>
+
+
+### 4.3 Training Neural Network
+
+# 4.3.1 Train neural network on python using Keras
+
+  input:  [1] .csv with pre-processed training set images
+          [2] .h5 with Keras Vgg16 network pretrained on ImageNet dataset
+  output: [3] .h5 with final Keras trained network
+
+- Usage:
+    python3 trainKerasNetwork.py <train.csv> <vgg16_imagenet_weights_notop.h5> <trained_network.h5>
+
+  The pretrained network is always the same and available at 
+    @lutz:/dados/bases/hybrid-classification/vgg16_imagenet_weights_notop.h5
+
+  It is STRONGLY recommended to use the docker image (see Section 4.1) for this.
+  For reference, training with ~6000 samples took ~50min on Odin (8 gpus).
+
+# 4.3.2 Convert Keras neural network to IFT format
+
+  input:  [1] .h5 with Keras trained network
+  output: [2] .json with ift network architecture
+          [3] .weights with ift network weights
+
+- Usage:
+    python3 ConvertKerasNetworkToIFT.py <network.h5> <ift_arch.json> <ift_arch.weights>
+
+# 4.3.3 Execute pruning script to obtain simplified Keras neural network (optional) 
+
+  input:    [1] .csv with pre-processed training set images
+            [2] .csv with pre-processed validation set images
+            [3] .h5 with Keras trained network
+            [4] integer indicating which layer to start/resume the script from (see details)
+            [5] percentage of kernels to be pruned from each layer within [0,1]
+  output:   [6] prefix used to save results (see details)
+
+- Usage:
+    ./pruning_script.sh <train.csv> <val.csv> <base_network.h5> <start layer> <pruning ratio> <output_prefix>
+
+  The script consists of running 'pruningSingleVggLayer.py' 13 times to
+    simplify each of the 13 convolutional layers (numbered from 0 to 12)
+    of the Vgg16 network in order, and lastly retrain the whole network with
+    'retrainPrunedNetwork.py'. When running the full thing from start, just
+    set <start layer> = 0 and the result will be '<prefix>_final.h5'.
+  If <prefix> is within a folder, make sure the folder already exists.
+
+  Standard pruning percentage is 0.5, which is the one used in the
+    pretrained data.
+
+  As the whole script takes quite a while to run (12h+ on Odin with 8 gpus),
+    the option to resume from intermediate results is also introduced. After
+    each layer simplification step, the intermediate network 
+    '<prefix>_layer<layer number>.h5' will be saved and the work can be resumed
+    by running the script with <start layer> = 1 + <layer number> as long as
+    the other parameters are the same. <layer number> ranges from 0 to 12, with
+    12 being the exceptional case where <start layer> = 13 will not correspond
+    to an actual layer, it just indicates there is only the retrain left.
+  For example, after running the first layer (0), '<prefix>_layer0.h5' will be
+    available and the script can be resumed by setting <start layer> = 1. Those
+    intermediate networks are always replaced by the latest one during execution,
+    so they will only be seen while the script executes or if it stops midway
+    through for some reason.
+
+  Note that the script assumes that 'pruningSingleVggLayer.py' and
+    'retrainPrunedNetwork.py' are in the same folder as 'pruning_script.sh'.
+
+### 4.4 Training SVM & error histogram
+
+# 4.4.1 Find optimal SVM parameters
+
+  input:  [1] .zip with training iftDataSet (Celso's descriptors)
+  output: [2] .txt with svm parameters 
+
+- Usage:
+    iftGetSVMOptimalParameters <train_dataset.zip> <svm_params.txt>
+
+# 4.4.2 Compute error histogram and save final SVM 
+
+  input:  [1] .zip with training iftDataSet (Celso's descriptors)
+          [2] .zip with validation iftDataSet (Celso's descriptors)
+          [3] Number of bins for histogram in pSVM probability assignment
+          [4] .txt with svm parameters
+  output: [5] .npy with error rate information 
+          [6] .zip with the final trained SVM
+
+- Usage:
+    iftGetSVMErrorMatrix <train_dataset.zip> <val_dataset.zip> <nBins> <svm_params.txt> <error_data.npy> <svm.zip>
+
+    The number of bins (nBins) is based on Osaku's experiments, 
+      20 for Eggs and 10 for the other two datasets. Theoretically
+      it can be increased when more data is available.
+
+#####################################################################
+# 5 - Testing
+#####################################################################
+
+### Sub-sections
+# 5.1 Network performance on python
+# 5.2 Network performance on C (ift)
+# 5.3 SVM performance
+# 5.4 Hybrid performance
+
+### 5.1 Network performance on python (Keras)
+
+  input:  [1] .csv with testing samples
+          [2] .h5 with Keras trained network
+  output: printed results
+
+- Usage:
+    python3 testKerasNetwork.py <test.csv> <trained_network.h5>
+
+### 5.2 Network performance on C (IFT)
+  input:  [1] .json with ift network architecture
+          [2] .weights with ift network weights
+          [3] .csv with pre-processed testing set images
+          [4] Network minibatch size
+  output: printed results
+
+- Usage:
+    iftNetworkBatchExperiment <ift_arch.json> <ift_arch.weights> <test.csv> <minibatch size>
+
+  Standard minibatch size is 16 and it is recommended to use powers of 2.
+  Higher values can speed up processing at the cost of increased memory consumption.
+  When using the simplified network, the minibatch size can also be increased.
+
+  Note that this demo is the main reference when deciding the fraction of
+    samples fed into the network during hybrid operation. The number of
+    samples the network will take should be approximately:
+      (time available ~4min) / (processing time per sample)
+
+### 5.3 SVM performance
+  input:  [1] .zip with the final trained SVM
+          [2] .zip with test iftDataSet (Celso's descriptors)
+  output: printed results
+
+- Usage:
+    iftSVMExperiment <svm.zip> <test_dataset.zip>
+
+### 5.4 Hybrid performance
+  input:  [1] .svm with the final trained SVM
+          [2] Network minibatch size 
+          [3] .json with ift network architecture
+          [4] .weights with ift network weights
+          [5] .npy with error rate information
+          [6] .zip with test iftDataSet (Celso's descriptors and pre-processed image paths)
+          [7] Percentage of samples to be forwarded to the network within [0,1]
+  output: printed results
+
+- Usage:
+    iftHybridExperiment <svm.zip> <minibatch size> <ift_arch.json> <ift_arch.weights> <error_data.npy> <test_dataset.zip> <perc network> 
+
+  See Section 5.2 for finding optimal minibatch size, default is 16.
+
+#####################################################################
+# 6 - Online Operation
+#####################################################################
+
+  Online operation is mostly analogous to the 'iftHybridExperiment'
+    demo (Section 5.4) and it is recommended to check iftHybridExperiment.c
+    directly for reference. The referenced new functions are all defined
+    and documented in 'include/iftHybridNetwork.h'. Here we describe the
+    main steps and some possible variations for this mode of operation:
+
+- Initialization
+  - Load SVM classifier:
+    char *path = "svm.zip"; // Section 4.4 
+    iftSVM *svm = iftReadSVM(path);
+
+    Only 'svm' will be used afterwards.
+
+  - Load Neural Network:
+    char *pathArch = "ift_network.json"; // Section 4.3
+    char *pathWeights = "ift_network.weights"; // Section 4.3
+    miniBatchSize = 16; // Section 5.2
+    iftNeuralNetwork *net = iftLoadVggFromJson(pathArch, pathWeights, miniBatchSize);
+
+    Both 'miniBatchSize' and 'net' will be used afterwards.
+
+  - Load Error Data:
+    char *path = "error_data.npy"; // Section 4.4
+    float percNetwork = 0.2;
+    iftMatrix *errorData = iftReadMatrix(path);
+    iftMatrix *pMatrix = (iftGetHybridBinProbabilities(errorData, percNetwork);
+
+    Only pMatrix (referring to probability matrix) will be used afterwards.
+    'percNetwork' (percentage of samples forwarded to network) value depends
+     on results obtained on Section 5.2 and the expected number of samples.
+
+  - Neural network batch information:
+    int emptyBatchSlots = net->miniBatch;
+    int *batchSampleIdx = iftAllocIntArray(net->miniBatch);
+    int *batchSamplePrediction = iftAllocIntArray(net->miniBatch);
+  
+    'emptyBatchSlots' is necessary to track the status of the batch
+      during operation.
+    'batchSampleIdx' is an array of arbitrary identifiers (e.g., iftDataSet sample id)
+      used to track which samples are currently in the batch and in which position.
+    'batchSamplePrediction' will receive the predictions after a given batch
+      is processed. The prediction at a given array index should match the sample
+      identified by 'batchSampleIdx' at the same index.
+
+- Online Operation
+  - Classify individual sample with SVM
+    float *feats; // Array containing features from Celso's descriptor
+    int nfeats; // Size of feats array
+    int svmLabel; // will receive output Label
+    float svmProb; // will receive output p-SVM probability
+    iftSVMClassifyOVO_ProbabilitySingleSample(svm, feats, nfeats, &svmLabel, &svmProb);
+
+    Note that the returned svmLabel >= 1, and 0 <= svmProb <= 1.
+
+  - Evaluate if sample should be forwarded to network:
+    if (iftHybridDecision(svmLabel, svmProb, pMatrix)) {...}
+
+    'iftHybridDecision' returns TRUE (executing the body of the if) when
+      the sample SHOULD BE forwarded to network.
+
+  - Preprocessing sample image for network:
+    iftImage *parasiteImg;
+    iftImage *parasiteMask;
+    iftImage *img = iftHybridNetworkPreProcImg(parasiteImg, parasiteMask);
+
+    This is analogous to the operation done for each pair of image and mask
+      in Section 4.2.1. Currently, this is the only step that requires an
+      iftImage to work. In case converting back and forth or the operation
+      in itself becomes a bottleneck, this might need an optimized
+      implementation.
+
+  - Forwarding sample to network:
+    emptyBatchSlots = iftVggLoadImg(net, img);
+    batchSampleIdx[net->miniBatch - emptyBatchSlots] = sampleId;
+
+    'iftVggLoadImg' also has the variants:
+    int iftVggLoadImgFromPath(iftNeuralNetwork* net, const char *img_path);
+    int iftVggLoadImgFromBuffer(iftNeuralNetwork *net, int *R, int *G, int *B, int depth);
+
+    In all cases the correct value for 'emptyBatchSlots' is returned and the
+      corresponding array position for the forwarded image will be given
+      by 'net->miniBatch - emptyBatchSlots'.
+
+  - Processing batch (regular case):
+    if (emptyBatchSlots == 0) {
+      iftNetForward(net);
+      iftClearEmptyImageLayerBatch(net);
+      emptyBatchSlots = net->miniBatch;
+      iftGetNetworkPredictions(net, batchSamplePrediction);
+      for (int i = 0; i < net->miniBatch; ++i)
+        results[batchSampleIdx[i]] = batchSamplePrediction[i];
+    }
+
+    This should be executed whenever the batch is full (given by the
+      'emptyBatchSlots == 0' check). 'results' is just an arbitrary
+      example array, the important part is that the sample identified by
+      'batchSampleIdx[i]' has the prediction 'batchSamplePrediction[i]'.
+
+  - Processing batch (non-full case):
+    if (emptyBatchSlots != net->miniBatch) {
+      iftNetForward(net);
+      iftClearEmptyImageLayerBatch(net);
+      iftGetNetworkPredictions(net, batchSamplePrediction);
+      for (int i = 0; i < net->miniBatch - emptyBatchSlots; ++i)
+        results[batchSampleIdx[i]] = batchSamplePrediction[i];
+      emptyBatchSlots = net->miniBatch;
+    }
+      
+    This is meant for the end of a set when no more samples are coming
+      in and there is an incomplete batch remaining (given by the
+      'emptyBatchSlots != net->miniBatch' check). Similar to previous
+      case with the extra usage of emptyBatchSlots to only cover the
+      relevant batch positions when retrieving predictions.
+      
+- Cleaning up
+  Dedicated destroyers for the structures used:
+    iftDestroySVM(svm); // NOT a reference
+    iftDestroyNeuralNetwork(&net);
+    iftDestroyMatrix(&pMatrix);
+    iftDestroyImg(&img);
+
+  Other arrays just use regular free().
+    
+
+#####################################################################
+# 7 - Full Operation Example
+#####################################################################
+
+  Here we provide a practical example of all steps of this demo.
+
+  As this will generally be the case in practice, I will be considering
+    the use of two machines for this example, given by the two pairs
+    <user>@<machine> felipe@logan and felipegalvao@odin. For simplicity
+    I will shorten these references to just @logan and @odin.
+
+  The IFT directory should be available and will be referenced by $NEWIFT_DIR.
+
+  The C programs in this folder are assumed to be compiled in advance
+    ('make all' in this folder will compile everything relevant) and the IFT
+    bin directory should be in the $PATH variable to call the programs
+    directly from any folder.
+
+- Preprocessing data (case 1, Section 3.1):
+  @logan:~/bases$ scp -r /dados/bases/LIDS/datasets/biomedical_images/parasitology/Larvae/raw ./LarvaeRaw
+  @logan:~/bases$ iftNetworkPreProcImgs_iftStd RawLarvae/orig RawLarvae/label 2 LarvaePreProc
+
+- Preprocessing data (case 2, Section 3.2):
+  @logan:~/bases$ scp -r /dados/bases/Bases_formatadas/parasites ./Parasites
+  @logan:~/bases$ iftNetworkPreProcImgs_celsoStd Parasites $NEWIFT_DIR/demo/ParasiteHybridClassification/raw_path_celso/larvae.csv LarvaePreProc
+
+- Creating .csv files with train/val/test split
+  # First create .csv with all samples (Section 4.2.2)
+  @logan:~/bases$ python3 $NEIFT_DIR/py_scripts/SplitDataSets/createCSV_with_filepaths.py LarvaePreProc png full.csv
+  # Adjust pointed directory (Section 4.2.4)
+  @logan:~/bases$ iftUpdateSampleCsvDir full.csv /home/felipe/bases/LarvaePreProc
+  # Perform actual splits (Section 4.2.3)
+  @logan:~/bases$ python3 $NEIFT_DIR/py_scripts/SplitDataSets/split_dataset.py full.csv splits/ 1 2 0.7
+  @logan:~/bases$ mv splits/_fold/train0_percent_per_class.csv train_val.csv
+  @logan:~/bases$ mv splits/_fold/test0_percent_per_class.csv test.csv
+  @logan:~/bases$ python3 $NEIFT_DIR/py_scripts/SplitDataSets/split_dataset.py train_val.csv splits/ 1 2 0.571
+  @logan:~/bases$ mv splits/_fold/train0_percent_per_class.csv train.csv
+  @logan:~/bases$ mv splits/_fold/test0_percent_per_class.csv val.csv
+
+  This results in a 40/30/30 split in the files train.csv, val.csv and test.csv.
+  The folder location is inherited from what is set for the full.csv file
+    initially. Afterwards, any changes require running the program for each
+    of the .csv files.
+
+- Prepare for training network on @odin
+  # Copy data to odin
+  @odin:~$ scp @logan:~/bases ./
+  # Update .csv paths
+  @odin:~/bases$ iftUpdateSampleCsvDir train.csv /data/home/felipegalvao/bases/LarvaePreProc
+  @odin:~/bases$ iftUpdateSampleCsvDir val.csv /data/home/felipegalvao/bases/LarvaePreProc
+  @odin:~/bases$ iftUpdateSampleCsvDir test.csv /data/home/felipegalvao/bases/LarvaePreProc
+  # Retrieve base Vgg16 network trained on ImageNet
+  @odin:~/bases$ scp @lutz:/dados/bases/hybrid-classification/vgg16_imagenet_weights_notop.h5 ./
+
+- Training Keras network
+  # Enter docker environment (Section 4.1) 
+  @odin:~/bases$ docker run --rm -it --gpus all -v /data/home/felipegalvao/:/data/home/felipegalvao/ hybrid-learning:latest bash
+  @docker:/$ cd /data/home/felipegalvao/bases
+  # Perform actual training within docker (Section 4.3.1)
+  @docker:~/bases: python3 $NEWIFT_DIR/demo/ParasiteHybridClassification/trainKerasNetwork.py train.csv vgg16_imagenet_weights_notop.h5 keras_network.h5
+
+  The resulting network is 'keras_network.h5'.
+
+  Note that $NEWIFT_DIR variable will not be available in the docker
+    environment by default, it was only used here for convenience. In
+    practice, you will need to use the absolute path to your IFT repository
+    in odin (it must be within the path used when running the docker,
+    '/data/home/felipegalvao' in this example, with IFT being in
+    '/data/home/felipegalvao/dev/trunk').
+
+
+- Pruning Keras network
+  # Enter docker environment (Section 4.1) 
+  @odin:~/bases$ docker run --rm -it --gpus all -v /data/home/felipegalvao/:/data/home/felipegalvao/ hybrid-learning:latest bash
+  @docker:/$ cd /data/home/felipegalvao/bases
+  # Run pruning script (Section 4.3.3)
+  @docker:~/bases: $NEWIFT_DIR/demo/ParasiteHybridClassification/pruning_script.sh train.csv val.csv keras_network.h5 0 0.5 keras_network_pruned
+
+  The resulting network is 'keras_network_pruned_final.h5'. Each convolutional
+    layer will have half the amount of kernels compared to 'keras_network.h5',
+    as given by the '0.5' pruning ratio parameter.
+
+  Note that the pruning script can take very long to run (12+ hours). The network
+    from the previous step can be used in its place to perform the following
+    steps if a quicker test is desirable.
+
+- Testing Keras networks
+  # Enter docker environment (Section 4.1) 
+  @odin:~/bases$ docker run --rm -it --gpus all -v /data/home/felipegalvao/:/data/home/felipegalvao/ hybrid-learning:latest bash
+  @docker:/$ cd /data/home/felipegalvao/bases
+  # Run test (Section 5.1)
+  @docker:~/bases: python3 $NEWIFT_DIR/demo/ParasiteHybridClassification/testKerasNetwork.py test.csv keras_network.h5
+  @docker:~/bases: python3 $NEWIFT_DIR/demo/ParasiteHybridClassification/testKerasNetwork.py test.csv keras_network_pruned_final.h5
+
+  After each run of 'testKerasNetwork.py', the results for the corresponding
+    network will be printed at the end. The pruned network result should be
+    similar to base one, so it is good to test both for reference.
+
+- Convert trained Keras network to IFT network
+  # Enter docker environment (Section 4.1) 
+  @odin:~/bases$ docker run --rm -it --gpus all -v /data/home/felipegalvao/:/data/home/felipegalvao/ hybrid-learning:latest bash
+  @docker:/$ cd /data/home/felipegalvao/bases
+  # Convert network (Section 4.3.2)
+  @docker:~/bases: python3 $NEWIFT_DIR/demo/ParasiteHybridClassification/ConvertKerasNetworkToIFT.py keras_network_pruned_final.h5 ift_network.json ift_network.weights
+
+  This concludes the network training with the pair ift_network.json/weights
+    as the result.
+
+- Testing IFT network
+  # Copy resulting network to logan
+  @logan:~/bases$ scp @odin:~/bases/ift_network* ./
+  # Run Test (Section 5.2)
+  iftNetworkBatchExperiment ift_network.json ift_network.weights test.csv 32
+
+  This will be important to confirm that the classification accuracy matches
+    the original Keras network. It is also used to benchmark the network
+    performance on the target machine, including the optimal minibatch size.
+
+- Prepare data for SVM classifier
+  # Pre-existing iftDataSet with Celso descriptors for all samples
+  @logan:~/bases$ scp @lutz:/dados/bases/hybrid-classification/Larvae/celsofeats_full.zip ./
+  # Point iftDataSet file set to correct directory (Section 4.2.5)
+  @logan:~/bases$ iftUpdateDataSetFileSetDir celsofeats.full.zip /home/felipe/bases/LarvaePreProc
+  # Split dataset according to .csv files (Section 4.2.6)
+  @logan:~/bases$ iftPartitionSVMDataset celsofeats_full.zip train.csv celsofeats_train.zip
+  @logan:~/bases$ iftPartitionSVMDataset celsofeats_full.zip val.csv celsofeats_val.zip
+  @logan:~/bases$ iftPartitionSVMDataset celsofeats_full.zip test.csv celsofeats_test.zip
+
+- Train SVM (Section 4.4)
+  @logan:~/bases$ iftGetOptimalSVMParameters celsofeats_train.zip svm_params.txt
+  @logan:~/bases$ iftGetSVMErrorMatrix celsofeats_train.zip celsofeats_val.zip 10 svm_params.txt error_data.npy svm.zip
+
+  The resulting classifier and error histogram are 'svm.zip'
+    and 'error_data.npy', respectively.
+
+- Test SVM (Section 5.3)
+  @logan:~/bases$ iftSVMExperiment svm.zip celsofeats_test.zip
+
+  The results here will be the base of comparison for the improvements
+    in the hybrid setup.
+  
+- Test Hybrid SVM+network performance (Section 5.4)
+  @logan:~/bases$ iftHybridExperiment svm.zip 32 ift_network.json ift_network.weights error_data.npy celsofeats_test.zip 0.2
+
+  At this point all the trained data should be available, which consists of:
+    'ift_network.json', 'ift_network.weights', 'svm.zip', and 'error_data_npy'.
+  This is the same data that will be necessary for actual online operation.
+
+  The ideal minibatch size (32 here) and the fraction of samples forwarded
+    to the network (0.2 here) depends on benchmarks using this and the
+    'iftNetworkBatchExperiment' demos.
+
+  Note that the actual number of samples forwarded to the network is not
+    exact as the total number of samples is not assumed to be known in
+    advance during the process. For any given pair of (class, bin) returned
+    by the p-SVM, a probability of forwarding a sample is estimated based
+    on the training error data and the desired fraction to be forwarded.
+  In particular, (class, bin) pairs that never result in errors during
+    training will never be forwarded to the network, which can result in
+    undesirable behavior if too few samples are used for training or the
+    number of bins is too high.
+
+#####################################################################
+# 8 - C++ Tensorflow Operation
+#####################################################################
+
+  This is a temporary section with information that will be
+    integrated with the other sections later. It assumes some
+    familiarity with the existing pipeline to explain how it
+    was changed to use the Tensorflow (TF) C API instead of the IFT
+    network implementation.
+
+  The main added steps are the following:
+    - Converting the Keras trained .h5 network to a frozen
+        TF .pb saved model.
+    - Installing the TF C API
+    - Installing the appropriate version of all CUDA related
+        libraries used by the TF C API
+    - Testing with the new programs
+
+  Next, we detail how to execute each of those steps. 
+
+### 8.1 Convert Keras neural network (.h5) to frozen TF model (.pb)
+
+  input:  [1] .h5 with Keras trained network
+  output: [2] folder where the frozen TF model will be saved
+  
+- Usage:
+    python3 ConvertKerasNetworkToTF.py <network.h5> <target folder>
+
+  Analogous to Section 4.3.2, but the result will be a "frozen_model.pb"
+    file inside the supplied <target folder>. It can also be run inside
+    the docker image. For example:
+
+  # Enter docker environment (Section 4.1) 
+  @odin:~/bases$ docker run --rm -it --gpus all -v /data/home/felipegalvao/:/data/home/felipegalvao/ hybrid-learning:latest bash
+  @docker:/$ cd /data/home/felipegalvao/bases
+  @docker:~/bases$ python3 $NEWIFT_DIR/demo/ParasiteHybridClassification/ConvertKerasNetworkToTF.py keras_network_pruned_final.h5 tf_trained_network
+  @docker:~/bases$ ls tf_trained_network
+    frozen_model.pb
+
+  The saved model can be renamed freely afterwards.
+
+### 8.2 Install Tensorflow C API library
+
+  Step 1: Get or build libtensorflow.tar.gz containing the TF C API library
+    - Option 1 (recommended) - Precompiled library: 
+        Download appropriate version from https://www.tensorflow.org/install/lang_c
+
+        As of now, the precompiled lib requires cuda-10.1 and libcudnn7.6.4.
+
+    - Option 2 - Compile from source:
+        Note that compiling from source is NOT recommended as it can run
+          into various system specific issues that can be hard to solve
+          and are impossible to list in advance here.
+
+        Install Bazel according to https://docs.bazel.build/versions/master/install.html
+        Tensorflow will require a specific Bazel version, currently 3.1.0.
+        The JDK installation can be skipped.
+        
+
+        Download TensorFlow source code from github and build library
+        $ git clone https://github.com/tensorflow/tensorflow.git
+        $ cd tensorflow
+        /tensorflow$ ./configure
+        /tensorflow$ bazel build --config opt //tensorflow/tools/lib_package:libtensorflow
+                                                      
+        Resulting tar will be available in
+          "/tensorflow/bazel-bin/tensorflow/tools/lib_package/libtensorflow.tar.gz"
+
+        Note that for GPU usage the appropriate CUDA libraries have to be
+          installed before running "./configure" (see https://www.tensorflow.org/install/gpu).
+
+  Step 2: Installing the TensorFlow C API from the tar file:
+    The following is based on instructions from
+      'https://www.tensorflow.org/install/lang_c'.
+
+    For a system-wide installation of the TensorFlow C API do:
+    $ sudo tar -C /usr/local -xzf <path to downloaded or generated libtensorflow.tar.gz>
+    $ sudo ldconfig
+
+    For a local one using '~/mydir' as example do:
+    $ sudo tar -C ~/mydir -xzf <path to downloaded or generated libtensorflow.tar.gz>
+    Then add to ~/.bashrc:
+    $ export LIBRARY_PATH=$LIBRARY_PATH:~/mydir/lib
+    $ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/mydir/lib
+
+### 8.3 Test TF .pb network with the Tensorflow C API wrapper cppflow
+
+  This step is notably important if you are using the pre-compiled
+    TF C API library as you have to check if the dynamic libraries
+    are linking properly. It also checks if the .pb TF network is
+    working properly.
+
+  input: [1] .pb with the frozen TF network
+
+  iftCheckTFNetwork <frozen_model.pb>
+        
+   For GPU execution, the first couple of lines should show the program
+     attempting to link to the relevant CUDA libraries.
+  On sucess, it should end with something like
+    "Created TensorFlow device (...) -> physical GPU (<gpu information>)".
+  Otherwise, check which dynamic libraries failed to load. Some possible
+    issues are listed next:
+
+  If libcudart.so.<cuda version> fails to load, the corresponding cuda
+    version indicated by the suffix is either not installed or its path
+    is not being searched by the linker.
+
+  If libcublas.so.<cublas version> fails to load (and libcudart.so works fine),
+    the CUDA installation may have the lib installed in a different place
+    such as '/usr/lib/x86_64-linux-gnu/libcublas.so.<cublas version>'
+   ('$ locate libcublas.so' can help finding that).
+  This can notably happen when installing from the debian package. After
+    identifying the path to the lib, you run the following to make it 
+    available on the main cuda directory with a symbolic link:
+  $ sudo ln -s /path/to/libcublas.so.10.1 /usr/local/cuda-<cuda version>/lib64/libcublas.so.<cublas version>
+
+  If libcublasLt.so fails to load, the solution is analogous.
+
+  If libcudnn.so.<cudnn version> fails to load, the corresponding cuDNN
+    version indicated by the suffix is either not installed or its path
+    is not being searched by the linker. Note that cuDNN is independent
+    from the CUDA installation. Note that if the major version is correct
+    but minor version is lower, you  might get another error later when
+    actually running the network.
+
+  For testing. the actual program loads the model, prints all of its
+    operations, prints the dimensions of the input and output, runs it
+    with a 0 filled image and prints the output predictions. Due to an
+    internal bug with the Tensorflow C API (or its interaction with the
+    wrapper), on exit the program may result in a SEGFAULT. This will be
+    investigated later, but it should not impact the execution otherwise
+    and can be ignored while testing.
+
+### 8.4 Benchmark network performance on C/C++ (TF)
+  input:  [1] .pb with the TF network architecture
+          [2] .csv with pre-processed testing set images
+          [3] Network minibatch size
+  output: printed results
+  
+- Usage:
+    iftNetworkBatchExperimentTF <saved_model.pb> <test.csv> <minibatch size>
+
+   Analogous to Section 5.2 demo but using the TF network instead of
+     the IFT one. Everything else still applies.
+
+   The hybrid demo using the TF network analogous to Section 5.4 will be
+     added later. Note that the results should be identical to those run
+     with the IFT network, the only difference is in performance.
+

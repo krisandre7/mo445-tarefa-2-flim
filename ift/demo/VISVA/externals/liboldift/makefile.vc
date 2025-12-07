@@ -1,0 +1,472 @@
+
+
+#----------------------------------------------------------------------
+# This is the Makefile to compile lib-ift with MS Visual C++ (cl.exe)
+# using the GNU make or NMAKE.
+#
+# Instruction:  Open the "Visual Studio Command Prompt" and type 
+#               "C:\ift> make -f makefile.vc" or 
+#               "C:\ift> nmake -f makefile.vc"
+#
+#----------------------------------------------------------------------
+
+VC_INCLUDE="$(VSINSTALLDIR)VC\include"
+
+LIB=.\lib
+INCLUDE=.\include
+BIN=.\bin
+SRC=.\src
+OBJ=.\obj
+DEMO=.\demo
+#FLAGS= -g -Wall -D _DEBUG
+#FLAGS= -O3 -Wall -Wno-unused-result
+FLAGS= /O2 /W1 /nologo
+
+INCLUDES=/I $(INCLUDE) /I $(VC_INCLUDE)
+
+all: libift #ift-utils
+	@echo "libift.lib built..."
+#	@echo "ift-utils built..."
+	@echo "DONE."
+
+libift: $(LIB)\libift.lib
+
+ift-utils:
+	cd util\src; make; cd ..\..
+
+
+$(LIB)\libift.lib: \
+$(OBJ)\common.obj \
+$(OBJ)\comptime.obj \
+$(OBJ)\border.obj \
+$(OBJ)\heap.obj \
+$(OBJ)\gheap.obj \
+$(OBJ)\realheap.obj \
+$(OBJ)\queue.obj \
+$(OBJ)\sort.obj \
+$(OBJ)\set.obj \
+$(OBJ)\curve.obj \
+$(OBJ)\geometry.obj \
+$(OBJ)\algebra.obj \
+$(OBJ)\plane.obj \
+$(OBJ)\polynom.obj \
+$(OBJ)\image.obj \
+$(OBJ)\cimage.obj \
+$(OBJ)\dimage.obj \
+$(OBJ)\descriptor.obj \
+$(OBJ)\salience.obj \
+$(OBJ)\bas.obj \
+$(OBJ)\ss.obj \
+$(OBJ)\metrics.obj \
+$(OBJ)\scene.obj \
+$(OBJ)\spectrum.obj \
+$(OBJ)\adjacency.obj \
+$(OBJ)\adjacency3.obj \
+$(OBJ)\annimg.obj \
+$(OBJ)\annscn.obj \
+$(OBJ)\frame.obj \
+$(OBJ)\genift.obj \
+$(OBJ)\genift3.obj \
+$(OBJ)\matrix.obj \
+$(OBJ)\realmatrix.obj \
+$(OBJ)\mathematics.obj \
+$(OBJ)\mathematics3.obj \
+$(OBJ)\radiometric.obj \
+$(OBJ)\radiometric3.obj \
+$(OBJ)\filtering.obj \
+$(OBJ)\filtering3.obj \
+$(OBJ)\morphology.obj \
+$(OBJ)\morphology3.obj \
+$(OBJ)\segmentation.obj \
+$(OBJ)\segmentation3.obj \
+$(OBJ)\analysis.obj \
+$(OBJ)\analysis3.obj \
+$(OBJ)\context.obj \
+$(OBJ)\graphics.obj \
+$(OBJ)\shading.obj \
+$(OBJ)\shell.obj \
+$(OBJ)\normal.obj \
+$(OBJ)\raycasting.obj \
+$(OBJ)\splatting.obj \
+$(OBJ)\reslicing.obj \
+$(OBJ)\classify.obj \
+$(OBJ)\spline.obj \
+$(OBJ)\stackandfifo.obj \
+$(OBJ)\color.obj \
+$(OBJ)\cimg.obj \
+$(OBJ)\tensorscale.obj \
+$(OBJ)\complgraph.obj \
+$(OBJ)\prscene.obj \
+$(OBJ)\gqueue.obj \
+$(OBJ)\ctree.obj \
+$(OBJ)\mclouds.obj \
+$(OBJ)\interpolation.obj \
+$(OBJ)\interpolation3.obj \
+$(OBJ)\matching.obj \
+$(OBJ)\geometric3.obj \
+$(OBJ)\geometric2.obj \
+$(OBJ)\reslice3.obj \
+$(OBJ)\glist.obj \
+$(OBJ)\feature.obj \
+$(OBJ)\feature3.obj \
+$(OBJ)\msfiltering.obj \
+$(OBJ)\subgraph.obj \
+$(OBJ)\tira.obj \
+$(OBJ)\ctree3.obj \
+$(OBJ)\sgctree.obj \
+$(OBJ)\file_analyze.obj \
+$(OBJ)\bz2_lib.obj \
+$(OBJ)\msp.obj \
+$(OBJ)\compressed.obj \
+$(OBJ)\msgd.obj
+	lib.exe /NOLOGO /OUT:$(LIB)\libift.lib \
+$(OBJ)\common.obj \
+$(OBJ)\comptime.obj \
+$(OBJ)\border.obj \
+$(OBJ)\heap.obj \
+$(OBJ)\gheap.obj \
+$(OBJ)\realheap.obj \
+$(OBJ)\queue.obj \
+$(OBJ)\sort.obj \
+$(OBJ)\set.obj \
+$(OBJ)\curve.obj \
+$(OBJ)\geometry.obj \
+$(OBJ)\algebra.obj \
+$(OBJ)\plane.obj \
+$(OBJ)\polynom.obj \
+$(OBJ)\image.obj \
+$(OBJ)\cimage.obj \
+$(OBJ)\dimage.obj \
+$(OBJ)\descriptor.obj \
+$(OBJ)\salience.obj \
+$(OBJ)\bas.obj \
+$(OBJ)\ss.obj \
+$(OBJ)\metrics.obj \
+$(OBJ)\scene.obj \
+$(OBJ)\spectrum.obj \
+$(OBJ)\adjacency.obj \
+$(OBJ)\adjacency3.obj \
+$(OBJ)\annimg.obj \
+$(OBJ)\annscn.obj \
+$(OBJ)\frame.obj \
+$(OBJ)\genift.obj \
+$(OBJ)\genift3.obj \
+$(OBJ)\matrix.obj \
+$(OBJ)\realmatrix.obj \
+$(OBJ)\mathematics.obj \
+$(OBJ)\mathematics3.obj \
+$(OBJ)\radiometric.obj \
+$(OBJ)\radiometric3.obj \
+$(OBJ)\filtering.obj \
+$(OBJ)\filtering3.obj \
+$(OBJ)\morphology.obj \
+$(OBJ)\morphology3.obj \
+$(OBJ)\segmentation.obj \
+$(OBJ)\segmentation3.obj \
+$(OBJ)\analysis.obj \
+$(OBJ)\analysis3.obj \
+$(OBJ)\context.obj \
+$(OBJ)\graphics.obj \
+$(OBJ)\shading.obj \
+$(OBJ)\shell.obj \
+$(OBJ)\normal.obj \
+$(OBJ)\raycasting.obj \
+$(OBJ)\splatting.obj \
+$(OBJ)\reslicing.obj \
+$(OBJ)\classify.obj \
+$(OBJ)\spline.obj \
+$(OBJ)\stackandfifo.obj \
+$(OBJ)\color.obj \
+$(OBJ)\cimg.obj \
+$(OBJ)\tensorscale.obj \
+$(OBJ)\complgraph.obj \
+$(OBJ)\prscene.obj \
+$(OBJ)\gqueue.obj \
+$(OBJ)\ctree.obj \
+$(OBJ)\mclouds.obj \
+$(OBJ)\interpolation.obj \
+$(OBJ)\interpolation3.obj \
+$(OBJ)\matching.obj \
+$(OBJ)\geometric3.obj \
+$(OBJ)\geometric2.obj \
+$(OBJ)\reslice3.obj \
+$(OBJ)\glist.obj \
+$(OBJ)\feature.obj \
+$(OBJ)\feature3.obj \
+$(OBJ)\msfiltering.obj \
+$(OBJ)\subgraph.obj \
+$(OBJ)\tira.obj \
+$(OBJ)\ctree3.obj \
+$(OBJ)\sgctree.obj \
+$(OBJ)\file_analyze.obj \
+$(OBJ)\bz2_lib.obj \
+$(OBJ)\msp.obj \
+$(OBJ)\compressed.obj \
+$(OBJ)\msgd.obj
+
+# $(OBJ)\opfimg.obj \
+
+
+
+$(OBJ)\glist.obj: $(SRC)\glist.c
+	cl.exe $(FLAGS) /c $(SRC)\glist.c $(INCLUDES) /Fo$(OBJ)\glist.obj
+
+$(OBJ)\common.obj: $(SRC)\common.c
+	cl.exe $(FLAGS) /c $(SRC)\common.c $(INCLUDES) /Fo$(OBJ)\common.obj
+
+$(OBJ)\comptime.obj: $(SRC)\comptime.c
+	cl.exe $(FLAGS) /c $(SRC)\comptime.c $(INCLUDES) /Fo$(OBJ)\comptime.obj
+
+$(OBJ)\border.obj: $(SRC)\border.c
+	cl.exe $(FLAGS) /c $(SRC)\border.c $(INCLUDES) /Fo$(OBJ)\border.obj
+
+$(OBJ)\heap.obj: $(SRC)\heap.c
+	cl.exe $(FLAGS) /c $(SRC)\heap.c $(INCLUDES) /Fo$(OBJ)\heap.obj
+
+$(OBJ)\gheap.obj: $(SRC)\gheap.c
+	cl.exe $(FLAGS) /c $(SRC)\gheap.c $(INCLUDES) /Fo$(OBJ)\gheap.obj
+
+$(OBJ)\realheap.obj: $(SRC)\realheap.c
+	cl.exe $(FLAGS) /c $(SRC)\realheap.c $(INCLUDES) /Fo$(OBJ)\realheap.obj
+
+$(OBJ)\queue.obj: $(SRC)\queue.c
+	cl.exe $(FLAGS) /c $(SRC)\queue.c $(INCLUDES) /Fo$(OBJ)\queue.obj
+
+$(OBJ)\sort.obj: $(SRC)\sort.c
+	cl.exe $(FLAGS) /c $(SRC)\sort.c $(INCLUDES) /Fo$(OBJ)\sort.obj
+
+$(OBJ)\set.obj: $(SRC)\set.c
+	cl.exe $(FLAGS) /c $(SRC)\set.c $(INCLUDES) /Fo$(OBJ)\set.obj
+
+$(OBJ)\curve.obj: $(SRC)\curve.c
+	cl.exe $(FLAGS) /c $(SRC)\curve.c $(INCLUDES) /Fo$(OBJ)\curve.obj
+
+$(OBJ)\geometry.obj: $(SRC)\geometry.c
+	cl.exe $(FLAGS) /c $(SRC)\geometry.c $(INCLUDES) /Fo$(OBJ)\geometry.obj
+
+$(OBJ)\algebra.obj: $(SRC)\algebra.c
+	cl.exe $(FLAGS) /c $(SRC)\algebra.c $(INCLUDES) /Fo$(OBJ)\algebra.obj
+
+$(OBJ)\plane.obj: $(SRC)\plane.c
+	cl.exe $(FLAGS) /c $(SRC)\plane.c $(INCLUDES) /Fo$(OBJ)\plane.obj
+
+$(OBJ)\polynom.obj: $(SRC)\polynom.c
+	cl.exe $(FLAGS) /c $(SRC)\polynom.c $(INCLUDES) /Fo$(OBJ)\polynom.obj
+
+$(OBJ)\image.obj: $(SRC)\image.c
+	cl.exe $(FLAGS) /c $(SRC)\image.c $(INCLUDES) /Fo$(OBJ)\image.obj
+
+$(OBJ)\cimage.obj: $(SRC)\cimage.c
+	cl.exe $(FLAGS) /c $(SRC)\cimage.c $(INCLUDES) /Fo$(OBJ)\cimage.obj
+
+$(OBJ)\dimage.obj: $(SRC)\dimage.c
+	cl.exe $(FLAGS) /c $(SRC)\dimage.c $(INCLUDES) /Fo$(OBJ)\dimage.obj
+
+$(OBJ)\scene.obj: $(SRC)\scene.c
+	cl.exe $(FLAGS) /c $(SRC)\scene.c $(INCLUDES) /Fo$(OBJ)\scene.obj
+
+$(OBJ)\spectrum.obj: $(SRC)\spectrum.c
+	cl.exe $(FLAGS) /c $(SRC)\spectrum.c $(INCLUDES) /Fo$(OBJ)\spectrum.obj
+
+$(OBJ)\adjacency.obj: $(SRC)\adjacency.c
+	cl.exe $(FLAGS) /c $(SRC)\adjacency.c $(INCLUDES) /Fo$(OBJ)\adjacency.obj
+
+$(OBJ)\adjacency3.obj: $(SRC)\adjacency3.c
+	cl.exe $(FLAGS) /c $(SRC)\adjacency3.c $(INCLUDES) /Fo$(OBJ)\adjacency3.obj
+
+$(OBJ)\annimg.obj: $(SRC)\annimg.c
+	cl.exe $(FLAGS) /c $(SRC)\annimg.c $(INCLUDES) /Fo$(OBJ)\annimg.obj
+
+$(OBJ)\annscn.obj: $(SRC)\annscn.c
+	cl.exe $(FLAGS) /c $(SRC)\annscn.c $(INCLUDES) /Fo$(OBJ)\annscn.obj
+
+$(OBJ)\frame.obj: $(SRC)\frame.c
+	cl.exe $(FLAGS) /c $(SRC)\frame.c $(INCLUDES) /Fo$(OBJ)\frame.obj
+
+$(OBJ)\mathematics.obj: $(SRC)\mathematics.c
+	cl.exe $(FLAGS) /c $(SRC)\mathematics.c $(INCLUDES) /Fo$(OBJ)\mathematics.obj
+
+$(OBJ)\mathematics3.obj: $(SRC)\mathematics3.c
+	cl.exe $(FLAGS) /c $(SRC)\mathematics3.c $(INCLUDES) /Fo$(OBJ)\mathematics3.obj
+
+$(OBJ)\radiometric.obj: $(SRC)\radiometric.c
+	cl.exe $(FLAGS) /c $(SRC)\radiometric.c $(INCLUDES) /Fo$(OBJ)\radiometric.obj
+
+$(OBJ)\radiometric3.obj: $(SRC)\radiometric3.c
+	cl.exe $(FLAGS) /c $(SRC)\radiometric3.c $(INCLUDES) /Fo$(OBJ)\radiometric3.obj
+
+$(OBJ)\morphology.obj: $(SRC)\morphology.c
+	cl.exe $(FLAGS) /c $(SRC)\morphology.c $(INCLUDES) /Fo$(OBJ)\morphology.obj
+
+$(OBJ)\morphology3.obj: $(SRC)\morphology3.c
+	cl.exe $(FLAGS) /c $(SRC)\morphology3.c $(INCLUDES) /Fo$(OBJ)\morphology3.obj
+
+$(OBJ)\segmentation.obj: $(SRC)\segmentation.c
+	cl.exe $(FLAGS) /c $(SRC)\segmentation.c $(INCLUDES) /Fo$(OBJ)\segmentation.obj
+
+$(OBJ)\segmentation3.obj: $(SRC)\segmentation3.c
+	cl.exe $(FLAGS) /c $(SRC)\segmentation3.c $(INCLUDES) /Fo$(OBJ)\segmentation3.obj
+
+$(OBJ)\analysis.obj: $(SRC)\analysis.c
+	cl.exe $(FLAGS) /c $(SRC)\analysis.c $(INCLUDES) /Fo$(OBJ)\analysis.obj
+
+$(OBJ)\analysis3.obj: $(SRC)\analysis3.c
+	cl.exe $(FLAGS) /c $(SRC)\analysis3.c $(INCLUDES) /Fo$(OBJ)\analysis3.obj
+
+$(OBJ)\filtering.obj: $(SRC)\filtering.c
+	cl.exe $(FLAGS) /c $(SRC)\filtering.c $(INCLUDES) /Fo$(OBJ)\filtering.obj
+
+$(OBJ)\filtering3.obj: $(SRC)\filtering3.c
+	cl.exe $(FLAGS) /c $(SRC)\filtering3.c $(INCLUDES) /Fo$(OBJ)\filtering3.obj
+
+$(OBJ)\context.obj: $(SRC)\context.c
+	cl.exe $(FLAGS) /c $(SRC)\context.c $(INCLUDES) /Fo$(OBJ)\context.obj
+
+$(OBJ)\graphics.obj: $(SRC)\graphics.c
+	cl.exe $(FLAGS) /c $(SRC)\graphics.c $(INCLUDES) /Fo$(OBJ)\graphics.obj
+
+$(OBJ)\shading.obj: $(SRC)\shading.c
+	cl.exe $(FLAGS) /c $(SRC)\shading.c $(INCLUDES) /Fo$(OBJ)\shading.obj
+
+$(OBJ)\shell.obj: $(SRC)\shell.c
+	cl.exe $(FLAGS) /c $(SRC)\shell.c $(INCLUDES) /Fo$(OBJ)\shell.obj
+
+$(OBJ)\normal.obj: $(SRC)\normal.c
+	cl.exe $(FLAGS) /c $(SRC)\normal.c $(INCLUDES) /Fo$(OBJ)\normal.obj
+
+$(OBJ)\raycasting.obj: $(SRC)\raycasting.c
+	cl.exe $(FLAGS) /c $(SRC)\raycasting.c $(INCLUDES) /Fo$(OBJ)\raycasting.obj
+
+$(OBJ)\splatting.obj: $(SRC)\splatting.c
+	cl.exe $(FLAGS) /c $(SRC)\splatting.c $(INCLUDES) /Fo$(OBJ)\splatting.obj
+
+$(OBJ)\reslicing.obj: $(SRC)\reslicing.c
+	cl.exe $(FLAGS) /c $(SRC)\reslicing.c $(INCLUDES) /Fo$(OBJ)\reslicing.obj
+
+$(OBJ)\genift.obj: $(SRC)\genift.c
+	cl.exe $(FLAGS) /c $(SRC)\genift.c $(INCLUDES) /Fo$(OBJ)\genift.obj
+
+$(OBJ)\genift3.obj: $(SRC)\genift3.c
+	cl.exe $(FLAGS) /c $(SRC)\genift3.c $(INCLUDES) /Fo$(OBJ)\genift3.obj
+
+$(OBJ)\descriptor.obj: $(SRC)\descriptor.c
+	cl.exe $(FLAGS) /c $(SRC)\descriptor.c $(INCLUDES) /Fo$(OBJ)\descriptor.obj
+
+$(OBJ)\salience.obj: $(SRC)\salience.c
+	cl.exe $(FLAGS) /c $(SRC)\salience.c $(INCLUDES) /Fo$(OBJ)\salience.obj
+
+$(OBJ)\bas.obj: $(SRC)\bas.c
+	cl.exe $(FLAGS) /c $(SRC)\bas.c $(INCLUDES) /Fo$(OBJ)\bas.obj
+
+$(OBJ)\ss.obj: $(SRC)\ss.c
+	cl.exe $(FLAGS) /c $(SRC)\ss.c $(INCLUDES) /Fo$(OBJ)\ss.obj
+
+$(OBJ)\metrics.obj: $(SRC)\metrics.c
+	cl.exe $(FLAGS) /c $(SRC)\metrics.c $(INCLUDES) /Fo$(OBJ)\metrics.obj
+
+$(OBJ)\matrix.obj: $(SRC)\matrix.c
+	cl.exe $(FLAGS) /c $(SRC)\matrix.c $(INCLUDES) /Fo$(OBJ)\matrix.obj
+
+$(OBJ)\realmatrix.obj: $(SRC)\realmatrix.c
+	cl.exe $(FLAGS) /c $(SRC)\realmatrix.c $(INCLUDES) /Fo$(OBJ)\realmatrix.obj
+
+$(OBJ)\classify.obj: $(SRC)\classify.c
+	cl.exe $(FLAGS) /c $(SRC)\classify.c $(INCLUDES) /Fo$(OBJ)\classify.obj
+
+$(OBJ)\spline.obj: $(SRC)\spline.c
+	cl.exe $(FLAGS) /c $(SRC)\spline.c $(INCLUDES) /Fo$(OBJ)\spline.obj
+
+$(OBJ)\stackandfifo.obj: $(SRC)\stackandfifo.c
+	cl.exe $(FLAGS) /c $(SRC)\stackandfifo.c $(INCLUDES) /Fo$(OBJ)\stackandfifo.obj
+
+$(OBJ)\cimg.obj: $(SRC)\cimg.c
+	cl.exe $(FLAGS) /c $(SRC)\cimg.c $(INCLUDES) /Fo$(OBJ)\cimg.obj
+
+$(OBJ)\color.obj: $(SRC)\color.c
+	cl.exe $(FLAGS) /c $(SRC)\color.c $(INCLUDES) /Fo$(OBJ)\color.obj
+
+$(OBJ)\tensorscale.obj: $(SRC)\tensorscale.c
+	cl.exe $(FLAGS) /c $(SRC)\tensorscale.c $(INCLUDES) /Fo$(OBJ)\tensorscale.obj
+
+$(OBJ)\complgraph.obj: $(SRC)\complgraph.c
+	cl.exe $(FLAGS) /c $(SRC)\complgraph.c $(INCLUDES) /Fo$(OBJ)\complgraph.obj
+
+$(OBJ)\prscene.obj: $(SRC)\prscene.c
+	cl.exe $(FLAGS) /c $(SRC)\prscene.c $(INCLUDES) /Fo$(OBJ)\prscene.obj
+
+$(OBJ)\gqueue.obj: $(SRC)\gqueue.c
+	cl.exe $(FLAGS) /c $(SRC)\gqueue.c $(INCLUDES) /Fo$(OBJ)\gqueue.obj
+
+$(OBJ)\ctree.obj: $(SRC)\ctree.c
+	cl.exe $(FLAGS) /c $(SRC)\ctree.c $(INCLUDES) /Fo$(OBJ)\ctree.obj
+
+$(OBJ)\mclouds.obj: $(SRC)\mclouds.c
+	cl.exe $(FLAGS) /c $(SRC)\mclouds.c $(INCLUDES) /Fo$(OBJ)\mclouds.obj
+
+$(OBJ)\interpolation.obj: $(SRC)\interpolation.c
+	cl.exe $(FLAGS) /c $(SRC)\interpolation.c $(INCLUDES) /Fo$(OBJ)\interpolation.obj
+
+$(OBJ)\interpolation3.obj: $(SRC)\interpolation3.c
+	cl.exe $(FLAGS) /c $(SRC)\interpolation3.c $(INCLUDES) /Fo$(OBJ)\interpolation3.obj
+
+$(OBJ)\matching.obj: $(SRC)\matching.c
+	cl.exe $(FLAGS) /c $(SRC)\matching.c $(INCLUDES) /Fo$(OBJ)\matching.obj
+
+$(OBJ)\geometric3.obj: $(SRC)\geometric3.c
+	cl.exe $(FLAGS) /c $(SRC)\geometric3.c $(INCLUDES) /Fo$(OBJ)\geometric3.obj
+
+$(OBJ)\geometric2.obj: $(SRC)\geometric2.c
+	cl.exe $(FLAGS) /c $(SRC)\geometric2.c $(INCLUDES) /Fo$(OBJ)\geometric2.obj
+
+$(OBJ)\registration.obj: $(SRC)\registration.c
+	cl.exe $(FLAGS) /c $(SRC)\registration.c $(INCLUDES) /Fo$(OBJ)\registration.obj
+
+$(OBJ)\reslice3.obj: $(SRC)\reslice3.c
+	cl.exe $(FLAGS) /c $(SRC)\reslice3.c $(INCLUDES) /Fo$(OBJ)\reslice3.obj
+
+$(OBJ)\feature.obj: $(SRC)\feature.c
+	cl.exe $(FLAGS) /c $(SRC)\feature.c $(INCLUDES) /Fo$(OBJ)\feature.obj
+
+$(OBJ)\feature3.obj: $(SRC)\feature3.c
+	cl.exe $(FLAGS) /c $(SRC)\feature3.c $(INCLUDES) /Fo$(OBJ)\feature3.obj
+
+$(OBJ)\msfiltering.obj: $(SRC)\msfiltering.c
+	cl.exe $(FLAGS) /c $(SRC)\msfiltering.c $(INCLUDES) /Fo$(OBJ)\msfiltering.obj
+
+$(OBJ)\opfimg.obj: $(SRC)\opfimg.c
+	cl.exe $(FLAGS) /c $(SRC)\opfimg.c $(INCLUDES) /Fo$(OBJ)\opfimg.obj
+
+$(OBJ)\subgraph.obj: $(SRC)\subgraph.c
+	cl.exe $(FLAGS) /c $(SRC)\subgraph.c $(INCLUDES) /Fo$(OBJ)\subgraph.obj
+$(OBJ)\tira.obj: $(SRC)\tira.c
+	cl.exe $(FLAGS) /c $(SRC)\tira.c $(INCLUDES) /Fo$(OBJ)\tira.obj
+
+$(OBJ)\ctree3.obj: $(SRC)\ctree3.c
+	cl.exe $(FLAGS) /c $(SRC)\ctree3.c $(INCLUDES) /Fo$(OBJ)\ctree3.obj
+
+$(OBJ)\sgctree.obj: $(SRC)\sgctree.c
+	cl.exe $(FLAGS) /c $(SRC)\sgctree.c $(INCLUDES) /Fo$(OBJ)\sgctree.obj
+
+$(OBJ)\file_analyze.obj: $(SRC)\file_analyze.c
+	cl.exe $(FLAGS) /c $(SRC)\file_analyze.c $(INCLUDES) /Fo$(OBJ)\file_analyze.obj
+
+$(OBJ)\bz2_lib.obj: $(SRC)\bz2_lib.c
+	cl.exe $(FLAGS) /c $(SRC)\bz2_lib.c $(INCLUDES) /Fo$(OBJ)\bz2_lib.obj
+
+$(OBJ)\msp.obj: $(SRC)\msp.c
+	cl.exe $(FLAGS) /c $(SRC)\msp.c $(INCLUDES) /Fo$(OBJ)\msp.obj
+
+$(OBJ)\msgd.obj: $(SRC)\msgd.c
+	cl.exe $(FLAGS) /c $(SRC)\msgd.c $(INCLUDES) /Fo$(OBJ)\msgd.obj
+
+$(OBJ)\compressed.obj: $(SRC)\compressed.c
+	cl.exe $(FLAGS) /c $(SRC)\compressed.c $(INCLUDES) /Fo$(OBJ)\compressed.obj
+
+
+
+clean:
+	del $(LIB)\lib*.a $(LIB)\lib*.lib $(OBJ)\*.obj $(OBJ)\*.o $(BIN)\*
+
+
+
+

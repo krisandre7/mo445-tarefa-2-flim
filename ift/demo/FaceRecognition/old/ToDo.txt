@@ -1,0 +1,45 @@
+1. Divide as imagens do codebook em regioes fixas e gera vetor de
+atributos por max label em cada regiao. => iftExtractFaceFeatures. Ou
+ja pode ser iftConcatenateFeatures.c.
+
+2. Se nao funcionar 1. Altera iftUnsupFeatLearn para gravar kernels (tipo iftKernelBase) no disco em vez de imagens de codebook.
+
+3. Cria programa que recebe diretório com as imagens de treinamento e a
+base de kernels, filtra todas as imagens, e grava elas de volta como
+imagens do tipo iftFImage.
+
+4. Cria programa iftPoolingAndNormalization que recebe o diretório e calcula a redução das imagens com média e normalização de acordo com uma relação de adjacência para cada uma dessas operações. Depois grava de volta as imagens reduzidas.
+
+6. Cria função iftConcatenateFeatures que extrai o vetor de caracteristicas de cada imagem da base, gerando o conjunto de dados ;
+
+
+
+
+
+
+Montar descritor da imagem toda:
+
+Nivel 1:
+
+1. Aprendizado dos filtros: Para filtros 3 x 3
+
+   Extrai rois 3 x 3 aleatorios de todas as imagens de treinamento
+   Agrupa os rois por similaridade no valor de brilho
+   Calcula a media ou o roi raiz de cada grupo e usa seus valores de brilho como os coeficientes do filtro
+
+   O numero N de filtros será o número de grupos
+
+2. Filtra a imagem pelo banco de filtros do item 1 => um vetor de N atributos por pixel
+
+3. Pooling: calcula a média de cada atributo em uma janela 7 x 7 reduzindo o tamanho da imagem original.
+
+4. Normalizacao: Para cada pixel da imagem reduzida (nivel 2) divide-se o valor do pixel pela soma dos valores em uma adjacencia 5  x 5
+
+Nivel 2:
+
+Repete operacoes como no nivel 1 para filtros 5 x 5 x N
+
+Nivel 3: 
+
+Repete operacoes como no nivel 1 para filtros 5 x 5 x N
+

@@ -1,0 +1,87 @@
+Para executar o maketcl e o makefile gerado automáticamente você primeiramente
+deve:
+	mover o c2tcl para o diretório de sua aplicação;
+	mover o maketcl "       "	   "     "     ;
+	mover o xmktclapp.tcl,mktclapp e todos os .tcl da sua aplicação!
+	
+
+
+	Sua aplicação DEVE ficar em um diretório do diretório ift/app para
+	que o makefile funcione direito.Qualquer problema você deve alterar
+	o makefile para que ele funcione de maneira coerente.
+
+	Execute "maketcl <seu diretório com os .h> <nome da sua aplicação> 
+	<nome da sua biblioteca> <nome do arquivo que contém o nome dos .h>"
+
+	Os .tcl também devem estar no makefile na seguinte posição:
+ 
+        (está marcado com ** <- xxx **)
+	
+ //--------------------------------------------------------------------- 
+  #####################################################
+  # THIS MAKEFILE IS AUTOMATIC GENERATED WITH MAKETCL #
+  #                ____________                       #
+  #               |DO NOT EDIT |                      #
+  #               |   AT ALL   |                      #
+  #               \------------/                      #
+  #                                                   #
+  #             MAKE WITH C2TCL BY:                   #
+  #####################################################
+  #      Andre Carvalho   (Andre@fee.unicamp.br)      #
+  #      Carlos Camolesi  (Coliveir@fee.unicamp.br)   #
+  #####################################################
+
+all: ../../lib/libift.a labimg.c labimg.h src_tcl/*.c
+	 gcc -o labimg labimg.c ./src_tcl/*.c -ltk8.3 -ltcl8.3 -L../../lib -I../../include -I./include_tcl -L/usr/X11R6/lib -lX11 -lm -lift -ldl
+
+
+../../lib/libift.a:
+	cd ../../; make; cd -
+
+
+labimg.h: labimg.mta labimg.tcl io.tcl menu.tcl ** <- coloque aqui seu .tcl **
+	 ./mktclapp -header > ./labimg.h
+
+
+labimg.c: labimg.mta labimg.tcl io.tcl menu.tcl ** <- coloque aqui seu .tcl **
+	 ./mktclapp -f labimg.mta > labimg.c
+------------------------------------------------------------------------- //
+
+	Não altere as outras partes sem necessidade!
+	O Makefile acima é do labimg mais o gerado para sua aplicação não vai
+	ser igual a esse, por isso não altere este!
+	
+	Quando você rodar o maketcl você DEVE ter licensa para gravação pois
+	o maketcl gera dois diretórios, src_tcl e include_tcl, necessários
+	para sua aplicação.
+	
+	Após executar irá aparecer:
+	
+	Processing XXX.h...
+	
+	para cada arquivo .h do diretório.
+	Se tudo correr bem no final aparecerá DONE with XXX,
+	donde XXX é seu diretório.
+	Em seguida a janela do Xmktclapp irá aparecer para você incluir
+	seus .tcl .c nos devidos lugares.
+
+	ATENÇÃO: Para que o makefile funcione você deve dar o nome do arquivo
+	de saída e do arquivo .mta o MESMO que você deu ao maketcl!
+	
+	Após incluir tudo aperte "BUILD" e se tudo correr bem aparecerá
+	
+	"Built XXX.c e XXX.h with no errors".
+	
+	Feche o Xmktclapp e rode o Makefile executando:
+	
+	make
+	
+	E sua aplicação está pronta!
+
+	Obrigado por usar o maketcl
+-----------------------------------------------------------------------------
+	Andre Carvalho (Andre@fee.unicamp.br)
+	Carlos Camolesi (Carlos.Oliveira@ic.unicamp.br)	
+	Alexandre Falcao (afalcao@ic.unicamp.br)
+-----------------------------------------------------------------------------
+	

@@ -15,7 +15,7 @@ import torchvision.transforms as T
 import torchvision.transforms.functional as TF
 import albumentations as A
 class FLIMData(Dataset):
-    def __init__(self, orig_folder, marker_folder=None, images_list=None, lab_norm=True, label_folder=None, orig_ext=".png", 
+    def __init__(self, orig_folder, marker_folder=None, images_list=None, lab_norm=True, lab=True, label_folder=None, orig_ext=".png", 
                  marker_ext="-seeds.txt", label_ext=".png",transform: A.Compose = None, bits=8, convert_gray_to_lab=False):
         """
         Arguments:
@@ -33,6 +33,7 @@ class FLIMData(Dataset):
         self.orig_folder = orig_folder
         self.label_folder = label_folder
         self.lab_norm = lab_norm
+        self.lab = lab
 
         if(marker_folder is not None):
             self.mode = "train"
@@ -197,11 +198,16 @@ class FLIMData(Dataset):
             if label is not None:
                 label = augmented['mask']
         
-        if (len(image_data.shape) == 2 and self.convert_gray_to_lab):
+        if (len(image_data.shape) == 2 and self.convert_gray_to_lab and self.lab):
             image_data = self.gray_to_colored(image_data)
             image = FLIMData.image_to_lab_norm(image_data) if self.lab_norm else FLIMData.image_to_lab(image_data)
-        elif(len(image_data.shape) == 3):
+        elif(len(image_data.shape) == 3) and self.lab:
             image = FLIMData.image_to_lab_norm(image_data) if self.lab_norm else FLIMData.image_to_lab(image_data)
+        elif (len(image_data.shape) == 3) and not self.lab:
+            if isinstance(image_data, np.ndarray):
+                image = image_data.astype(np.float32)
+            else:
+                image = image_data
         else:
             image = np.expand_dims(image_data, 2).astype(np.float32)
 
@@ -363,9 +369,15 @@ class ToTensor(object):
         if 'markers_label' in sample:
             markers_label = sample['markers_label']
         
-        image_new = torch.from_numpy(image).permute((2, 0, 1)).float()
+        if not isinstance(image, torch.Tensor):
+            image_new = torch.from_numpy(image).permute((2, 0, 1)).float()
+        else:
+            image_new = image.float()
         if(label is not None):
-            label_new = torch.unsqueeze(torch.from_numpy(label), 0)
+            if not isinstance(label, torch.Tensor):
+                label_new = torch.from_numpy(label).unsqueeze(0).float()
+            else:
+                label_new = label.float()            
         else:
             label_new = None
             

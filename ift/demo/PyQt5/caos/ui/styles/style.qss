@@ -1,0 +1,45 @@
+QMainWindow { background-color: white }
+QWidget#ToolPanel {background-color: white}
+QWidget#ToolPanel QPushButton {
+}
+QPushButton {
+    background-color: white;
+    border-style: solid;
+    border-width: 0.5px;
+    border-radius: 10px;
+    border-color: #ededed;
+}
+QPushButton:hover {
+    border-color: #33a067;
+}
+
+QPushButton:pressed {
+    background-color: #ededed;
+}
+
+QPushButton:checked {
+    border-color: #33a067;
+    background-color: #ededed;
+}
+
+
+
+
+QWidget#ToolPanel QGroupBox {
+    font-size: 12px;
+    font-weight: bold;
+    color: #33a067;
+}
+
+
+### a way to customize the inner box of a QGroupBox
+# QGroupBox {
+#     background-color: #FFFFEE;
+#     margin-top: 15px; /* leave space at the top for the title */
+# }
+
+# QGroupBox::title {
+#     subcontrol-origin: margin;
+#     padding: 0;
+# }
+

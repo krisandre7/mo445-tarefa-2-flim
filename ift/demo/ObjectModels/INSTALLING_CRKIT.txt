@@ -1,0 +1,19 @@
+The CRKIT contains a lot of programs about medical image processing.
+We currently use onlu crlSTAPLE.
+
+Firstly, download it from http://crl.med.harvard.edu/software/CRKIT/index.php
+
+MacOS
+    - Install the .dmg
+    - The installed software should be in /Applications/crkit.app
+    - Export to your PATH the bin folder from crkit
+    - On ~/.profile:
+    export PATH=$PATH:/Applications/crkit.app/Contents/bin
+
+Linux
+    - Unzip the compressed file
+    - Export to your PATH the bin folder from crkit
+    - Export to your LD_LIBRARY_PATH the lib folder from crkit
+    - On ~/.bashrc
+    export PATH=$PATH:~/local/crkit-1.6.0/bin
+    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:~/local/crkit-1.6.0/itk-4.6.1/lib

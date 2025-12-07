@@ -1,0 +1,13 @@
+{ 
+	"pascal_path"        : "/workspace/paulorauber/projects/ift/data/pascal",
+
+    "positive_class"   : "cat",
+    "n_positive"		: 200,
+   	"n_negative"		: 0,
+   	"windows_per_image" : 1024,
+
+	"svm_path"			: "output/models/svm.pkl",
+	"convnet_path"		: "output/models/convnet.ift",
+	
+	"frame_size"		: 200
+}

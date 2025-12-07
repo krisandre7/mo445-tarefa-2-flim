@@ -1,0 +1,14 @@
+  Current docker image is only for network training,
+    might update to support everything later.
+
+- Check active docker images:
+    docker images
+  
+- Build docker image for our problem:
+    docker build -t hybrid-learning:latest py_docker/
+
+- Access docker image with access to my [felipegalvao] data:
+    docker run --rm -it --gpus all -v /data/home/felipegalvao/:/data/home/felipegalvao/ hybrid-learning:latest bash
+
+  Using the same path inside the docker allows re-using fullpath csvs.
+

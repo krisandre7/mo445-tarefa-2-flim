@@ -1,0 +1,42 @@
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.874551234288
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.873085910039
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'colorspace': 4, 'spatial_radius': 3.0}
+Auc: 0.865386109054
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'colorspace': 1, 'spatial_radius': 3.0}
+Auc: 0.856720530997
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.852449697096
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.850438826882
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.846891031606
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.841595353207
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'colorspace': 0, 'spatial_radius': 3.0}
+Auc: 0.839334930841
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'colorspace': 1, 'spatial_radius': 1.5}
+Auc: 0.832424197644
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.831586938075
+
+Parameters: {'alpha': [1.0, 1.0, 1.0], 'colorspace': 4, 'spatial_radius': 1.5}
+Auc: 0.830567671178
+
+Parameters: {'alpha': [0.66, 1.0, 1.0], 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.826600948434
+
+Parameters: {'alpha': [0.33, 1.0, 1.0], 'colorspace': 0, 'spatial_radius': 1.5}
+Auc: 0.822956196102
+

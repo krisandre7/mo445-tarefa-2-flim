@@ -1,0 +1,41 @@
+Crie um arquivo json com a arquitetura da rede, uma pasta com as
+imagens originais e outra com os marcadores das poucas imagens de
+treino. Por exemplo:
+
+orig/
+   0001_0001.png
+   0001_0002.png
+   ...
+   0002_0001.png
+   ...
+
+markers/
+   0001_0005-seeds.txt
+   0002_0001-seeds.txt
+   
+
+Executa iftFLIM-LearnModel para gerar a pasta de saída com os
+parâmetros da rede.
+
+Depois cria um arquivo csv com a lista de imagens de treino ou de
+teste para ele extrair as características. Por exemplo:
+
+train.csv com as imagens
+
+0001_0002.png
+0001_0005.png
+0001_0015.png
+...
+
+O mesmo para test.csv
+
+Daí executa iftFLIM-ExtractFeatures para ele gerar a saída output com as mimages
+
+output/ 
+0001_0002.mimg
+0001_0005.mimg
+0001_0015.mimg
+...
+
+
+

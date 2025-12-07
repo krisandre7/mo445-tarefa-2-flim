@@ -1,0 +1,1313 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1290</width>
+    <height>766</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>784</width>
+    <height>528</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>2500</width>
+    <height>2500</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>1</width>
+    <height>1</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>Classifier Learning</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <spacer name="horizontalSpacer_2">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="2">
+     <spacer name="horizontalSpacer_7">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="1" colspan="3">
+     <layout class="QVBoxLayout" name="verticalLayout_7" stretch="1,30,1,1,0">
+      <property name="spacing">
+       <number>1</number>
+      </property>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <property name="spacing">
+         <number>1</number>
+        </property>
+        <item>
+         <widget class="QPushButton" name="pushButtonSaveCanvas">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="myicons.qrc">
+            <normaloff>:/Icons/Icons/Save-icon.png</normaloff>:/Icons/Icons/Save-icon.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonChangeBkgColor">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="myicons.qrc">
+            <normaloff>:/Icons/Icons/color-picker.png</normaloff>:/Icons/Icons/color-picker.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonEnableShadow">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="myicons.qrc">
+            <normaloff>:/Icons/Icons/shadow-icon.png</normaloff>:/Icons/Icons/shadow-icon.png</iconset>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBoxShowClassGroupColorOnTooltip">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="text">
+           <string>Class/group color on tooltip</string>
+          </property>
+          <property name="checked">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="CustomGraphicsView" name="projGraphicsView" native="true">
+        <property name="toolTip">
+         <string/>
+        </property>
+        <property name="whatsThis">
+         <string extracomment="Save projection as image"/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditDataSetName">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Dataset: --</string>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditDataSetInfo">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Info: --</string>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLineEdit" name="lineEditNumbSamplesShown">
+        <property name="enabled">
+         <bool>true</bool>
+        </property>
+        <property name="text">
+         <string>Samples shown:</string>
+        </property>
+        <property name="frame">
+         <bool>true</bool>
+        </property>
+        <property name="readOnly">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="1" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="sizeConstraint">
+       <enum>QLayout::SetDefaultConstraint</enum>
+      </property>
+      <item>
+       <widget class="Line" name="line_6">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="text">
+           <string>t-SNE parameters</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_15">
+          <item>
+           <layout class="QFormLayout" name="formLayout_5">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_10">
+              <property name="text">
+               <string>Perplexity</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_11">
+              <item>
+               <widget class="QSlider" name="horizontalSliderPerplexity">
+                <property name="enabled">
+                 <bool>false</bool>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="singleStep">
+                 <number>10</number>
+                </property>
+                <property name="value">
+                 <number>40</number>
+                </property>
+                <property name="tracking">
+                 <bool>true</bool>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="tickPosition">
+                 <enum>QSlider::TicksBelow</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBoxPerplexity">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="maximum">
+                 <number>100</number>
+                </property>
+                <property name="value">
+                 <number>20</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_12">
+              <property name="text">
+               <string>Num. Iter.</string>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="1">
+             <layout class="QHBoxLayout" name="horizontalLayout_12">
+              <item>
+               <widget class="QSlider" name="horizontalSliderNumIterTSNE">
+                <property name="minimum">
+                 <number>0</number>
+                </property>
+                <property name="maximum">
+                 <number>2000</number>
+                </property>
+                <property name="singleStep">
+                 <number>200</number>
+                </property>
+                <property name="value">
+                 <number>1000</number>
+                </property>
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="tickPosition">
+                 <enum>QSlider::TicksBelow</enum>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="spinBoxNumIterTSNE">
+                <property name="maximum">
+                 <number>2000</number>
+                </property>
+                <property name="value">
+                 <number>1000</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="1" column="1">
+             <widget class="QCheckBox" name="checkBoxAutomaticPerplexity">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="text">
+               <string>Automatic (smaller class)</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_10">
+            <item>
+             <spacer name="horizontalSpacer_5">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonProjectTSNE">
+              <property name="text">
+               <string>Project</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_6">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_13">
+        <item>
+         <widget class="QLabel" name="label_20">
+          <property name="text">
+           <string>Display options</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Node type</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxNodeType">
+            <item>
+             <property name="text">
+              <string>Point</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Feature pie</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Feature histogram</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Number</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Image</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Point and Edge</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Node color</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="comboBoxNodeColor">
+            <item>
+             <property name="text">
+              <string>True class</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Predicted</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Supervised</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Propagated</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Supervised + propagated</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Group</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="3" column="0">
+           <widget class="QLabel" name="label_5">
+            <property name="text">
+             <string>Filter class</string>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0">
+           <widget class="QLabel" name="label_7">
+            <property name="text">
+             <string>Filter group</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_17">
+              <property name="text">
+               <string>from</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="doubleSpinBoxNodeDataFilterFrom">
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_26">
+              <property name="text">
+               <string>to</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="doubleSpinBoxNodeDataFilterTo">
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="6" column="1">
+           <widget class="QCheckBox" name="checkBoxDisplayNodeDataFilter">
+            <property name="text">
+             <string>Display perplexty</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="0">
+           <widget class="QLabel" name="label_15">
+            <property name="text">
+             <string>Features</string>
+            </property>
+           </widget>
+          </item>
+          <item row="7" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_27">
+              <property name="text">
+               <string>from</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="doubleSpinBoxFeaturesFrom">
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_28">
+              <property name="text">
+               <string>to</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QDoubleSpinBox" name="doubleSpinBoxFeaturesTo">
+              <property name="singleStep">
+               <double>0.010000000000000</double>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QComboBox" name="comboBoxFilterClass"/>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxInverseClassFilter">
+              <property name="maximumSize">
+               <size>
+                <width>75</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Inverse</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_7">
+            <item>
+             <widget class="QComboBox" name="comboBoxFilterGroup"/>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBoxInverseGroupFilter">
+              <property name="maximumSize">
+               <size>
+                <width>75</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>Inverse</string>
+              </property>
+              <property name="checked">
+               <bool>false</bool>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="5" column="0">
+           <widget class="QComboBox" name="comboBoxNodeDataFilter">
+            <item>
+             <property name="text">
+              <string>Perplexity</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Mean</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Stdev</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Weight</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
+        <item>
+         <widget class="QLabel" name="label_23">
+          <property name="text">
+           <string>Label supervision</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QFormLayout" name="formLayout_7">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_18">
+            <property name="text">
+             <string>Mode</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBoxSupervisionMode">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>By group</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_19">
+            <property name="text">
+             <string>Field</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="comboBoxSupervisionField">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>True label</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Group</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_17">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_16">
+            <item>
+             <spacer name="horizontalSpacer_9">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonResetSupervision">
+              <property name="text">
+               <string>Reset supervision</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_10">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_24">
+          <property name="text">
+           <string>Classification/Clustering</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_18">
+          <item>
+           <layout class="QFormLayout" name="formLayout_8">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label_21">
+              <property name="text">
+               <string>Action</string>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="1">
+             <widget class="QComboBox" name="comboBoxClassClustAction">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>Classification</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>Clustering</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QLabel" name="label_22">
+              <property name="text">
+               <string>Method</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="1">
+             <widget class="QComboBox" name="comboBoxClassClustMethod">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <item>
+               <property name="text">
+                <string>SVM-Linear</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>SVM-RBF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>OPF</string>
+               </property>
+              </item>
+              <item>
+               <property name="text">
+                <string>kNN</string>
+               </property>
+              </item>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_17">
+            <item>
+             <spacer name="horizontalSpacer_13">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>28</width>
+                <height>25</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonClassClustExecute">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Execute</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_12">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>28</width>
+                <height>25</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButtonClassClustDisplay">
+              <property name="enabled">
+               <bool>false</bool>
+              </property>
+              <property name="text">
+               <string>Display</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer_11">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>28</width>
+                <height>25</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="Line" name="line_4">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item row="0" column="3">
+     <spacer name="horizontalSpacer_4">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="1">
+     <spacer name="horizontalSpacer_3">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="0" column="4">
+     <spacer name="horizontalSpacer_8">
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+      <property name="sizeType">
+       <enum>QSizePolicy::MinimumExpanding</enum>
+      </property>
+      <property name="sizeHint" stdset="0">
+       <size>
+        <width>40</width>
+        <height>20</height>
+       </size>
+      </property>
+     </spacer>
+    </item>
+    <item row="1" column="4">
+     <layout class="QHBoxLayout" name="horizontalLayout_14">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_10">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <widget class="QLabel" name="labelSelectedClasses">
+          <property name="maximumSize">
+           <size>
+            <width>120</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Sel. classes: 0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="listViewSelectedClasses">
+          <property name="maximumSize">
+           <size>
+            <width>120</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButtonSaveSelectedClasses">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/Save-icon.png</normaloff>:/Icons/Icons/Save-icon.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonOpenSelectedClasses">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/open-icon.png</normaloff>:/Icons/Icons/open-icon.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_15">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QLabel" name="labelSelectedGroups">
+          <property name="maximumSize">
+           <size>
+            <width>120</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Sel. groups: 0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="listViewSelectedGroups">
+          <property name="maximumSize">
+           <size>
+            <width>120</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButtonSaveSelectedGroups">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/Save-icon.png</normaloff>:/Icons/Icons/Save-icon.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonOpenSelectedGroups">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/open-icon.png</normaloff>:/Icons/Icons/open-icon.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonInvertSelection">
+            <property name="minimumSize">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>60</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Invert</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_12">
+        <property name="sizeConstraint">
+         <enum>QLayout::SetDefaultConstraint</enum>
+        </property>
+        <item>
+         <widget class="QLabel" name="labelSelectedSamples">
+          <property name="maximumSize">
+           <size>
+            <width>170</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Sel. samples: 0</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QListView" name="listViewSelectedSamples">
+          <property name="maximumSize">
+           <size>
+            <width>170</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_13">
+          <property name="spacing">
+           <number>1</number>
+          </property>
+          <item>
+           <widget class="QPushButton" name="pushButtonSaveSelectedSamples">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/Save-icon.png</normaloff>:/Icons/Icons/Save-icon.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonOpenSelectedSamples">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/open-icon.png</normaloff>:/Icons/Icons/open-icon.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="horizontalSpacer_18">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1290</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="separator"/>
+    <addaction name="actionOpen_dataset"/>
+    <addaction name="actionSave_dataset"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionOpen_dataset"/>
+   <addaction name="actionSave_dataset"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionOpen_dataset">
+   <property name="icon">
+    <iconset resource="myicons.qrc">
+     <normaloff>:/Icons/Icons/open-icon.png</normaloff>:/Icons/Icons/open-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open dataset ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionSave_dataset">
+   <property name="icon">
+    <iconset resource="myicons.qrc">
+     <normaloff>:/Icons/Icons/Save-icon.png</normaloff>:/Icons/Icons/Save-icon.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save dataset ...</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>CustomGraphicsView</class>
+   <extends>QWidget</extends>
+   <header>customgraphicsview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="myicons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

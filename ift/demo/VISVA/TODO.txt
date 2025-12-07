@@ -1,0 +1,29 @@
+Interface
+
+Introduzir um grafo com as dependencias entre funcoes e fazer a interface de processamento deste grafo. (ruppert)
+
+
+Transformations
+
+- Interpolation - precisa interpolar labels (ruppert)
+- MSP - precisa interpolar labels (ruppert)
+
+
+Segmentation
+
+Segmentacao Interativa - estender para multiplos rotulos (paulo)
+                         sibgrapi (paulo)
+                         
+ Registration 
+      hemisferios (Ruppert)
+        
+Analysis (Ruppert)
+      mostrar registro dos hemisferios
+      o que sao as medidas?
+ 
+m1 - volume 
+   esquerdo
+   direito
+   direito - esquerdo
+   total
+m2 - 

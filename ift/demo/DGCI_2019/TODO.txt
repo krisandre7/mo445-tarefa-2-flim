@@ -1,0 +1,6 @@
+OK - 1 - Adicionar scripts python para seleção de sementes
+2 - Organizar passos e workflow do paper
+3 - Comparar métodos atuais e novos
+4 - Realizar experimentos
+
+0 - Corrigir DynamicSetWithCluster

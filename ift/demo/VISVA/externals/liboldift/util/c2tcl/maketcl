@@ -1,0 +1,501 @@
+#!/usr/bin/wish
+
+#*****************************************************************************
+
+proc ButtonConfig { button } {
+    
+    bind $button <Enter> "$button configure -relief raise"
+    bind $button <Leave> "$button configure -relief flat"
+}
+
+#******************************************************************************
+
+proc makefile {include} {
+    global maindirvar appvar binvar libvar
+    
+    cd $maindirvar
+    set input [open "$maindirvar/Makefile" w]
+    puts $input "\n \
+	    #####################################################\n \
+	    # THIS MAKEFILE IS AUTOMATIC GENERATED WITH MAKETCL #\n \
+	    #                ____________                       #\n \
+	    #               |DO NOT EDIT |                      #\n \
+	    #               |   AT ALL   |                      #\n \
+	    #               \------------/                      #\n \
+	    #                                                   #\n \
+	    #             MAKE WITH C2TCL BY:                   #\n \
+	    #####################################################\n \
+	    #      Andre Carvalho   (Andre@fee.unicamp.br)      #\n \
+	    #      Carlos Camolesi  (Coliveir@fee.unicamp.br)   #\n \
+	    #####################################################\n\n"
+
+    
+    puts $input "LIB1=../../lib"
+    puts $input "LIB2=/usr/X11R6/lib"
+    puts $input "INCLUDE1=../../include"
+    puts $input "INCLUDE2=./include_tcl"
+    puts $input "INCLUDE3=./include"
+    puts $input  "SRC=./src"
+    puts $input "SRC1=./src_tcl"
+    puts $input "FLAGS= -lX11 -lm -l$libvar -ldl -ltk8.3 -ltcl8.3 -lctcl"
+    puts $input "OBJ=./obj_tcl"
+    puts $input "BIN=$binvar"
+    puts $input "FLAGS1= -O3 -Wall\n"
+    
+
+    puts $input "all: \$(LIB1)/lib$libvar.a \$(LIB1)/libctcl.a include/$appvar.h src/$appvar.c \$(SRC1)/*.c \$(SRC)/*.c"
+    
+    puts $input "\tgcc -o \$(BIN)/$appvar \$(SRC)/*.c \$(OBJ)/*.o \$(FLAGS) -L\$(LIB1) -I\$(INCLUDE1) -I\$(INCLUDE2) -L\$(LIB2) -I\$(INCLUDE3)\n"
+   
+    puts $input "libctcl: \$(LIB1)/libctcl.a"
+    puts $input "\t@echo \"libctcl build...\"\n"
+
+    puts $input "\$(LIB1)/libctcl.a: \\"
+    
+    foreach file $include {
+	if [catch [file extension $file] result] {
+	    if {[file extension $file] == ".h"} {
+		set index [string first "." $file]
+		set name ""
+		for { set i 0} {$i < $index} {incr i} {
+		    append name [string index $file $i]
+		} 
+		puts $input "\$(OBJ)/tcl_$name.o \\"
+	    }
+	}
+    }
+    
+    
+    puts $input "\n\tar csr \$(LIB1)/libctcl.a \\"
+    
+    foreach file $include {
+	if [catch [file extension $file] result] {
+	    if {[file extension $file] == ".h"} {
+		set index [string first "." $file]
+		set name ""
+		for { set i 0} {$i < $index} {incr i} {
+		    append name [string index $file $i]
+		} 
+		puts $input "\$(OBJ)/tcl_$name.o \\"
+	    }
+	}
+    }
+    
+    puts $input "\n"
+    
+    foreach file $include {
+	if [catch [file extension $file] result] {
+	    if {[file extension $file] == ".h"} {
+		set index [string first "." $file]
+		set name ""
+		for { set i 0} {$i < $index} {incr i} {
+		    append name [string index $file $i]
+		} 
+		puts $input "\$(OBJ)/tcl_$name.o: \$(SRC1)/tcl_$name.c\n\t\
+			gcc -c \$(FLAGS1) \$(SRC1)/tcl_$name.c  -L\$(LIB1) -I\$(INCLUDE2) -I\$(INCLUDE1) -I\$(INCLUDE3) \\\n\t-o \$(OBJ)/tcl_$name.o\n\n" 
+	    }
+	}
+    }
+    
+    puts $input "../../lib/lib$libvar.a:\n\t\cd ../../; make; cd -\n\n"
+    puts $input "include/$appvar.h: $appvar.mta" nonewline
+    set files [exec dir]
+    foreach file $files {
+	if {[file extension $file] == ".tcl"} {
+	    puts $input " $file " nonewline
+	}
+    }
+    puts $input "\n\t\$(BIN)/mktclapp -header > include/$appvar.h\n"
+    puts $input "src/$appvar.c: $appvar.mta $appvar.tcl" nonewline
+    foreach file $files {
+	if {[file extension $file] == ".tcl"} {
+	    puts $input " $file " nonewline
+	}
+    }
+    puts $input "\n\t\$(BIN)/mktclapp -f $appvar.mta > src/$appvar.c\n"
+    puts $input "mktclapp: ../../util/mktclapp/mktclapp.c\n\t\
+	    gcc -o \$(BIN)/mktclapp ../../util/mktclapp/mktclapp.c\n"
+    
+    puts $input "clean:\n\trm \$(OBJ)/*.o\trm \$(BIN)/*"
+    
+    close $input
+    
+    return;
+}
+
+#******************************************************************************
+
+proc updateheaders { } {
+    global appvar headf3 inclvar head2f3 head2var headvar maindirvar
+ 
+    
+    cd $maindirvar
+    if [catch [set input [open $headvar w+]]] { 
+	set includes [$headf3.txt get 1.0 end]
+	foreach file $includes {
+	    puts $input $file
+	}
+	close $input
+	
+    }
+    
+    if [catch [set input [open $head2var w+]]] { 
+	set includes [$head2f3.txt get 1.0 end]
+	foreach file $includes {
+	    puts $input $file
+	}
+	close $input
+    } 
+    
+    newinclude
+    
+}
+
+#**************************************************************************
+proc newinclude { } {
+    global maindirvar appvar head2f3 libvar
+    
+    cd $maindirvar/include_tcl
+    if [catch [set input [open [format "tcl_%s.h" $appvar] w+]]] { 
+	puts $input "#include \"$appvar.h\""
+	puts $input "#include \"$libvar.h\""
+	puts $input "#include <tk.h>"
+	puts $input "#include <stdio.h>"
+	set includes [$head2f3.txt get 1.0 end]
+	foreach file $includes {
+	    puts $input "#include \"$file\""
+	}	
+	close $input
+    }
+}
+
+
+#*******************************************************************************
+
+proc createdirs { } {
+    global maindirvar binvar
+    
+    
+    if {![file exist $maindirvar/src_tcl]} {
+	exec mkdir $maindirvar/src_tcl
+    }
+    if {![file exist $maindirvar/include_tcl]} {
+	exec mkdir $maindirvar/include_tcl
+    }
+    if {![file exist $maindirvar/obj_tcl]} {
+	exec mkdir $maindirvar/obj_tcl
+    }
+    if {![file exist $maindirvar/src]} {
+	exec mkdir $maindirvar/src
+    }
+    if {![file exist $maindirvar/include]} {
+	exec mkdir $maindirvar/include
+    }
+    
+    cd $maindirvar
+    cd ../../util/c2tcl
+    exec gcc c2tcl.c -o $binvar/c2tcl
+    cd ../mktclapp
+    exec gcc mktclapp.c -o $binvar/mktclapp
+    cd $maindirvar
+}
+ 
+#******************************************************************************
+
+
+proc runc2tcl { } {
+    global headvar appvar maindirvar inclvar binvar head2var
+    
+    updateheaders
+    cd $maindirvar
+    set includes ""
+    if [catch [set input [open $headvar r]]] {
+	while {[gets $input headerf] >= 0} {
+	    lappend includes $headerf
+	}
+	close $input
+	cd ../../include/
+	if { $includes != "" } {
+	    foreach file $includes {
+		if [catch [file extension $file] result] {
+		    if {[file extension $file] == ".h"} {
+			if [catch [exec $binvar/c2tcl $file $appvar]] {
+			}
+		    }
+		}
+	    }
+	    set tcl_c [exec dir]
+	    foreach file $tcl_c {
+		if {[file extension $file] == ".c"} {
+		    exec mv $file $maindirvar/src_tcl
+		} else {
+		    if {[file extension $file] == ".h"} {
+			if {[string match tcl_* $file]} {
+			    exec mv $file $maindirvar/include_tcl
+			}
+		    }
+		}
+	    }
+	}
+    }
+    unset input
+    
+    cd $maindirvar
+    set includes2 ""
+    if [catch [set input [open $maindirvar/$head2var r]]] {
+	while {[gets $input headerf] >= 0} {
+	    lappend includes2 $headerf
+	}
+	close $input
+	cd ./include/
+	if { $includes2 != "" } {
+	    foreach file $includes {
+		if [catch [file extension $file] result] {
+		    if {[file extension $file] == ".h"} {
+			if [catch [exec $binvar/c2tcl $file $appvar]] {
+			}
+		    }
+		}
+	    }
+	    set tcl_c [exec dir]
+	    foreach file $tcl_c {
+		if {[file extension $file] == ".c"} {
+		    exec mv $file $maindirvar/src_tcl
+		} else {
+		    if {[file extension $file] == ".h"} {
+			if {[string match tcl_* $file]} {
+			    exec mv $file $maindirvar/include_tcl
+			}
+			
+		    }
+		}
+	    }
+	}   
+    }
+    lappend includes $includes2
+    makefile $includes
+    runxmk
+}
+
+proc runxmk { } {
+    global maindirvar
+    
+    
+    cd $maindirvar
+    
+    save
+    
+    exec wish xmktclapp.tcl
+    
+    set files [exec dir]
+    foreach file $files {
+	if {[file extension $file] == ".c"} {
+	    exec mv $file ./src
+	}
+	if {[file extension $file] == ".h"} {
+	    exec mv $file ./include
+	    
+	}
+    }
+    
+    quit
+    
+}
+
+proc save { } {
+    global maindirvar headvar appvar head2var libvar
+    
+    cd $maindirvar
+    set input [open "maketclinit" w]
+    foreach var {maindirvar headvar appvar libvar head2var} { 
+	puts $input "$var [set $var]"
+    }
+    
+    close $input
+}
+
+proc quit { } {
+    destroy .
+}
+
+proc reset { } {
+    global maindirvar inclvar headf3 head2f3 appvar libvar
+    
+    $headf3.txt delete 1.0 end
+    $head2f3.txt delete 1.0 end
+    cd $maindirvar
+    cd ../../include
+    set files [exec dir]
+    foreach file $files {
+	if {[file extension $file] == ".h"}  {
+	    if {$file != "$libvar.h"} {
+		$headf3.txt insert end "$file\n"
+	    }
+	}
+    }
+    
+    if [file exist "$maindirvar/include"] {
+	cd $maindirvar/include
+	set files [exec dir]
+	foreach file $files {
+	    if {[file extension $file] == ".h"}  {
+		if {$file != "$appvar.h"} {
+		    $head2f3.txt insert end "$file\n"
+		}
+	    }
+	}
+	cd $maindirvar
+    }
+}
+    
+#******************************************************************************
+
+
+wm title . "Maketcl X Version"
+
+######################
+# Main frame creation#
+######################
+set  mainf [frame .mainf -borderwidth 4 -relief groove]
+pack $mainf -fill x
+
+# Main label creation
+set mainl [label $mainf.mainl -text "Maketcl X Version" -font { Charter 18 } \
+	-borderwidth 4 -relief groove]
+pack $mainl -side top -fill x
+
+
+set mainl2 [label $mainf.mainl3 -text "This application is for automatic C->Tcl/Tk functions C2TCL conversion." -font { Charter 10 }]
+pack $mainl2 -side top 
+
+#####LIST BOX#######################
+# Frame for list box 
+set headf [frame .head -borderwidth 4 -relief groove]
+pack $headf -side top -fill x
+
+
+# Label construction for include file
+set label [label $headf.l1 -text "MAIN INCLUDE DIRECTORY." -font { Charter 14 }]
+pack $label -side top -fill x
+
+set headl [label $headf.l -text "Main headers files:"]
+pack $headl -side left
+
+set headf3 [frame .head.f]
+pack $headf3 -side top -fill y 
+
+# List box for header files
+set headtxt [text $headf3.txt -relief sunken -bg white -height 5 -width 25 \
+	-yscrollcommand [list $headf3.headscr set]]
+pack $headtxt -side left
+
+# List box right scrollbar 
+set headscr [scrollbar $headf3.headscr -orient vertical -command [list $headtxt yview]]
+pack $headscr -side left -fill y
+
+################################
+# Construction of directories  #
+################################
+set maindirvar [pwd]
+
+cd ../../bin
+set binvar [pwd]
+
+cd $maindirvar
+
+set index [string last "/" $maindirvar]
+for { set i [expr $index+1] } { $i < [string length $maindirvar] } { incr i} {
+    append appvar [string index $maindirvar $i]
+}
+
+
+set headvar [format "%s_headers" $appvar]
+
+
+set head2var [format "extra_%s_headers" $appvar]
+
+cd ../../
+set libvaraux [pwd]
+set index [string last "/" $libvaraux]
+for { set i [expr $index+1] } { $i < [string length $maindirvar] } { incr i} {
+    append libvar [string index $libvaraux $i]
+}
+
+createdirs
+
+set head2f [frame .head2 -borderwidth 4 -relief groove]
+pack $head2f -side top -fill x
+
+set head2label [label .head2.label -text "EXTRA INCLUDE DIRECTORY" -font { Charter 14 } ]
+pack $head2label -side top
+
+set head2l [label $head2f.l -text "Extra headers files:"]
+pack $head2l -side left
+
+set head2f3 [frame .head2.f]
+pack $head2f3 -side top -fill y 
+
+# List box for header files
+set head2txt [text $head2f3.txt -relief sunken -bg white -height 5 -width 25 \
+	-yscrollcommand [list $head2f3.head2scr set]]
+pack $head2txt -side left
+
+# List box right scrollbar 
+set head2scr [scrollbar $head2f3.head2scr -orient vertical -command [list $head2txt yview]]
+pack $head2scr -side left -fill y
+
+
+set bottomf [frame .bottomf -borderwidth 4 -relief groove]
+pack $bottomf -side top -fill x
+
+
+# Button for LAUNCH
+set bbutton [button $bottomf.b1 -text "CREATE" -relief flat -command "runc2tcl" -font {Charter 12}]
+ButtonConfig $bbutton
+pack $bbutton -side right -ipadx 10
+
+# Button for RESET
+set bbutton2 [button $bottomf.b2 -text "RESET" -relief flat -command "reset" -font {Charter 12}]
+ButtonConfig $bbutton2
+pack $bbutton2 -side left -ipadx 10
+
+
+cd $maindirvar
+if [file exist "maketclinit"] {
+    if [catch [set input [open "maketclinit" r]]] {
+	
+	while {[gets $input varaux] >= 0 } {
+	    set varlist $varaux
+	    set var [lindex $varlist 0]
+	    set aux [set [set var]]
+	    if {[string compare $aux [lindex $varlist 1]] == 0} {
+		set [set var] [lindex $varlist 1]
+	    }
+	} 
+	close $input
+	
+	if [file exist "$headvar"] {
+	    if [catch [set input [open $headvar r]]] { 
+		while { [gets $input hfiles] >= 0 } {
+		    $headf3.txt insert end "$hfiles\n"
+		}
+		close $input
+	    }
+	}
+	
+	if [file exist "$head2var"] {
+	    if [catch [set input [open $head2var r]]] { 
+		while { [gets $input hfiles] >= 0 } {
+		    $head2f3.txt insert end "$hfiles\n"
+		}
+		close $input
+	    }   
+	}
+	
+	
+    }
+} else {
+    reset
+    updateheaders
+}
+

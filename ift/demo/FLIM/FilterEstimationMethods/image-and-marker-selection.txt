@@ -1,0 +1,15 @@
+Usar superpixels-ISF.py em ../aux_scripts para gerar superpixels com o
+ISF_MIX_MEAN_Simple em demo/ImageGraph.
+
+Usar iftSeedsFromSuperpixels para gerar sementes
+
+Usar iftPatchDataSetFromSeeds para gerar o patch dataset das sementes
+
+Usar iftFiltersFromPatchDataset para gerar as imagens com os centros de grupo na subpasta graphics da pasta do modelo
+
+Carregar essas imagens no FLIMBuilder -- elas sao as imagens
+selecionadas e os marcadores indicam regioes para o usuario marcar.
+
+Copiar as originais dessas imagens selecionadas para uma pasta, trocar
+os nomes dos arquivos de marcadores para eliminar _layerX deles,
+executar BoFP.

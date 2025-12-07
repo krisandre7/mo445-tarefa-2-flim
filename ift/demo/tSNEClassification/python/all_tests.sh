@@ -1,0 +1,6 @@
+python3 tsne_classification_train_test_without_cross_val.py convnet_peixinho_6-classes_perc-0.2_oldopf.zip 0.5
+python3 tsne_classification_train_test_without_cross_val.py convnet_peixinho_7-classes_perc-0.05_oldopf.zip 0.5
+python3 tsne_classification_train_test_without_cross_val.py convnet_peixinho_12-classes_perc-0.05_oldopf.zip 0.5
+python3 tsne_classification_train_test_without_cross_val.py proto_celso_6-classes_perc-0.2_oldopf.zip 0.5
+python3 tsne_classification_train_test_without_cross_val.py proto_celso_7-classes_perc-0.05_oldopf.zip 0.5
+python3 tsne_classification_train_test_without_cross_val.py proto_celso_12-classes_perc-0.05_oldopf.zip 0.5

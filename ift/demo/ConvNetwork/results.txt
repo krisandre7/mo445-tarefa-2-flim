@@ -1,0 +1,6 @@
+1. Filtros aleatorios com normalizacao de saida e normalizacao por
+contraste: 0.958380
+2. Filtros aleatorios sem normalizacao de saida e normalizacao por
+contraste: 0.951470
+3. Filtros aleatorios com normalizacao de saida e normalizacao comum:
+0.956739

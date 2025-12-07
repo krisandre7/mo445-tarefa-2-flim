@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/Icons">
+        <file>Icons/open-icon.png</file>
+        <file>Icons/Save-icon.png</file>
+        <file>Icons/black-white-icon.png</file>
+        <file>Icons/color-picker.png</file>
+        <file>Icons/shadow-icon.png</file>
+        <file>Icons/expand.png</file>
+        <file>Icons/shrink.png</file>
+        <file>Icons/zoom_in.png</file>
+        <file>Icons/zoom_out.png</file>
+    </qresource>
+</RCC>

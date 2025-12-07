@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SupervisionWindow</class>
+ <widget class="QDialog" name="SupervisionWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>767</width>
+    <height>682</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QWidget" name="verticalLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>751</width>
+     <height>666</height>
+    </rect>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QGraphicsView" name="graphicsView">
+      <property name="minimumSize">
+       <size>
+        <width>679</width>
+        <height>593</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_7">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <item>
+           <widget class="QPushButton" name="pushButtonZoomIn">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/zoom_in.png</normaloff>:/Icons/Icons/zoom_in.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonZoomOut">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/zoom_out.png</normaloff>:/Icons/Icons/zoom_out.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_6">
+          <item>
+           <widget class="QPushButton" name="pushButtonOriginalSize">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/shrink.png</normaloff>:/Icons/Icons/shrink.png</iconset>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="pushButtonFitWindow">
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="myicons.qrc">
+              <normaloff>:/Icons/Icons/expand.png</normaloff>:/Icons/Icons/expand.png</iconset>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_6">
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <item>
+           <widget class="QComboBox" name="comboBoxPlane">
+            <property name="editable">
+             <bool>false</bool>
+            </property>
+            <item>
+             <property name="text">
+              <string>Axial</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Coronal</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sagittal</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_5">
+          <item>
+           <widget class="QLabel" name="label_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Slice</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QSpinBox" name="spinBoxSlice">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_8">
+        <item>
+         <widget class="QLabel" name="label_4">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Select image band:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSpinBox" name="spinBoxBand"/>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_3">
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Class for supervision:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QComboBox" name="comboBoxClassForSupervision">
+          <property name="minimumSize">
+           <size>
+            <width>140</width>
+            <height>0</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_2">
+        <item>
+         <widget class="QPushButton" name="pushButtonSupervise">
+          <property name="minimumSize">
+           <size>
+            <width>130</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Supervise</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pushButtonCancel">
+          <property name="minimumSize">
+           <size>
+            <width>130</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Cancel</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources>
+  <include location="myicons.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,1 @@
+./RunExperiment.sh 100 50 ds/parasites_larvas.zip results/larvas_100Splits_50ActiveIters
