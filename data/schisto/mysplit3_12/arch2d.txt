@@ -1,0 +1,245 @@
+{
+	"stdev_factor": 0.010000,
+	"nlayers": 16,
+	"apply_intrinsic_atrous": false,
+	"layer1": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer2": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer3": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	},
+	"layer4": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	},
+	"layer5": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer6": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer7": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	},
+	"layer8": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	},
+	"layer9": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer10": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer11": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	},
+	"layer12": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	},
+	"layer13": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer14": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 2
+		}
+	},
+	"layer15": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	},
+	"layer16": {
+		"conv": {
+			"kernel_size": [3, 3, 0],
+			"nkernels_per_marker": 3,
+			"dilation_rate": [1, 1, 0],
+			"nkernels_per_image": 10000,
+			"noutput_channels": 200
+		},
+		"relu": true,
+		"pooling": {
+			"type": "avg_pool",
+			"size": [3, 3, 0],
+			"stride": 1
+		}
+	}
+}

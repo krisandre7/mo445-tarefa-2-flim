@@ -4,12 +4,10 @@ demo.py
 .env
 logs/*
 !logs/.gitkeep
-data/*
 !data/.gitkeep
 *.mat
 old_data/*
 datasets/
-data/
 requirements_shen.txt
 history.txt
 flim-python-demo/
