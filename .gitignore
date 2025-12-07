@@ -4,10 +4,13 @@ demo.py
 .env
 logs/*
 !logs/.gitkeep
-data/*
 !data/.gitkeep
 *.mat
 old_data/*
+datasets/
+requirements_shen.txt
+history.txt
+flim-python-demo/
 
 ### VisualStudioCode template
 .vscode/*
