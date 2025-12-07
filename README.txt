@@ -45,9 +45,6 @@ cd flim-python-demo
 pip install -e .
 ```
 
-# Executando Experimentos
-## Treinamento e Avaliação
-```bash
-python src/main.py fit -c configs/data/schisto.yaml -c configs/model/schisto_segmentation.yaml
-python src/main.py test -c configs/data/schisto.yaml -c configs/model/schisto_segmentation.yaml --ckpt_path <PATH_TO_CHECKPOINT>
-```
+# Explicação dos Notebooks
+- `notebooks/segment_dino.ipynb`: Notebook com a implementação do método alternativo utilizando somente DINOv3, sem FLIM ou IFT.
+- `notebooks/tarefa_2_gilson.ipynb`: Notebook com a implementação do método original usando o modelo FLIM. Foi incrementado com a opção de usar DINOv3 no lugar do FLIM. Este é o método (DINOv3 + MLP) discutido no relatório, Para habilitar, modificar USE_FLIM para False.

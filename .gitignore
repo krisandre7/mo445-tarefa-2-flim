@@ -268,3 +268,4 @@ wandb
 
 *.jpg
 *.pkl
+!notebooks/fg_classifier.pkl
