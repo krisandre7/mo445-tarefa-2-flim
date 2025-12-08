@@ -48,3 +48,4 @@ pip install -e .
 # Explicação dos Notebooks
 - `notebooks/segment_dino.ipynb`: Notebook com a implementação do método alternativo utilizando somente DINOv3, sem FLIM ou IFT.
 - `notebooks/tarefa_2_gilson.ipynb`: Notebook com a implementação do método original usando o modelo FLIM. Foi incrementado com a opção de usar DINOv3 no lugar do FLIM. Este é o método (DINOv3 + MLP) discutido no relatório, Para habilitar, modificar USE_FLIM para False.
+- `notebooks/experimentos_preliminares.ipynb`: Notebook com experimentos modificanndo apenas o método original, retreinando o FLIM e combinando FLIMs com diferentes profundidades.
